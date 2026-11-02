@@ -1,0 +1,859 @@
+<title>__TITLE__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: drafting sheet — 3D model and floor plan side by side, one shared height slider, title block and bill below */
+:root{
+  --bg:#e9e6df; --sheet:#f4f2ed; --ink:#24262b; --muted:#6b6a66; --line:#cfcac0;
+  --ember:#d4621a; --ember-soft:#f2d6c2; --door:#3b7a8c; --furn:#6f8a3a; --shelter:#b03a48;
+  --bad:#c0392b; --unsure:#a8740a; --minor:#6b6a66;
+  --display:"Alegreya Sans SC",ui-serif,Georgia,serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17181b; --sheet:#202226; --ink:#e7e4dd; --muted:#9d9a93; --line:#3a3c41;
+  --ember:#f08a3e; --ember-soft:#4a2e1c; --door:#6fb3c6; --furn:#a4c266; --shelter:#e0707e;
+  --bad:#ff6b5a; --unsure:#e0b040; --minor:#9d9a93; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17181b; --sheet:#202226; --ink:#e7e4dd; --muted:#9d9a93; --line:#3a3c41;
+  --ember:#f08a3e; --ember-soft:#4a2e1c; --door:#6fb3c6; --furn:#a4c266; --shelter:#e0707e;
+  --bad:#ff6b5a; --unsure:#e0b040; --minor:#9d9a93; color-scheme:dark}
+html,body{background:var(--bg);color:var(--ink)}
+body{font-family:var(--body);font-size:15px;line-height:1.5;padding-block:20px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1280px;margin:0 auto;display:grid;gap:18px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(26px,4vw,38px);letter-spacing:.02em;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:2px 0 0;max-width:70ch}
+.stamp{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:4px;white-space:nowrap}
+.views{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:18px}
+@media (max-width:900px){.views{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--sheet);border:1px solid var(--line);border-radius:6px;display:flex;flex-direction:column;min-width:0}
+.panel h2{font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:.06em;margin:0}
+.ph{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.hint{font-size:12px;color:var(--muted)}
+#three{position:relative;width:100%;flex:1 1 auto;min-height:360px;touch-action:none}
+#three canvas{display:block;width:100%;height:100%;border-radius:0 0 6px 6px}
+#three:fullscreen canvas{border-radius:0}
+.walkbtn{font:600 13px var(--body);color:var(--sheet);background:var(--ember);border:0;border-radius:999px;padding:5px 14px;cursor:pointer}
+.walkbtn[aria-pressed="true"]{background:var(--ink)}
+.walkbtn:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+#walkhud{position:absolute;left:10px;bottom:10px;right:10px;pointer-events:none;font:12px/1.45 var(--body);color:#fff;text-shadow:0 1px 2px #000,0 0 6px #000;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+#walkhud b{font-weight:600}
+#cross{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#fff;box-shadow:0 0 3px #000;pointer-events:none}
+#doorhint{position:absolute;left:50%;top:calc(50% + 18px);transform:translateX(-50%);pointer-events:none;font:600 13px var(--body);color:#fff;text-shadow:0 1px 3px #000;white-space:nowrap}
+#plan.walking{cursor:crosshair}
+#plan-box{padding:10px;overflow-x:auto}
+#plan{display:block;margin:0 auto;max-width:100%}
+.controls{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.lvl{font:500 13px var(--body);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+.lvl:hover{border-color:var(--ember)}
+.lvl[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:var(--sheet)}
+.lvl:focus-visible,input:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+.slider{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.slider input{flex:1 1 220px;accent-color:var(--ember)}
+.zread{font-family:var(--mono);font-size:13px;min-width:15ch;font-variant-numeric:tabular-nums}
+label.tg{white-space:nowrap;display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted);cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-2px;margin-right:5px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.facts .panel{padding:14px 16px;gap:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{padding:4px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em}
+td.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:10px}
+.tag{font-family:var(--mono);font-size:11px;padding:1px 6px;border-radius:3px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.ok{color:var(--furn);border-color:var(--furn)}
+.tag.guess{color:var(--ember);border-color:var(--ember)}
+ul.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
+.mono{font-family:var(--mono);font-size:11.5px;word-break:break-all}
+.pick{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.pick-row{display:flex;gap:6px;align-items:stretch}
+.pick-row select{flex:1;min-width:0}
+.pick-row button{font:inherit;font-size:14px;padding:4px 10px;border:1px solid var(--rule, #8886);border-radius:6px;background:var(--sheet, #fff);color:var(--ink, #222);cursor:pointer}
+.pick select{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--rule, #8886);border-radius:6px;background:var(--sheet, #fff);color:var(--ink, #222);max-width:100%}
+/* Assistant: proposals list; each item jumps to its spot in 3D and on the plan */
+#advice-panel .ph{border-bottom:1px solid var(--line)}
+.advice-body{padding:10px 14px 14px;display:grid;gap:10px}
+.advice-filter{display:flex;gap:6px;flex-wrap:wrap}
+#advice-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-height:420px;overflow:auto}
+.adv{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:start;text-align:left;width:100%;font:inherit;color:inherit;
+  background:transparent;border:1px solid var(--line);border-left:4px solid var(--minor);border-radius:6px;padding:8px 10px;cursor:pointer}
+.adv:hover{border-color:var(--ember)}
+.adv[aria-pressed="true"]{background:var(--ember-soft)}
+.adv:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+.adv.error{border-left-color:var(--bad)} .adv.unsure{border-left-color:var(--unsure)}
+.adv .num{font:600 12px var(--mono);color:var(--muted);min-width:2ch;text-align:right}
+.adv .t{font-weight:600;font-size:14px}
+.adv .sev{font:500 11px var(--mono);margin-left:6px;padding:0 5px;border-radius:3px;border:1px solid currentColor;white-space:nowrap}
+.adv.error .sev{color:var(--bad)} .adv.unsure .sev{color:var(--unsure)} .adv.warning .sev{color:var(--minor)} .adv.idea .sev{color:var(--furn)}
+.adv.idea{border-left-color:var(--furn)}
+.adv .a{grid-column:2;font-size:13px;line-height:1.45}
+.adv .where{grid-column:2;font:11.5px var(--mono);color:var(--muted)}
+[hidden]{display:none!important}
+</style>
+<div class="wrap">
+  <header>
+    <div>
+      <h1 id="title"></h1>
+      <p class="sub" id="desc"></p>
+    </div>
+    <div>
+      <label class="pick" for="pick" id="pick-box" hidden><span class="hint">Постройка</span>
+        <span class="pick-row"><button type="button" id="pick-prev" aria-label="Предыдущая постройка">←</button><select id="pick" aria-label="Постройка"></select><button type="button" id="pick-next" aria-label="Следующая постройка">→</button></span></label>
+      <div class="stamp" id="stamp"></div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="row" id="levels" role="group" aria-label="Уровни"></div>
+    <div class="slider">
+      <label for="z" class="hint">Высота среза</label>
+      <input type="range" id="z" min="-4" max="25" step="1" value="3">
+      <span class="zread" id="zread"></span>
+      <label class="tg" for="cut"><input type="checkbox" id="cut" checked> резать 3D-вид</label>
+      <label class="tg" for="furn"><input type="checkbox" id="furn" checked> <span id="furnText">мебель и станки</span></label>
+      <label class="tg" for="stations" id="stationsLabel" hidden><input type="checkbox" id="stations" checked> станки и сундуки</label>
+      <label class="tg" for="earth"><input type="checkbox" id="earth" checked> земля</label>
+      <label class="tg" for="advshow" id="advshowLabel" hidden><input type="checkbox" id="advshow" checked> подсказки помощника</label>
+    </div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="views">
+    <section class="panel">
+      <div class="ph"><h2>Объём</h2><span class="hint"><span id="status3d">загружаю модели и текстуры игры…</span> · <span id="hint3d">тяните — вращать, колесо — масштаб, правая кнопка — сдвиг</span></span>
+        <button type="button" class="walkbtn" id="walk" aria-pressed="false">Пешком</button></div>
+      <div id="three"><div id="cross" hidden></div><div id="doorhint" hidden></div>
+        <div id="walkhud" hidden><span><b>W A S D</b> — идти · <b>мышь</b> — смотреть (щёлкните по виду) · <b>Shift</b> — бегом · <b>Пробел</b> — прыжок · <b>E</b> — дверь · <b>F</b> — во весь экран · <b>R</b> — к алтарю · <b>Q</b> — выйти</span><span id="walkpos"></span></div></div>
+    </section>
+    <section class="panel">
+      <div class="ph"><h2>План слоя</h2><span class="hint" id="planlabel"></span></div>
+      <div id="plan-box"><canvas id="plan"></canvas></div>
+    </section>
+  </div>
+
+  <section class="panel" id="advice-panel" hidden>
+    <div class="ph"><h2>Помощник Кустодия: что доработать и достроить</h2><span class="hint" id="advice-sum"></span></div>
+    <div class="advice-body">
+      <p class="hint" id="advice-mode">Помощник только предлагает: в мире и в чертеже ничего не меняется. Сверху — что мешает жить, ниже — что достроить, перестроить и улучшить. Нажмите на пункт, чтобы показать место в объёме и на плане.</p>
+      <div class="advice-filter" role="group" aria-label="Какие пункты показывать" id="advice-filter"></div>
+      <ol id="advice-list"></ol>
+      <ul class="tight hint" id="advice-limits"></ul>
+    </div>
+  </section>
+
+  <div class="facts">
+    <section class="panel" id="notes-panel">
+      <h2>Как устроено</h2>
+      <ul class="tight" id="notes"></ul>
+    </section>
+    <section class="panel">
+      <h2>Залы и комнаты</h2>
+      <table id="rooms"><thead><tr><th>Помещение</th><th>Что стоит</th></tr></thead><tbody></tbody></table>
+    </section>
+    <section class="panel">
+      <h2>Шаблоны молота</h2>
+      <table id="tpl"><thead><tr><th>Шаблон</th><th>Размер</th><th class="n">Штук</th></tr></thead><tbody></tbody></table>
+      <h2>Блоки</h2>
+      <table id="mat"><thead><tr><th>Материал</th><th class="n">Блоков</th><th class="n">Сырьё</th></tr></thead><tbody></tbody></table>
+      <p class="hint" id="bill-note"></p>
+    </section>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+<script>
+const D = window.FORT;
+const LEVELS = D.levels;
+document.getElementById("title").textContent = D.title || D.name;
+// Several buildings: a picker; switching reloads the page with the other one (see the loader).
+(function () {
+  const list = window.BUILDINGS || [];
+  if (list.length < 2) return;
+  const sel = document.getElementById("pick");
+  for (const b of list) {
+    const o = document.createElement("option"); o.value = b.id; o.textContent = b.title || b.id;
+    if (b.id === window.CURRENT) o.selected = true; sel.appendChild(o);
+  }
+  document.getElementById("pick-box").hidden = false;
+  sel.addEventListener("change", () => window.SWITCH(sel.value));
+  const step = d => {
+    const i = list.findIndex(b => b.id === window.CURRENT);
+    window.SWITCH(list[(i + d + list.length) % list.length].id);
+  };
+  document.getElementById("pick-prev").addEventListener("click", () => step(-1));
+  document.getElementById("pick-next").addEventListener("click", () => step(1));
+})();
+document.getElementById("desc").textContent = D.description || "";
+document.getElementById("notes").innerHTML = (D.notes || []).map(n => `<li>${n}</li>`).join("");
+document.getElementById("notes-panel").hidden = !(D.notes || []).length;
+document.getElementById("bill-note").textContent = D.billNote || "";
+const MAT_LABEL = D.matLabels || {};
+const TPL = {
+  foundation_2m: ["Фундамент 2M", "2×2×2 м"], ceiling_2m: ["Потолок 2M", "2×2×0,5 м"],
+  narrow_wall_2m: ["Короткая стена", "2×4 м"], door_frame_2m: ["Дверной проём 2M", "проём 2×2,5 м"], stair_4m: ["Ступенька", "4×4×4 м"],
+  door_frame_4m: ["Дверной проём 4M", "4×4 м, проём 2×2,5"], window_frame_2m: ["Оконная рама 2×4", "проём 1×1,5 м"]
+};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// Expand runs into voxels.
+const vox = [], solid = new Set(), doors = new Set();
+const key = (x, y, z) => x + "," + y + "," + z;
+for (const [x, y, z, n, m] of D.v) for (let i = 0; i < n; i++) { vox.push([x + i, y, z, m]); solid.add(key(x + i, y, z)); }
+for (const [x, y, z, n] of D.d) for (let i = 0; i < n; i++) doors.add(key(x + i, y, z));
+vox.sort((a, b) => a[2] - b[2]);
+const [[X0, Y0, Z0], [X1, Y1, Z1]] = D.bbox;
+const ASSETS = window.ASSETS || {};
+// Blueprint layers (layers.json): building always shown, furniture and stations switch independently.
+const furnBox = document.getElementById("furn"), stBox = document.getElementById("stations");
+if (D.hasLayers) { document.getElementById("stationsLabel").hidden = false; document.getElementById("furnText").textContent = "мебель"; }
+const shown = f => !f || (!D.hasLayers ? furnBox.checked
+  : f.layer === "stations" ? stBox.checked : f.layer === "furniture" ? furnBox.checked : true);
+// Assets come embedded (ASSETS: data URLs / base64 glb) or as files next to the page (ASSET_BASE).
+const ASSET_BASE = window.ASSET_BASE || "";
+const HAVE = new Set([...(D.assets || []), ...Object.keys(ASSETS)]);
+const assetUrl = n => ASSETS[n] || ASSET_BASE + n;
+
+// ---------- controls ----------
+const zIn = document.getElementById("z"), zRead = document.getElementById("zread");
+zIn.min = Z0; zIn.max = Z1;
+const lv = document.getElementById("levels");
+LEVELS.forEach(([name, z]) => {
+  const b = document.createElement("button"); b.className = "lvl"; b.type = "button"; b.textContent = name; b.dataset.z = z;
+  b.addEventListener("click", () => { zIn.value = z; update(); }); lv.appendChild(b);
+});
+document.getElementById("legend").innerHTML =
+  D.mats.map(m => `<span><i class="sw" style="background:${D.matColor[m]}"></i>${MAT_LABEL[m] || m}</span>`).join("") +
+  `<span><i class="sw" style="background:var(--door)"></i>дверной проём</span>` +
+  `<span><i class="sw" style="background:var(--shelter)"></i>кровать / станция под крышей</span>` +
+  `<span><i class="sw" style="background:var(--furn)"></i>мебель</span>` +
+  `<span><i class="sw" style="background:var(--ember)"></i>алтарь: плита 4 × 4 м вровень с полом, пунктир — свободная зона 1,5 м</span>` +
+  `<span><i class="sw" style="background:var(--ink)"></i>стрелка — лестница вверх, рамка — площадка 2 м</span>`;
+const [[BX0, BY0], [BX1, BY1]] = D.bbox;
+document.getElementById("stamp").textContent = `клетка = 0,5 м · габарит ${((BX1 - BX0 + 1) / 2).toLocaleString("ru-RU")} × ${((BY1 - BY0 + 1) / 2).toLocaleString("ru-RU")} м · куб алтаря ${D.altar.level * 40} м`;
+const groups = {};
+for (const f of D.furn) {
+  const [room, what] = (f.id || "").split(": ");
+  const key = room.replace(/ -?\d+,-?\d+$/, "");
+  (groups[key] = groups[key] || []).push(what || f.item);
+}
+const rb = document.querySelector("#rooms tbody");
+for (const [room, items] of Object.entries(groups)) {
+  const c = {}; items.forEach(i => { const k = i.replace(/ -?\d+$/, "").replace(/ \d+[юс]?$/, ""); c[k] = (c[k] || 0) + 1; });
+  rb.insertAdjacentHTML("beforeend", `<tr><td>${room}</td><td>${Object.entries(c).map(([k, n]) => n > 1 ? `${k} × ${n}` : k).join(", ")}</td></tr>`);
+}
+const tb = document.querySelector("#tpl tbody");
+Object.entries(D.templates).sort((a, b) => b[1] - a[1]).forEach(([k, n]) => {
+  const t = TPL[k] || [k, ""];
+  tb.insertAdjacentHTML("beforeend", `<tr><td>${t[0]}</td><td>${t[1]}</td><td class="n">${n}</td></tr>`);
+});
+const mb = document.querySelector("#mat tbody");
+const RAW = {Block_T1_Stone_Rough_CRAFTING: ["камня", 2, 100], Block_T1_Wood_Rough_CRAFTING: ["брёвен", 2, 100]};
+Object.entries(D.counts).forEach(([m, n]) => {
+  const r = RAW[D.matNames[m]]; const raw = r ? `${Math.ceil(n / r[2]) * r[1]} ${r[0]}` : "—";
+  mb.insertAdjacentHTML("beforeend", `<tr><td>${MAT_LABEL[m] || m}<br><span class="mono hint">${D.matNames[m]}</span></td><td class="n">${n.toLocaleString("ru-RU")}</td><td class="n">${raw}</td></tr>`);
+});
+
+// ---------- assistant: proposals with their spots ----------
+// D.advice comes from enshrouded_assist.py: each proposal has a kind, severity (error = fix,
+// unsure = check in game, warning = minor), Russian advice and the cell [x, y, z] it is about.
+var ADV = (D.advice && D.advice.proposals) || [], advSel = null, advFilter = "all", advMarkers = [];
+const SEV = {error: "исправить", unsure: "проверить", warning: "мелочь", idea: "идея"};
+const SECTION = {build: "достроить", rebuild: "перестроить", optimise: "оптимизировать"};
+const sevVar = p => ({error: "--bad", unsure: "--unsure", idea: "--furn"})[p.severity] || "--minor";
+const advBox = document.getElementById("advshow");
+function advVisible(p) { return advFilter === "all" || p.severity === advFilter; }
+(function () {
+  if (!D.advice) return;
+  document.getElementById("advice-panel").hidden = false;
+  document.getElementById("advshowLabel").hidden = !ADV.some(p => p.at);
+  const s = D.advice.summary || {};
+  const f = D.advice.found || {};
+  const read = D.advice.kind && D.advice.kind !== "design"
+    ? ` · прочитано из игры: дверей ${f.doors || 0}, станков ${f.stations || 0}, сундуков ${f.chests || 0}, лестниц ${f.flights || 0}` : "";
+  document.getElementById("advice-sum").textContent = ADV.length
+    ? `исправить ${s.errors || 0} · проверить ${s.unsure || 0} · мелочи ${s.warnings || 0} · идеи ${s.ideas || 0}${read}`
+    : `замечаний нет${read}`;
+  document.getElementById("advice-limits").innerHTML = (D.advice.limits || []).map(t => `<li>${t}</li>`).join("");
+  const fb = document.getElementById("advice-filter");
+  const opts = [["all", "все"], ["error", "исправить"], ["unsure", "проверить"], ["warning", "мелочи"], ["idea", "достроить и улучшить"]]
+    .filter(([k]) => k === "all" || ADV.some(p => p.severity === k));
+  if (opts.length > 2) for (const [k, label] of opts) {
+    const b = document.createElement("button"); b.type = "button"; b.className = "lvl"; b.textContent = label;
+    b.setAttribute("aria-pressed", String(k === advFilter));
+    b.addEventListener("click", () => { advFilter = k; fb.querySelectorAll(".lvl").forEach(x => x.setAttribute("aria-pressed", String(x === b))); renderAdvice(); update(); });
+    fb.appendChild(b);
+  }
+  if (!ADV.some(p => p.severity !== "idea") && ADV.length) document.getElementById("advice-mode").textContent = "Правила жизнеспособности постройка проходит. Ниже — идеи, что достроить и улучшить; нажмите на пункт, чтобы показать место.";
+  if (!ADV.length) document.getElementById("advice-mode").textContent = "Помощник проверил постройку: двери, проходы 2 м, лестницы, дыры, висящие блоки и предметы. Всё в порядке.";
+  renderAdvice();
+})();
+function renderAdvice() {
+  const ol = document.getElementById("advice-list"); ol.innerHTML = "";
+  for (const p of ADV) {
+    if (!advVisible(p)) continue;
+    const li = document.createElement("li");
+    const b = document.createElement("button"); b.type = "button"; b.className = "adv " + p.severity;
+    b.setAttribute("aria-pressed", String(advSel === p));
+    const where = p.at ? `слой z = ${p.at[2]} · ${(p.at[2] * .5).toFixed(1).replace(".", ",")} м · клетка ${p.at[0]}, ${p.at[1]}` + (p.count > 1 ? ` · мест: ${p.count}` : "") : "";
+    b.innerHTML = `<span class="num">${p.n}</span><span class="t"></span><span class="a"></span>` + (where ? `<span class="where">${where}</span>` : "");
+    b.querySelector(".t").textContent = p.title; b.querySelector(".t").insertAdjacentHTML("beforeend", `<span class="sev">${p.section ? SECTION[p.section] : SEV[p.severity]}</span>`);
+    b.querySelector(".a").textContent = p.advice;
+    b.title = p.detail || "";
+    b.addEventListener("click", () => selectAdvice(advSel === p ? null : p));
+    li.appendChild(b); ol.appendChild(li);
+  }
+}
+function selectAdvice(p) {
+  advSel = p; renderAdvice();
+  if (p && p.at) {
+    advBox.checked = true;
+    zIn.value = Math.max(+zIn.min, Math.min(+zIn.max, p.at[2] + (p.kind === "floating" ? 0 : 1)));
+    if (typeof focusAdvice === "function") focusAdvice(p);
+  }
+  update();
+}
+function drawAdvice(g, px, py, cell, z) {
+  if (!advBox.checked) return;
+  g.save(); g.font = "600 11px " + css("--mono"); g.textAlign = "center"; g.textBaseline = "middle";
+  for (const p of ADV) {
+    if (!p.at || !advVisible(p)) continue;
+    const pts = p === advSel ? (p.cells && p.cells.length ? p.cells : [p.at]) : [p.at];
+    const near = pts.filter(c => Math.abs(c[2] - z) <= 2);
+    if (!near.length) continue;
+    const col = css(sevVar(p));
+    if (p === advSel && p.box && Math.abs(p.box[0][2] - z) <= p.box[1][2]) {
+      g.setLineDash([4, 3]); g.strokeStyle = col; g.lineWidth = 1.5;
+      g.strokeRect(px(p.box[0][0]), py(p.box[0][1] + p.box[1][1] - 1), p.box[1][0] * cell, p.box[1][1] * cell); g.setLineDash([]);
+    }
+    for (const c of near) {
+      const x = px(c[0]) + cell / 2, y = py(c[1]) + cell / 2, r = Math.max(7, cell * (p === advSel ? 2.2 : 1.4));
+      g.globalAlpha = p === advSel ? .28 : .16; g.fillStyle = col; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+      g.globalAlpha = 1; g.strokeStyle = col; g.lineWidth = p === advSel ? 3 : 1.5; g.beginPath(); g.arc(x, y, r, 0, 7); g.stroke();
+    }
+    const c = near[0], x = px(c[0]) + cell / 2, y = py(c[1]) + cell / 2 - Math.max(7, cell * 1.4) - 8;
+    g.fillStyle = col; g.beginPath(); g.arc(x, y, 8, 0, 7); g.fill();
+    g.fillStyle = css("--sheet"); g.fillText(String(p.n), x, y + .5);
+  }
+  g.restore();
+}
+
+// ---------- plan ----------
+const plan = document.getElementById("plan"), box = document.getElementById("plan-box");
+let planCell = 4, walker = null;
+function drawPlan(z) {
+  const cols = X1 - X0 + 3, rows = Y1 - Y0 + 3;
+  const cell = Math.max(4, Math.min(10, Math.floor((box.clientWidth - 20) / cols)));
+  planCell = cell;
+  const dpr = window.devicePixelRatio || 1;
+  plan.width = cols * cell * dpr; plan.height = (rows * cell + 26) * dpr;
+  plan.style.width = cols * cell + "px"; plan.style.height = rows * cell + 26 + "px";
+  const g = plan.getContext("2d"); g.scale(dpr, dpr);
+  const px = x => (x - X0 + 1) * cell, py = y => (Y1 + 1 - y) * cell; // north up
+  g.fillStyle = css("--sheet"); g.fillRect(0, 0, cols * cell, rows * cell + 26);
+  // 2 m grid
+  g.strokeStyle = css("--line"); g.lineWidth = 0.5;
+  for (let x = X0 - 1; x <= X1 + 2; x++) if ((x % 4 + 4) % 4 === 0) { g.beginPath(); g.moveTo(px(x), 0); g.lineTo(px(x), rows * cell); g.stroke(); }
+  for (let y = Y0 - 1; y <= Y1 + 2; y++) if ((y % 4 + 4) % 4 === 0) { g.beginPath(); g.moveTo(0, py(y) + cell); g.lineTo(cols * cell, py(y) + cell); g.stroke(); }
+  // ghost of the layer below
+  g.fillStyle = css("--line");
+  for (const [x, y, zz] of vox) if (zz === z - 1 && !solid.has(key(x, y, z))) g.fillRect(px(x) + cell * .3, py(y) + cell * .3, cell * .4, cell * .4);
+  for (const [x, y, zz, m] of vox) if (zz === z) { g.fillStyle = D.matColor[D.mats[m]]; g.fillRect(px(x), py(y), cell, cell); }
+  g.fillStyle = css("--door");
+  for (const k of doors) { const [x, y, zz] = k.split(",").map(Number); if (zz === z) g.fillRect(px(x) + 1, py(y) + 1, cell - 2, cell - 2); }
+  for (const f of D.furn) {
+    if (!shown(f)) continue;
+    const [fx, fy, fz] = f.at, [sx, sy, sz] = f.size;
+    if (z < fz || z >= fz + sz) continue;
+    const c = f.shelter ? css("--shelter") : css("--furn");
+    g.strokeStyle = c; g.lineWidth = 2; g.globalAlpha = .25; g.fillStyle = c;
+    g.fillRect(px(fx), py(fy + sy - 1), sx * cell, sy * cell); g.globalAlpha = 1;
+    g.strokeRect(px(fx) + 1, py(fy + sy - 1) + 1, sx * cell - 2, sy * cell - 2);
+  }
+  for (const f of D.flights) {
+    const [ax, ay, az] = f.at, [dx, dy] = f.d;
+    if (z < az || z > az + f.steps) continue;
+    const w = 8, ox = dx ? 0 : w / 2, oy = dx ? w / 2 : 0;
+    const sx = ax + ox + .5 * (dx ? 1 : 0), sy = ay + oy + .5 * (dy ? 1 : 0);
+    const ex = sx + dx * (f.steps - 1), ey = sy + dy * (f.steps - 1);
+    g.strokeStyle = css("--ink"); g.lineWidth = 2; g.beginPath();
+    g.moveTo(px(sx), py(sy) + cell / 2); g.lineTo(px(ex), py(ey) + cell / 2); g.stroke();
+    const ang = Math.atan2(-(ey - sy), ex - sx);
+    g.beginPath(); g.moveTo(px(ex), py(ey) + cell / 2);
+    g.lineTo(px(ex) - 8 * Math.cos(ang - .5), py(ey) + cell / 2 - 8 * Math.sin(ang - .5));
+    g.lineTo(px(ex) - 8 * Math.cos(ang + .5), py(ey) + cell / 2 - 8 * Math.sin(ang + .5)); g.closePath(); g.fillStyle = css("--ink"); g.fill();
+    g.setLineDash([2, 2]); g.lineWidth = 1;
+    for (const [a, b, lz] of [[f.steps, f.steps + 3, az + f.steps], [-4, -1, az]]) {
+      if (z !== lz) continue;
+      const xs = [ax + dx * a, ax + dx * b], ys = [ay + dy * a, ay + dy * b];
+      const lx = dx ? Math.min(...xs) : ax, ly = dy ? Math.min(...ys) : ay;
+      const lw = dx ? 4 : 8, lh = dx ? 8 : 4;
+      g.strokeRect(px(lx), py(ly + lh - 1), lw * cell, lh * cell);
+    }
+    g.setLineDash([]);
+  }
+  const [bx, by, bz] = D.altar.box, cl = D.altar.clear;
+  g.setLineDash([3, 3]); g.strokeStyle = css("--ember"); g.lineWidth = 1;
+  g.strokeRect(px(-cl), py(by - 1 + cl), (bx + 2 * cl) * cell, (by + 2 * cl) * cell); g.setLineDash([]);
+  if (z < 0 && z >= -bz && D.altar.present) { g.fillStyle = css("--ember"); g.fillRect(px(0), py(by - 1), bx * cell, by * cell); }
+  else { g.strokeStyle = css("--ember"); g.lineWidth = 2; g.strokeRect(px(0) + 1, py(by - 1) + 1, bx * cell - 2, by * cell - 2); }
+  g.fillStyle = css("--ink"); g.font = "11px " + css("--mono"); g.fillText("0,0", px(0) + 2, py(-1) + cell + 11);
+  if (walker) {  // walking: where you stand and where you look
+    const wx = (walker.x - X0 + 1) * cell, wy = (Y1 + 2 - walker.y) * cell;
+    g.fillStyle = css("--ember"); g.strokeStyle = css("--ember"); g.lineWidth = 2;
+    g.beginPath(); g.arc(wx, wy, Math.max(4, cell * .8), 0, 7); g.fill();
+    g.beginPath(); g.moveTo(wx, wy); g.lineTo(wx - Math.sin(walker.yaw) * cell * 4, wy - Math.cos(walker.yaw) * cell * 4); g.stroke();
+  }
+  drawAdvice(g, px, py, cell, z);
+  // scale bar 4 m and north arrow
+  const yb = rows * cell + 14; g.fillStyle = css("--ink"); g.fillRect(cell, yb, 8 * cell, 3);
+  g.font = "11px " + css("--mono"); g.fillText("4 м", 9 * cell + 6, yb + 5);
+  g.fillText("↑ север", cols * cell - 62, yb + 5);
+}
+
+// ---------- 3D: game textures and models ----------
+const host = document.getElementById("three");
+const status3d = document.getElementById("status3d");
+const renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+renderer.outputEncoding = THREE.sRGBEncoding;
+host.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, 4 / 3, 1, 2000);
+const cx = (X0 + X1) / 2, cy = (Y0 + Y1) / 2;
+camera.position.set(cx - 70, 95, -(cy - 120));
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.target.set(cx, 4, -cy); controls.enableDamping = true; controls.update();
+scene.add(new THREE.HemisphereLight(0xfff4e6, 0x5a5348, 0.75));
+const sun = new THREE.DirectionalLight(0xfff1dc, 0.85); sun.position.set(-40, 90, 60); scene.add(sun);
+const ground = new THREE.Mesh(new THREE.PlaneGeometry(600, 600), new THREE.MeshLambertMaterial({color: 0x6f7f52}));
+ground.rotation.x = -Math.PI / 2; ground.position.set(cx, -0.05, -cy); scene.add(ground);
+
+// One texture spans 4 m = 8 voxels (shader tilingFactor 0.25 per metre); UVs come from world position.
+const TILE = 1 / 8;
+const loader = new THREE.TextureLoader();
+function tex(file, colour) {
+  const t = loader.load(assetUrl(file.replace("visual/", "")));
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.anisotropy = renderer.capabilities.getMaxAnisotropy();
+  if (colour) t.encoding = THREE.sRGBEncoding;
+  return t;
+}
+function blockMaterial(block, face, colour) {
+  const albedo = `${block}_${face}_albedo.jpg`, normal = `${block}_${face}_normal.jpg`;
+  const glow = /glow|illumin|crystal_light|lamp/i.test(block);
+  const opts = {roughness: 0.95, metalness: 0};
+  if (HAVE.has(albedo)) { opts.map = tex(albedo, true); if (HAVE.has(normal)) opts.normalMap = tex(normal, false); }
+  else opts.color = new THREE.Color(colour);
+  if (glow) { opts.emissive = new THREE.Color(colour); opts.emissiveIntensity = 0.9; if (opts.map) opts.emissiveMap = opts.map; }
+  const m = new THREE.MeshStandardMaterial(opts);
+  // World-space UVs only for textured faces: without a map the shader has no vUv to write.
+  if (opts.map) m.onBeforeCompile = sh => {
+    sh.vertexShader = sh.vertexShader.replace("#include <uv_vertex>", `#include <uv_vertex>
+      {
+        vec4 wp = modelMatrix * instanceMatrix * vec4(position, 1.0);
+        vec3 an = abs(normal);
+        vec2 t = an.y > 0.5 ? vec2(wp.x, -wp.z) : (an.x > 0.5 ? vec2(-wp.z, wp.y) : vec2(wp.x, wp.y));
+        vUv = t * ${TILE.toFixed(5)};
+      }`);
+  };
+  return m;
+}
+const unitBox = new THREE.BoxGeometry(1, 1, 1);
+const blockMeshes = D.mats.map((m, i) => {
+  const name = D.matNames[m];
+  const side = blockMaterial(name, "side", D.matColor[m]), top = blockMaterial(name, "top", D.matColor[m]);
+  const cells = vox.filter(v => v[3] === i);
+  const mesh = new THREE.InstancedMesh(unitBox, [side, side, top, top, side, side], cells.length);
+  const m4 = new THREE.Matrix4();
+  cells.forEach(([x, y, z], k) => { m4.makeTranslation(x + .5, z + .5, -(y + .5)); mesh.setMatrixAt(k, m4); });
+  mesh.userData.zs = cells.map(c => c[2]);
+  mesh.userData.terrain = /^Terrain_/.test(name);
+  scene.add(mesh);
+  return mesh;
+});
+
+// Game models (metres) placed on the voxel grid: scale 2, centred on their target, standing on z.
+const gltf = new THREE.GLTFLoader();
+const models = [];
+const cache = {};
+function loadModel(file) {
+  if (!cache[file]) cache[file] = ASSETS[file]
+    ? Promise.resolve(ASSETS[file]).then(b64 => new Promise((ok, fail) => { const bin = Uint8Array.from(atob(b64.trim()), c => c.charCodeAt(0)); gltf.parse(bin.buffer, "", g => ok(g.scene), fail); }))
+    : (HAVE.has(file) ? new Promise((ok, fail) => gltf.load(ASSET_BASE + file, g => ok(g.scene), undefined, fail)) : Promise.reject(new Error(file)));
+  return cache[file];
+}
+function place(file, cxv, cyv, z, rotY, fallbackSize) {
+  const group = new THREE.Group(); group.userData.z = z; scene.add(group); models.push(group);
+  return loadModel(file).then(src => {
+    const obj = src.clone(true);
+    obj.scale.setScalar(2); obj.rotation.y = rotY || 0; obj.updateMatrixWorld(true);
+    const bb = new THREE.Box3().setFromObject(obj), c = bb.getCenter(new THREE.Vector3());
+    obj.position.set(cxv - c.x, z - bb.min.y, -cyv - c.z);
+    group.add(obj); applyCut();
+  }).catch(() => {
+    const [sx, sy, sz] = fallbackSize || [1, 1, 1];
+    const b = new THREE.Mesh(new THREE.BoxGeometry(sx, sz, sy), new THREE.MeshLambertMaterial({color: 0x8a8070}));
+    b.position.set(cxv, z + sz / 2, -cyv); group.add(b);
+  });
+}
+const jobs = [];
+// Captured game props: pivot at ``pos`` (voxels), rotation in the game frame. House axes are game
+// X, Z, Y, i.e. a mirror of the game frame, so the model is mirrored on z and the quaternion
+// conjugated by that mirror.
+function placeExact(file, pos, q) {
+  const group = new THREE.Group(); group.userData.z = Math.floor(pos[2]); group.userData.furn = true; scene.add(group); models.push(group);
+  return loadModel(file).then(src => {
+    const obj = src.clone(true);
+    obj.scale.set(2, 2, -2);
+    obj.quaternion.set(-q[0], -q[1], q[2], q[3]);
+    obj.position.set(pos[0], pos[2], -pos[1]);
+    group.add(obj); applyCut();
+  }).catch(() => {});
+}
+const [ABX, ABY] = D.altar.box;
+// The platform (4 x 4 x 2 m) is sunk: its top is the floor, only the bowl stands above.
+if (D.altar.present) jobs.push(place(D.altar.model, ABX / 2, ABY / 2, -D.altar.box[2], 0, [8, 8, 6]));
+const HOLE = {door_frame_2m: [2, 0, "door_wooden.glb"], door_frame_4m: [4, 0, "door_wooden.glb"],
+              window_frame_2m: [2, 2, "window_wooden_frame.glb"], window_frame_4m: [4, 2, "window_wooden_frame.glb"]};
+for (const o of D.openings) {
+  if (o.t === "cut_window") {
+    const [ox, oy, oz] = o.at, [sx, sy] = o.size;
+    jobs.push(place("window_wooden_frame.glb", ox + sx / 2, oy + sy / 2, oz, sx < sy ? 0 : Math.PI / 2));
+    continue;
+  }
+  const [along, up, file] = HOLE[o.t];
+  const [ox, oy, oz] = o.at;
+  const turned = o.rot === 90 || o.rot === 270;
+  const px = turned ? ox + .5 : ox + along, py = turned ? oy + along : oy + .5;
+  jobs.push(place(file, px, py, oz + up, turned ? Math.PI / 2 : 0));
+}
+const plainBoxes = [];
+for (const f of D.furn) {
+  const [fx, fy, fz] = f.at, [sx, sy, sz] = f.size;
+  if (f.model && f.pos) {
+    jobs.push(placeExact(f.model, f.pos, f.rot_xyzw));
+    models[models.length - 1].userData.item = f;
+  } else if (f.model) {
+    // Game models are long along their own X; turn them with the prop.
+    jobs.push(place(f.model, fx + sx / 2, fy + sy / 2, fz, (f.rot || 0) * Math.PI / 180, [sx, sy, sz]).then(() => {
+      models[models.length - 1].userData.furn = true;
+    }));
+    models[models.length - 1].userData.furn = true;
+    models[models.length - 1].userData.item = f;
+  } else {
+    const b = new THREE.Mesh(new THREE.BoxGeometry(sx - .1, sz - .1, sy - .1), new THREE.MeshLambertMaterial({color: 0x7d6a52}));
+    b.position.set(fx + sx / 2, fz + sz / 2, -(fy + sy / 2)); b.userData.z = fz; b.userData.item = f; scene.add(b); plainBoxes.push(b);
+  }
+}
+Promise.allSettled(jobs).then(r => {
+  const bad = r.filter(x => x.status === "rejected").length;
+  const placeholders = D.furn.filter(f => !f.model).length;
+  const issues = [];
+  if (bad) issues.push(`не загружено моделей: ${bad}`);
+  if (placeholders) issues.push(`предметов без моделей: ${placeholders}; при отображении они заменяются условными блоками`);
+  status3d.textContent = issues.length ? issues.join(" · ") : "модели и текстуры из игры";
+});
+
+// Assistant markers in 3D: a ring and a column of light at every spot, a box round the selected one.
+var advGroup = new THREE.Group(); scene.add(advGroup);
+function advColour(p) { return new THREE.Color(css(sevVar(p))); }
+function buildAdvMarkers() {
+  while (advGroup.children.length) advGroup.remove(advGroup.children[0]);
+  advMarkers = [];
+  for (const p of ADV) {
+    if (!p.at || !advVisible(p)) continue;
+    const sel = p === advSel, col = advColour(p);
+    for (const c of (sel && p.cells && p.cells.length ? p.cells : [p.at])) {
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(sel ? 2.4 : 1.6, sel ? .28 : .18, 8, 32),
+        new THREE.MeshBasicMaterial({color: col, depthTest: false, transparent: true, opacity: .95}));
+      ring.rotation.x = Math.PI / 2; ring.position.set(c[0] + .5, c[2] + .15, -(c[1] + .5)); ring.renderOrder = 10;
+      ring.userData.z = c[2]; advGroup.add(ring); advMarkers.push(ring);
+      const beam = new THREE.Mesh(new THREE.CylinderGeometry(.12, .12, 6, 8),
+        new THREE.MeshBasicMaterial({color: col, depthTest: false, transparent: true, opacity: sel ? .8 : .45}));
+      beam.position.set(c[0] + .5, c[2] + 3, -(c[1] + .5)); beam.renderOrder = 10; beam.userData.z = c[2];
+      advGroup.add(beam); advMarkers.push(beam);
+    }
+    if (sel && p.box) {
+      const [[bx, by, bz], [sx, sy, sz]] = p.box;
+      const edges = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(sx, sz, sy)),
+        new THREE.LineBasicMaterial({color: col, depthTest: false}));
+      edges.position.set(bx + sx / 2, bz + sz / 2, -(by + sy / 2)); edges.renderOrder = 10; edges.userData.z = bz;
+      advGroup.add(edges); advMarkers.push(edges);
+    }
+  }
+}
+function focusAdvice(p) {
+  if (walker || !p.at) return;
+  const t = new THREE.Vector3(p.at[0] + .5, p.at[2] + 1, -(p.at[1] + .5));
+  const off = camera.position.clone().sub(controls.target);
+  off.setLength(Math.max(30, Math.min(70, off.length())));
+  controls.target.copy(t); camera.position.copy(t).add(off); controls.update();
+}
+advBox.addEventListener("change", update);
+buildAdvMarkers();
+
+function resize() {
+  const w = host.clientWidth, h = host.clientHeight;
+  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+function applyCut() {
+  const z = +zIn.value, cut = document.getElementById("cut").checked, furn = document.getElementById("furn").checked;
+  for (const mesh of blockMeshes) {
+    const zs = mesh.userData.zs; let n = zs.length;
+    if (cut) { n = 0; while (n < zs.length && zs[n] <= z) n++; }
+    mesh.count = n;
+  }
+  // "Earth" off: no ground plane and no terrain voxels, so the basement shows from any side.
+  // Cutting below ground level (z < 0) hides the earth on its own.
+  const earth = document.getElementById("earth").checked && !(cut && z < 0);
+  ground.visible = earth;
+  for (const mesh of blockMeshes) if (mesh.userData.terrain) mesh.visible = earth;
+  for (const g of models) g.visible = (!g.userData.furn || shown(g.userData.item)) && (!cut || g.userData.z <= z);
+  for (const b of plainBoxes) b.visible = shown(b.userData.item) && (!cut || b.userData.z <= z);
+  if (typeof advGroup !== "undefined") {
+    if (advGroup.userData.sel !== advSel || advGroup.userData.filter !== advFilter) {
+      advGroup.userData.sel = advSel; advGroup.userData.filter = advFilter; buildAdvMarkers();
+    }
+    advGroup.visible = advBox.checked;
+    for (const m of advMarkers) m.visible = !cut || m.userData.z <= z + 1;
+  }
+}
+function update() {
+  const z = +zIn.value;
+  applyCut();
+  zRead.textContent = `слой z = ${z} · ${(z * 0.5).toFixed(1).replace(".", ",")} м`;
+  document.getElementById("planlabel").textContent = `высота ${(z * 0.5).toFixed(1).replace(".", ",")} м над землёй`;
+  lv.querySelectorAll(".lvl").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.z === z)));
+  drawPlan(z);
+}
+zIn.addEventListener("input", update);
+document.getElementById("cut").addEventListener("change", update);
+document.getElementById("furn").addEventListener("change", update);
+document.getElementById("stations").addEventListener("change", update);
+document.getElementById("earth").addEventListener("change", update);
+new ResizeObserver(() => { resize(); drawPlan(+zIn.value); }).observe(host);
+const retheme = () => { scene.background = new THREE.Color(walker ? 0xbfd2e2 : css("--sheet")); update(); };
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", retheme);
+new MutationObserver(retheme).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+retheme(); resize();
+
+// ---------- walking: first person, collides with blocks, earth, closed doors and furniture ----------
+// House frame in voxels (x east, y north, z up); three.js: (x, z, -y). 1 voxel = 0.5 m.
+const R = 0.6, H = 3.7, EYE = 3.3, WALK = 9, RUN = 17, GRAV = 50, JUMP = 15;
+const colMin = new Map();  // lowest voxel per column: empty cells above it and below ground are dug out
+for (const [x, y, z] of vox) { const k = x + "," + y; if (!colMin.has(k) || z < colMin.get(k)) colMin.set(k, z); }
+const [ALX, ALY, ALZ] = D.altar.box;
+const doorList = D.furn.filter(f => f.group === "door" || /door/i.test(f.prop || f.model || ""));
+doorList.forEach(f => { f._door = true; });
+function earthCell(x, y, z) {
+  if (z >= 0) return false;
+  const lo = colMin.get(x + "," + y);
+  return lo === undefined || lo >= z;
+}
+function cellSolid(x, y, z) {
+  if (solid.has(key(x, y, z)) || earthCell(x, y, z)) return true;
+  return D.altar.present && x >= 0 && x < ALX && y >= 0 && y < ALY && z >= -ALZ && z < 0;
+}
+function hitBox(f, x, y, z) {
+  const [fx, fy, fz] = f.at, [sx, sy, sz] = f.size;
+  return x + R > fx && x - R < fx + sx && y + R > fy && y - R < fy + sy && z + H > fz && z < fz + sz;
+}
+function blocked(x, y, z) {
+  const e = 1e-6;
+  for (let ix = Math.floor(x - R); ix <= Math.floor(x + R - e); ix++)
+    for (let iy = Math.floor(y - R); iy <= Math.floor(y + R - e); iy++)
+      for (let iz = Math.floor(z + e); iz <= Math.floor(z + H - e); iz++)
+        if (cellSolid(ix, iy, iz)) return true;
+  for (const f of D.furn) {
+    if (f._open || !f.size || !shown(f)) continue;
+    if (!f._door && f.size[2] < 2) continue;  // rugs and low things: step over
+    if (hitBox(f, x, y, z) && !(f._inside === walker)) return true;
+  }
+  return false;
+}
+// A spot to stand at (x, y) near layer z: free for the body, with something solid under the feet.
+function standAt(x, y, z) {
+  for (let d = 0; d < 80; d++) for (const zz of d ? [z - d, z + d] : [z])
+    if (!blocked(x, y, zz) && blocked(x, y, zz - 0.5)) return zz;
+  return null;
+}
+function spawn(x, y, z, yaw) {
+  for (let r = 0; r < 12; r++) for (let a = 0; a < (r ? 8 : 1); a++) {
+    const sx = x + r * Math.round(Math.cos(a * Math.PI / 4)), sy = y + r * Math.round(Math.sin(a * Math.PI / 4));
+    const sz = standAt(sx, sy, z);
+    if (sz !== null) { Object.assign(walker, {x: sx, y: sy, z: sz, vz: 0, lag: 0}); if (yaw !== undefined) walker.yaw = yaw; return true; }
+  }
+  return false;
+}
+const toAltar = () => spawn(ALX / 2, -(D.altar.clear || 3) - 2, 0, 0);
+const walkBtn = document.getElementById("walk"), cross = document.getElementById("cross"),
+      hud = document.getElementById("walkhud"), doorHint = document.getElementById("doorhint"),
+      walkPos = document.getElementById("walkpos"), hint3d = document.getElementById("hint3d");
+const keys = new Set();
+// A lamp you carry: basements and halls without windows stay readable.
+const lamp = new THREE.PointLight(0xffe2b8, 0, 40, 1.5); camera.add(lamp); scene.add(camera);
+let savedCut = true, savedCam = null, lastCell = "";
+function setWalking(on, at) {
+  if (on === !!walker) { if (on && at) spawn(...at); return; }
+  walkBtn.setAttribute("aria-pressed", String(on));
+  walkBtn.textContent = on ? "Выйти" : "Пешком";
+  hud.hidden = cross.hidden = !on; doorHint.hidden = true;
+  plan.classList.toggle("walking", on);
+  hint3d.textContent = on ? "ходите по постройке" : "тяните — вращать, колесо — масштаб, правая кнопка — сдвиг";
+  const cutBox = document.getElementById("cut");
+  if (on) {
+    walker = {x: 0, y: 0, z: 0, vz: 0, yaw: 0, pitch: 0, ground: false, lag: 0};
+    savedCut = cutBox.checked; cutBox.checked = false;
+    savedCam = {p: camera.position.clone(), t: controls.target.clone(), fov: camera.fov, near: camera.near};
+    lamp.intensity = 0.9; scene.background = new THREE.Color(0xbfd2e2);
+    controls.enabled = false; camera.fov = 70; camera.near = 0.05; camera.updateProjectionMatrix();
+    if (!(at ? spawn(...at) : toAltar())) spawn(Math.round(cx), Y0 - 6, 0, 0);
+    update(); renderer.domElement.focus();
+  } else {
+    walker = null; keys.clear(); lamp.intensity = 0; scene.background = new THREE.Color(css("--sheet"));
+    if (document.pointerLockElement) document.exitPointerLock();
+    if (document.fullscreenElement) document.exitFullscreen();
+    cutBox.checked = savedCut;
+    camera.position.copy(savedCam.p); controls.target.copy(savedCam.t);
+    camera.fov = savedCam.fov; camera.near = savedCam.near; camera.updateProjectionMatrix();
+    camera.up.set(0, 1, 0); controls.enabled = true; camera.lookAt(controls.target);
+    update();
+  }
+}
+walkBtn.addEventListener("click", () => setWalking(!walker));
+renderer.domElement.tabIndex = 0;
+// Look: pointer lock when the page allows it, otherwise drag.
+let drag = null;
+renderer.domElement.addEventListener("pointerdown", e => {
+  if (!walker) return;
+  drag = {x: e.clientX, y: e.clientY};
+  if (e.pointerType === "mouse" && !document.pointerLockElement) {
+    try { const p = renderer.domElement.requestPointerLock(); if (p && p.catch) p.catch(() => {}); } catch (_) {}
+  }
+});
+window.addEventListener("pointerup", () => { drag = null; });
+const look = (dx, dy) => {
+  walker.yaw -= dx * 0.0025;
+  walker.pitch = Math.max(-1.5, Math.min(1.5, walker.pitch - dy * 0.0025));
+};
+window.addEventListener("pointermove", e => {
+  if (!walker) return;
+  if (document.pointerLockElement === renderer.domElement) look(e.movementX, e.movementY);
+  else if (drag) { look(e.clientX - drag.x, e.clientY - drag.y); drag = {x: e.clientX, y: e.clientY}; }
+});
+const MOVE_KEYS = ["KeyW", "KeyA", "KeyS", "KeyD", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space", "ShiftLeft", "ShiftRight"];
+window.addEventListener("keydown", e => {
+  if (!walker || e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+  if (MOVE_KEYS.includes(e.code)) { keys.add(e.code); e.preventDefault(); }
+  else if (e.code === "KeyE") toggleDoor();
+  else if (e.code === "KeyR") toAltar();
+  else if (e.code === "KeyF") { if (document.fullscreenElement) document.exitFullscreen(); else if (host.requestFullscreen) host.requestFullscreen().catch(() => {}); }
+  else if (e.code === "KeyQ" || (e.code === "Escape" && !document.pointerLockElement)) setWalking(false);
+});
+window.addEventListener("keyup", e => keys.delete(e.code));
+window.addEventListener("blur", () => keys.clear());
+// Plan: click a cell to stand there (on the shown layer or the nearest floor).
+plan.addEventListener("click", e => {
+  const r = plan.getBoundingClientRect();
+  const x = Math.floor((e.clientX - r.left) / planCell) + X0 - 1 + .5, y = Y1 + 1 - Math.floor((e.clientY - r.top) / planCell) + .5;
+  setWalking(true, [x, y, +zIn.value, walker ? walker.yaw : 0]);
+  update();
+});
+
+// Doors: E opens the closest one in front; it swings away from you around its hinge.
+function nearDoor() {
+  let best = null, bd = 1e9;
+  const fx = -Math.sin(walker.yaw), fy = Math.cos(walker.yaw);
+  for (const f of doorList) {
+    if (!f._group || !shown(f)) continue;
+    const [ax, ay, az] = f.at, [sx, sy, sz] = f.size;
+    const dx = ax + sx / 2 - walker.x, dy = ay + sy / 2 - walker.y, dz = az - walker.z;
+    const d = Math.hypot(dx, dy);
+    if (d > 6 || Math.abs(dz) > 3) continue;
+    const ahead = (dx * fx + dy * fy) / (d || 1);
+    const score = d - ahead * 2;
+    if (ahead > -0.2 && score < bd) { bd = score; best = f; }
+  }
+  return best;
+}
+function toggleDoor() {
+  const f = nearDoor(); if (!f) return;
+  const [ax, ay] = f.at, [sx, sy] = f.size, alongX = sx >= sy;
+  if (!f._open) {
+    // In three.js a +90° turn takes a leaf along +x to house +y, a leaf along +y to house -x.
+    const away = alongX ? walker.y < ay + sy / 2 : walker.x > ax + sx / 2;
+    f._target = away ? Math.PI / 2 : -Math.PI / 2;
+    f._hinge = alongX ? [ax, -ay - sy / 2] : [ax + sx / 2, -ay];
+    f._open = true;
+  } else if (!hitBox(f, walker.x, walker.y, walker.z)) { f._target = 0; f._open = false; }
+}
+function animateDoors(dt) {
+  for (const f of doorList) {
+    const g = f._group; if (!g || f._target === undefined) continue;
+    const a = g.rotation.y + Math.sign(f._target - g.rotation.y) * Math.min(Math.abs(f._target - g.rotation.y), dt * 5);
+    const [hx, hz] = f._hinge, c = Math.cos(a), s = Math.sin(a);
+    g.rotation.y = a; g.position.set(hx - (c * hx + s * hz), 0, hz - (-s * hx + c * hz));
+  }
+}
+for (const f of doorList) for (const g of models) if (g.userData.item === f) f._group = g;
+
+function walkStep(dt) {
+  const w = walker;
+  let f = 0, s = 0;
+  if (keys.has("KeyW") || keys.has("ArrowUp")) f++;
+  if (keys.has("KeyS") || keys.has("ArrowDown")) f--;
+  if (keys.has("KeyD") || keys.has("ArrowRight")) s++;
+  if (keys.has("KeyA") || keys.has("ArrowLeft")) s--;
+  const speed = keys.has("ShiftLeft") || keys.has("ShiftRight") ? RUN : WALK;
+  const n = Math.hypot(f, s) || 1;
+  let mx = (-Math.sin(w.yaw) * f + Math.cos(w.yaw) * s) / n * speed * dt;
+  let my = (Math.cos(w.yaw) * f + Math.sin(w.yaw) * s) / n * speed * dt;
+  if (keys.has("Space") && w.ground) { w.vz = JUMP; w.ground = false; }
+  w.vz = Math.max(-45, w.vz - GRAV * dt);
+  // furniture you already stand in does not hold you (spawned into a bed, say)
+  for (const it of D.furn) it._inside = it.size && hitBox(it, w.x, w.y, w.z) ? walker : null;
+  const steps = Math.ceil(Math.max(Math.abs(mx), Math.abs(my), Math.abs(w.vz * dt)) / 0.3) || 1;
+  for (let i = 0; i < steps; i++) {
+    for (const ax of ["x", "y"]) {
+      const d = (ax === "x" ? mx : my) / steps; if (!d) continue;
+      const nx = ax === "x" ? w.x + d : w.x, ny = ax === "y" ? w.y + d : w.y;
+      if (!blocked(nx, ny, w.z)) { w.x = nx; w.y = ny; }
+      else if (w.ground) {  // stairs: climb one voxel (0.5 m) without jumping
+        const up = Math.floor(w.z + 1e-6) + 1;
+        if (up - w.z <= 1.05 && !blocked(w.x, w.y, up) && !blocked(nx, ny, up)) { w.lag -= up - w.z; w.x = nx; w.y = ny; w.z = up; }
+      }
+    }
+    const nz = w.z + w.vz * dt / steps;
+    if (!blocked(w.x, w.y, nz)) { w.z = nz; w.ground = false; }
+    else if (w.vz < 0) {
+      const top = Math.floor(nz + 1e-6) + 1;
+      if (top <= w.z + 1e-6 && !blocked(w.x, w.y, top)) w.z = top;
+      w.vz = 0; w.ground = true;
+    } else w.vz = 0;
+  }
+  if (w.z < Z0 - 40) toAltar();
+  w.lag *= Math.exp(-14 * dt);
+  camera.position.set(w.x, w.z + EYE + w.lag, -w.y);
+  camera.rotation.order = "YXZ"; camera.rotation.set(w.pitch, w.yaw, 0);
+  const cell = `${Math.floor(w.x)},${Math.floor(w.y)},${Math.floor(w.z)},${Math.round(w.yaw * 8)}`;
+  if (cell !== lastCell) {
+    lastCell = cell;
+    const lz = Math.floor(w.z + 1e-6) + 2;
+    if (+zIn.value !== lz) { zIn.value = lz; update(); } else drawPlan(lz);
+    walkPos.textContent = `${(w.x / 2).toFixed(1)} · ${(w.y / 2).toFixed(1)} м, пол ${(Math.floor(w.z + 1e-6) / 2).toFixed(1)} м`.replace(/\./g, ",");
+    const d = nearDoor();
+    doorHint.hidden = !d; if (d) doorHint.textContent = d._open ? "E — закрыть дверь" : "E — открыть дверь";
+  }
+}
+let last = performance.now();
+(function loop(now) {
+  now = now || performance.now();
+  const dt = Math.min(0.05, (now - last) / 1000); last = now;
+  if (walker) walkStep(dt); else controls.update();
+  animateDoors(dt);
+  renderer.render(scene, camera); requestAnimationFrame(loop);
+})();
+</script>

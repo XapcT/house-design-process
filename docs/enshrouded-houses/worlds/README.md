@@ -1,0 +1,1 @@
+User world captures are optional inputs. Supply an explicitly approved capture locally when editing an existing building; no private or third-party world capture is distributed. New design, checking, rendering and export use the bundled catalogs without these inputs.

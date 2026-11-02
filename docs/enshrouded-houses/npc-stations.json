@@ -1,0 +1,545 @@
+{
+ "source": "installed client resources and game text",
+ "rules": {
+  "npc_bed": "After placing, each NPC must be assigned a sheltered bed. Unassigned NPCs take a free bed within 10 m at night. Crafters unlock more recipes once they have a sheltered bed.",
+  "bed_assignment": "Summoning Staff: aim it at a bed to assign the placed survivor.",
+  "magic_chests": "Crafting can draw from \"Backpack & Magic Chests in this Base\", so the scope is the whole base, not a radius. No distance field was found on the chest entity.",
+  "quick_stack_station": "Quick Stack Station: 16 m radius; Large: 24 m. Backpack items go to matching stacks in magic chests inside that radius.",
+  "comfort": "Comfort furniture raises Comfort Level, which extends the Rested buff. Rested also needs shelter, plus sitting at a fire or similar.",
+  "not_confirmed": "The base-wide reading comes from UI text; not tested in game. No minimum room size exists in game data."
+ },
+ "quotes": {
+  "60562579": {
+   "en": "Backpack & Magic Chests in this Base",
+   "ru": "Заплечный мешок и магические сундуки в этой ставке"
+  },
+  "2150646894": {
+   "en": "Select the NPC you want to place. \n\nAfter they are placed, NPCs must be assigned to sheltered beds. If left unassigned, they will automatically occupy a free bed within a 10-meter range at night.\n\nYou can manually assign them by pointing at a bed with the Summoning Staff while having an NPC selected. ",
+   "ru": "Выбери NPC, которого хочешь разместить. \n\nПосле размещения NPC должны быть назначены на койки в убежище. Если их не назначить, то ночью они автоматически займут свободную кровать в радиусе 10 метров.\n\nТы можешь назначить их вручную, указав на кровать с помощью Посох призыва при выбранном NPC. "
+  },
+  "2153706774": {
+   "en": "Used to transfer items from your backpack to matching magic chest stacks nearby. Magic chests must be placed within a 16 m radius of this station.",
+   "ru": "Используется для переноса предметов из заплечного мешка в соответствующие магические сундуки поблизости. Последние должны находиться в радиусе 16 метров от точки."
+  },
+  "2135068118": {
+   "en": "Used to transfer items from your backpack to matching magic chest stacks nearby. Magic chests must be placed within a 24 m radius of this station.",
+   "ru": "Используется для переноса предметов из заплечного мешка в соответствующие магические сундуки поблизости. Последние должны находиться в радиусе 24 метров от точки."
+  },
+  "490356749": {
+   "en": "The <npc>Blacksmith</npc> wants a proper shop to smith and work in. Once he has a <b>sheltered bed</b> inside his workshop, he can craft more items.\nA <b><craftingstation>Workbench</craftingstation></b>, some <b>Building Blocks</b> and a <b>Construction Hammer</b> are needed to build a shop for the <npc>Blacksmith</npc>. \n\nYou will first need a <b><craftingstation>Workbench</craftingstation></b>. Craft and place a <craftingstation>Workbench</craftingstation> from your Manual Crafting tab. Crafting a <craftingstation>Workbench</craftingstation> requires String and Wood Logs.",
+   "ru": "Для работы кузнецу требуется мастерская с кроватью для отдыха. Укрывшись в своей <b>мастерской</b>, он сможет изготавлить различные предметы. Чтобы построить мастерскую, понадобятся <b>верстак</b>, несколько <b>строительных блоков</b> и <b>строительный молот</b>.\n\nНачать следует с <b>верстака</b>: изготовьте его в меню создания предметов и разместите в удобной точке. Для этого потребуются веревка и бревна."
+  },
+  "1334286101": {
+   "en": "The Blacksmith, Oswald Anders, requires a roof over his head and a sheltered bed to do his best work.\n\nCertain crafting recipes require shelter as a condition. Therefore, it's advisable to keep your craftspeople sheltered and safe at all times.\n\nTo shelter your survivors, <b>craft a suitable bed.</b> Place the bed in a protected area easily accessible by survivors. It will automatically be assigned to the nearest free survivor upon being placed. If you wish to re-assign the bed, equip your Summoning Staff and use it while aimed at the bed.\n\nThis quest will reopen to notify you once your survivors are no longer sheltered.",
+   "ru": "Для спокойной работы кузнецу Освальду Андерсу требуется крыша над головой и кроватью.\n\nДля некоторых ремесленных схем обязательно наличие убежища, поэтому рекомендуется обеспечить всех ремесленников безопасным кровом.\n\nЧтобы сберечь выживжих, нужно <b>создать подходящие кровати</b>. Разместите такую в безопасной и доступной для новых поселенцев области, и она будет автоматически назначена ближайшему к ней персонажу. Если захотите сменить владельца, используйте посох призыва, направив его на кровать.\n\nЗадание актируется повторно, когда вновь появятся выжившие, лишенные убежища."
+  },
+  "401192728": {
+   "en": "Fenrig the Farmer explained that villagers need food and a warm, sheltered bed to do their best work and be happy. You can assign a spare bed to your followers by using the summoning staff and aiming it at a bed.\n\n<b>Assign a sheltered bed to Fenrig to proceed!</b>",
+   "ru": "Крестьянин Фенриг уточнил, что поселенцам не обойтись без еды и места для сна под крышей, но этого будет достаточно для того, чтобы все стали счастливы и готовы к работе. Указать последователю на свободную кровать можно с помощью Посоха призыва.\n\n<b>Осталось назначить кровать под крышей для Фенрига!</b>"
+  },
+  "3444621872": {
+   "en": "Furnish your base with <b>Comfort Furniture</b>. A decorated base with higher Comfort Levels will increase the duration of the Rested Buff. As you progress, it will become harder to extend the Rested Buff. ",
+   "ru": "Стоит украсить ставку <b>мебелью для уюта</b>. Приятная глазу ставка с высоким показателем уюта позволит увеличить длительность действия усиления «Отдых». Чем выше этот показатель, тем сложнее увеличить его еще больше."
+  }
+ },
+ "npc_workshops": [
+  {
+   "debug_name": "NPC_Crafter_Alchemist01",
+   "name_en": "Balthazar",
+   "name_ru": "Бальтазар",
+   "is_npc": true,
+   "recipes": 247,
+   "recipes_requiring_shelter": 246,
+   "stations_used": {
+    "Prop_Production_T4_Laboratory": 69,
+    "Prop_NPC_T2_Mortar": 27,
+    "Prop_Production_T3_Alchemy_Station": 13,
+    "Prop_Production_T1_Forge": 4,
+    "Prop_Production_T5_BlastFurnace": 3,
+    "Prop_Production_T6_improvedGrinder": 1
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_Blacksmith01",
+   "name_en": "Oswald Anders",
+   "name_ru": "Освальд Андерс",
+   "is_npc": true,
+   "recipes": 223,
+   "recipes_requiring_shelter": 213,
+   "stations_used": {
+    "Prop_NPC_Tools_Smith": 40,
+    "Prop_Production_T1_Forge": 21
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_Carpenter01",
+   "name_en": "Cade Hawthorn",
+   "name_ru": "Кэйд Хоуторн",
+   "is_npc": true,
+   "recipes": 338,
+   "recipes_requiring_shelter": 326,
+   "stations_used": {
+    "Prop_NPC_Mason_Tools_T3": 71,
+    "Prop_Production_T2_Table_Saw": 41,
+    "Prop_Production_T1_Forge": 9,
+    "Prop_Production_T2_Kiln": 2
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_Hunter01",
+   "name_en": "Athalan Skree",
+   "name_ru": "Аталан Скри",
+   "is_npc": true,
+   "recipes": 275,
+   "recipes_requiring_shelter": 172,
+   "stations_used": {
+    "Prop_Production_T2_Table_Saw": 80,
+    "Prop_NPC_Loom": 6,
+    "Prop_Production_T3_Tanning_Station": 3
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_Farmer01",
+   "name_en": "Emily Fray",
+   "name_ru": "Эмили Фрэй",
+   "is_npc": true,
+   "recipes": 135,
+   "recipes_requiring_shelter": 55,
+   "stations_used": {
+    "Prop_NPC_T3_Almanach_Cooking": 2,
+    "Prop_NPC_T4_Smoker_for_Beehive_Factory": 1,
+    "Prop_Production_T2_NPC_Hand_Spindle": 1
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_CryptKeeper01",
+   "name_en": "Alden Crowley",
+   "name_ru": "Алден Кроули",
+   "is_npc": true,
+   "recipes": 81,
+   "recipes_requiring_shelter": 50,
+   "stations_used": {
+    "Prop_NPC_T2_cryptKeeper_EctoplasmPress": 6
+   }
+  },
+  {
+   "debug_name": "NPC_Crafter_Bard01",
+   "name_en": "Valory",
+   "name_ru": "Вэлори",
+   "is_npc": true,
+   "recipes": 99,
+   "recipes_requiring_shelter": 99,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "NPC_Townsfolk_Female_Villager_05_name_chineseNewYear_Trader",
+   "name_en": "Mei-Yin Chen",
+   "name_ru": "Мэй-Инь Чэнь",
+   "is_npc": true,
+   "recipes": 157,
+   "recipes_requiring_shelter": 142,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "NPC_Crafter_Barber01",
+   "name_en": "Elio Ricci",
+   "name_ru": "Элио Риччи",
+   "is_npc": true,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "NPC_Townsfolk_Male_Villager_08_fisher_Trader",
+   "name_en": "Captain Melville Fontane",
+   "name_ru": "Капитан Мелвиль Фонтейн",
+   "is_npc": true,
+   "recipes": 17,
+   "recipes_requiring_shelter": 17,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "NPC_Townsfolk_Female_Villager_06_LoraineCrim_AncientResearcher",
+   "name_en": "Loraine Crim",
+   "name_ru": "Лорэйн Крим",
+   "is_npc": true,
+   "recipes": 15,
+   "recipes_requiring_shelter": 9,
+   "stations_used": {}
+  }
+ ],
+ "station_workshops": [
+  {
+   "debug_name": "Craftingstation_Workbench",
+   "name_en": "Workbench",
+   "name_ru": "Верстак",
+   "is_npc": false,
+   "recipes": 166,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 4,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T3_Oven",
+   "name_en": "Oven",
+   "name_ru": "Духовая печь",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T1_HandGrinder",
+   "name_en": "Grinding Stones",
+   "name_ru": "Шлифовальные камни",
+   "is_npc": false,
+   "recipes": 14,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 10,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T1_Charcoal_Kiln",
+   "name_en": "Charcoal Kiln",
+   "name_ru": "Углеобжигательная печь",
+   "is_npc": false,
+   "recipes": 3,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T1_Drying_Rack",
+   "name_en": "Drying Rack",
+   "name_ru": "Сушилка",
+   "is_npc": false,
+   "recipes": 5,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_production_T2_Cooking_Station",
+   "name_en": "Cooking Station",
+   "name_ru": "Место для готовки",
+   "is_npc": false,
+   "recipes": 22,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T2_Kiln",
+   "name_en": "Kiln",
+   "name_ru": "Промышленная печь",
+   "is_npc": false,
+   "recipes": 18,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T1_Forge",
+   "name_en": "Forge",
+   "name_ru": "Кузница",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T2_Smelter",
+   "name_en": "Smelter",
+   "name_ru": "Плавильня",
+   "is_npc": false,
+   "recipes": 5,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T2_Table_Saw",
+   "name_en": "Table Saw",
+   "name_ru": "Циркулярная пила",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T3_Tanning_Station",
+   "name_en": "Tanning Station",
+   "name_ru": "Дубильный станок",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T3_Alchemy_Station",
+   "name_en": "Alchemy Station",
+   "name_ru": "Алхимический стол",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T1_Seedbed",
+   "name_en": "Seedbed",
+   "name_ru": "Рассадница",
+   "is_npc": false,
+   "recipes": 63,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T4_Beehive",
+   "name_en": "Honey Beehive",
+   "name_ru": "Пчелиный улей",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T2_NPC_Hand_Spindle",
+   "name_en": "Hand Spindle",
+   "name_ru": "Веретено",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T4_Spinning_Wheel",
+   "name_en": "Spinning Wheel",
+   "name_ru": "Прялка",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_NPC_Loom",
+   "name_en": "Loom",
+   "name_ru": "Ткацкий станок",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T4_Laboratory",
+   "name_en": "Laboratory",
+   "name_ru": "Лаборатория",
+   "is_npc": false,
+   "recipes": 11,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 31,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_NPC_T2_cryptKeeper_EctoplasmPress",
+   "name_en": "Ectoplasm Press",
+   "name_ru": "Давильня эктоплазмы",
+   "is_npc": false,
+   "recipes": 6,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Z_Prop_Production_T5_Laboratory2_DEPRECATED",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T5_CardingMachine_Spinning",
+   "name_en": "Spinning Machine",
+   "name_ru": "Прядильный станок",
+   "is_npc": false,
+   "recipes": 3,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T5_BlastFurnace",
+   "name_en": "Blast Furnace",
+   "name_ru": "Доменная печь",
+   "is_npc": false,
+   "recipes": 9,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "_Prop_Production_T2_ColoringStation",
+   "name_en": "Coloring Station",
+   "name_ru": "Место для окрашивания",
+   "is_npc": false,
+   "recipes": 73,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T6_MedievalGrill",
+   "name_en": "Seafood Grill",
+   "name_ru": "Жаровня (дары моря)",
+   "is_npc": false,
+   "recipes": 19,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T6_coffeemaker_roaster",
+   "name_en": "Coffee Drum Roaster",
+   "name_ru": "Жаровня-барабан для кофе",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T6_improvedGrinder",
+   "name_en": "Mill",
+   "name_ru": "Мельница",
+   "is_npc": false,
+   "recipes": 14,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T6_coffeemaker_brewer",
+   "name_en": "Coffee Brewery",
+   "name_ru": "Кофеварка",
+   "is_npc": false,
+   "recipes": 3,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Craftingstation_Carpenter_Workbench",
+   "name_en": "Decoration Workbench",
+   "name_ru": "Верстак для декора",
+   "is_npc": false,
+   "recipes": 319,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {
+    "Prop_NPC_Mason_Tools_T3": 102,
+    "Prop_Production_T2_Table_Saw": 27,
+    "Prop_Production_T1_Forge": 12,
+    "Prop_Production_T2_Smelter": 8,
+    "Prop_Production_T2_Kiln": 6,
+    "Prop_NPC_Tools_Smith": 1
+   }
+  },
+  {
+   "debug_name": "Craftingstation_Farmer_Kitchen",
+   "name_en": "Kitchen",
+   "name_ru": "Кухня",
+   "is_npc": false,
+   "recipes": 46,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {
+    "Prop_NPC_T3_Almanach_Cooking": 22,
+    "Prop_production_T2_Cooking_Station": 21,
+    "Prop_Production_T3_Oven": 7,
+    "Prop_Production_T6_MedievalGrill": 2
+   }
+  },
+  {
+   "debug_name": "Prop_Production_T3_Butter_Churn",
+   "name_en": "Butter Churn",
+   "name_ru": "Маслобойка",
+   "is_npc": false,
+   "recipes": 2,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T7_Force_Generator",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 0,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Prop_Production_T7_Infusion_Station",
+   "name_en": "Infusion Altar",
+   "name_ru": "Алтарь растворения",
+   "is_npc": false,
+   "recipes": 1,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "Craftingstation_Logic_System_Workbench",
+   "name_en": "Sparkworks Workbench",
+   "name_ru": "Верстак искры",
+   "is_npc": false,
+   "recipes": 18,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  },
+  {
+   "debug_name": "0",
+   "name_en": null,
+   "name_ru": null,
+   "is_npc": false,
+   "recipes": 12,
+   "recipes_requiring_shelter": 0,
+   "stations_used": {}
+  }
+ ]
+}

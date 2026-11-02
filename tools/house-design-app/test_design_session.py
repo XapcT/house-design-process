@@ -10,10 +10,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import design_session as session
-VIEWER_SCRIPTS = Path("D:/Projects/castle-viewer/src/scripts")
-if VIEWER_SCRIPTS.is_dir():
-    sys.path.insert(0, str(VIEWER_SCRIPTS))
-    import enshrouded_house as house_core
+VIEWER_SCRIPTS = Path(__file__).resolve().parents[2] / "scripts"
+sys.path.insert(0, str(VIEWER_SCRIPTS))
+import enshrouded_house as house_core
 
 
 class DesignSessionTests(unittest.TestCase):

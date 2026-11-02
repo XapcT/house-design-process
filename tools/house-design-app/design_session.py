@@ -24,7 +24,7 @@ MAX_FRAGMENT_BYTES = 10 * 1024 * 1024
 MAX_TOTAL_FRAGMENT_BYTES = 10 * 1024 * 1024
 MAX_TITLE = 200
 MAX_PHASE = 160
-VIEWER_HOUSES = Path("D:/Projects/castle-viewer/src/docs/enshrouded-houses")
+VIEWER_HOUSES = Path(__file__).resolve().parents[2] / "docs" / "enshrouded-houses"
 _ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$")
 _UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.I)
 _REVISION = re.compile(r"^[0-9a-f]{64}$")
@@ -459,6 +459,21 @@ def get_state(root: Path, session_id: str) -> dict | None:
     try:
         row = conn.execute("SELECT * FROM sessions WHERE session_id=?", (session_id,)).fetchone()
         return _state(row) if row is not None else None
+    finally:
+        conn.close()
+
+
+def list_sessions(root: Path, limit: int = 100) -> list[dict]:
+    """Return bounded durable session summaries, newest activity first."""
+    if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= 100:
+        raise ValueError("limit must be between 1 and 100")
+    try:
+        conn = _connect(_canonical_root(root), create=False)
+    except FileNotFoundError:
+        return []
+    try:
+        rows = conn.execute("SELECT * FROM sessions ORDER BY updated_at DESC, session_id LIMIT ?", (limit,)).fetchall()
+        return [_state(row) for row in rows]
     finally:
         conn.close()
 

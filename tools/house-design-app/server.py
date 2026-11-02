@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[2]
 APP = Path(__file__).resolve().parent
 UI_URI = "ui://house-design-app/index.html"
 PROJECT_PREFIX = "mage-tower-80-"
-VIEWER_SCRIPTS = Path("D:/Projects/castle-viewer/src/scripts")
+VIEWER_SCRIPTS = ROOT / "scripts"
 if str(VIEWER_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(VIEWER_SCRIPTS))
 import enshrouded_house as house_core  # trusted existing source, read-only
@@ -574,9 +574,8 @@ async def http_client(reader: asyncio.StreamReader, writer: asyncio.StreamWriter
 async def serve(host: str = "127.0.0.1", port: int = 8765):
     if host not in ("127.0.0.1", "localhost", "::1"):
         raise ValueError("House Design App can bind only to loopback.")
-    server = await asyncio.start_server(http_client, host, port)
-    async with server:
-        await server.serve_forever()
+    from webui import serve as serve_webui
+    await serve_webui(host, port)
 
 
 server = Server("house-design-app", version="0.2.0", instructions="In-memory house design sessions and read-only saved-design evidence. Session edits never write to the game world, server, saves, or project files.")

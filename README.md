@@ -1,50 +1,83 @@
 # House Design Process
 
-Связка проектирующего навыка и интерактивного визуализатора текущего процесса в чате.
+Полная связка проектирования Enshrouded: два навыка, инструменты строителя, native-карточка чата, браузерный WebUI и постоянное хранилище в одном checkout.
 
-Исполнитель публикует реальные промежуточные изменения: эскиз объёмов → уточнение формы и проёмов → выбор материалов. House Design обновляет ту же 3D-сцену, сохраняя вращение, масштаб, сдвиг и скрытие земли. Сетка применяется только к форме без текстур; игровые текстуры показываются без дополнительной сетки.
-
-## Состав
-
-| Компонент | Назначение |
-| --- | --- |
-| `skills/house-design/` | Собственный навык показа процесса и контракт действий исполнителя |
-| `tools/house-design-app/` | MCP server, inline app, состояние сессий и тесты |
-| `docs/integration.md` | Подключение внешнего строителя без изменения его навыка |
+| Компонент | Путь | Назначение |
+| --- | --- | --- |
+| Навык строительства | skills/enshrouded-building/ | Полная копия навыка и всех его правил |
+| Навык отображения | skills/house-design/ | Показ реальных промежуточных решений в чате |
+| Строитель | scripts/enshrouded_*.py | Компиляция, checker, рендер, импорт и экспорт blueprint |
+| Viewer и данные | docs/enshrouded-houses/ | Исходный viewer, каталоги, реальные модели и текстуры |
+| MCP App и WebUI | tools/house-design-app/ | Общая интерактивная сцена: вращение, масштаб, сдвиг и скрытие земли |
+| Хранение | tools/house-design-app/design_session.py | SQLite: сессии, версии, события, контроль ревизий и dedup |
 
 ```text
-Проектирующий исполнитель / enshrouded-building
-        -> typed MCP begin / phase / update / finish
-        -> immutable session revisions and ordered events
-        -> native House Design card in the invoking chat
-        -> original castle-viewer scene and game materials
+enshrouded-building + house-design
+ -> реальные промежуточные spec / фазы
+ -> MCP update или scripts/house_process.py
+ -> SQLite: сессии / версии / события
+ -> карточка чата и WebUI той же сессии
+ -> исходный Enshrouded viewer и игровые материалы
 ```
 
-## Зависимости и запуск
+## Запуск
 
-Python 3.12; зависимости зафиксированы в `requirements.txt` по проверенному окружению. Текущий адаптер использует существующий checkout `D:/Projects/castle-viewer/src/scripts` (`enshrouded_house`, `enshrouded_house_render`, `enshrouded_view`) и его исходные ассеты. Они не включены в этот репозиторий. Это выделенный исходный проект существующей локальной интеграции; перенос на другую машину требует настройки этого пути и исходного viewer.
+Python 3.12. Отдельные checkout Custodian_GM и castle-viewer не нужны: исходники, каталоги, template и визуальные ресурсы включены. Python-зависимости фиксированы в requirements.txt.
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-В MCP-клиенте зарегистрировать stdio server: команда `python`, аргумент — абсолютный путь к `tools/house-design-app/server.py` в этом checkout. В клиенте должна быть включена поддержка MCP Apps. Навык `skills/house-design` устанавливается в каталог навыков клиента. Строитель остаётся внешним навыком; его файлы здесь не изменяются и не дублируются.
+Для чата установите обе папки из skills/ в каталог навыков клиента. MCP stdio: команда — установленный Python, аргумент — абсолютный путь к tools/house-design-app/server.py этого checkout. В клиенте нужна поддержка MCP Apps. Конфигурация клиента и исходные чужие навыки автоматически не меняются.
 
 ```powershell
-python tools/house-design-app/server.py
+python tools/house-design-app/server.py --serve
 ```
 
-## Проверки и текущий статус
+WebUI: http://127.0.0.1:8765/ — явно выберите сессию. Он читает то же хранилище, что MCP App. Обновления появляются автоматически без сброса камеры. Сетка применяется только к форме без текстур; игровые материалы показываются без дополнительной сетки. Исходный viewer использует Three.js 0.147.0 из CDN и Google Fonts: браузеру нужен доступ к ним; игровые ресурсы загружаются из checkout.
+
+## Работа строителя
+
+Применяйте оба навыка. Публикуйте настоящие изменения по мере создания: эскиз объёмов, уточнение формы и проёмов, выбранные материалы. Не готовьте финальную модель для последующего проигрывания стадий. Контракт описан в docs/integration.md.
+
+Файловый исполнитель может публиковать текущий spec в общее хранилище:
+
+```powershell
+python scripts/house_process.py begin "Мой дом"
+```
+
+```powershell
+python scripts/house_process.py publish SESSION_ID work/current.json --phase "Эскиз"
+```
+
+Для следующей публикации передайте --revision с последней возвращённой ревизией. SQLite создаётся в work/house-app-integration/design-sessions/sessions.sqlite3. Сессии, снимки и события сохраняются между перезапусками. Runtime исключён из Git; резервная копия SQLite должна учитывать WAL.
+
+## Проверки и экспорт
+
+```powershell
+python scripts/enshrouded_house.py check docs/enshrouded-houses/castle.json
+```
+
+```powershell
+python scripts/enshrouded_bundle.py export docs/enshrouded-houses/castle.json work/castle-export --label "Замок"
+```
+
+```powershell
+python scripts/enshrouded_bundle.py import work/castle-export -o work/castle.scene.json
+```
+
+```powershell
+python -m unittest discover -s scripts -p "test_enshrouded_house.py" -v
+```
 
 ```powershell
 python -m unittest discover -s tools/house-design-app -p "test_*.py" -v
 ```
 
-В исходной среде пользователь подтвердил новый эскиз, автоматическое уточнение формы и появление материалов в той же карточке с сохранением ракурса и масштаба. Исправление сетки проверено отдельно в реальном WebGL: есть на нейтральной форме, отсутствует на игровых текстурах. Загрузка последней правки в native-карточку и её визуальная приёмка остаются открытыми. Результат не является проверенным домом, экспортом или строительством в игре.
+castle.json проходит checker без ошибок; предупреждения остаются видимыми. estate.json — исторический пример: тест намеренно обнаруживает его нарушения. Черновой показ не означает приёмки готового дома; перед экспортом действуют правила строителя. Игра, сервер и сейвы этим проектом не изменяются.
 
-В репозитории нет игровых ассетов, чужого навыка, пользовательских проектов, runtime-сессий, учётных данных и остального Custodian_GM.
+## Состав и происхождение
 
-Дополнительные внешние зависимости исходного viewer: Three.js 0.147.0 из CDN и Google Fonts; для них нужен доступ к сети. Жёсткий путь к checkout viewer указан в `server.py` и `design_session.py`; при переносе необходимо согласованно настроить оба файла. Сохранённые `mage-tower-80-*` проекты и preview jobs — отдельная legacy-поверхность, она не является источником текущего процесса.
+provenance/dependencies.json фиксирует исходники и хеши; docs/enshrouded-houses/visual/README.json — происхождение визуального каталога и сборку игры. Исходный enshrouded-building не изменён. Его устаревшие ссылки на пути ПК не являются runtime-зависимостями комплекта: рабочие инструменты лежат в scripts/ этого checkout.
 
-
-Проверка выделенного checkout перед публикацией: полный набор 22/22 теста прошёл (2.093 с); каталог `work/`, SQLite, `.env` и Python cache исключены из Git.
+Локальный код записи в игру, серверы, сейвы, ключи, runtime-сессии и запрещённые к публикации чужие чертежи не входят в комплект. Снимки миров — необязательный пользовательский вход для достройки существующей базы; для нового проекта они не нужны.

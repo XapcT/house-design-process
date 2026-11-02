@@ -1,0 +1,2239 @@
+{
+  "sources": [
+    "Custodian_GM authored construction tools from castle-viewer checkout",
+    "Custodian_GM enshrouded-building skill copied without editing original",
+    "Game visual catalog source/build metadata: docs/enshrouded-houses/visual/README.json"
+  ],
+  "excluded": [
+    "Third-party mayor-manor blueprints and derived world captures",
+    "deployment/enshrouded-house-builder local game mutation code",
+    "Runtime sessions, credentials, worlds and saves"
+  ],
+  "files": [
+    {
+      "path": "scripts/enshrouded_house.py",
+      "sha256": "8ee87db5d86bc32b6a04f33bf60c4f6fa7a19e80eb5171da5e3d2362be07aabd",
+      "source": "scripts\\enshrouded_house.py"
+    },
+    {
+      "path": "scripts/enshrouded_house_render.py",
+      "sha256": "fe045391f4c521691a4043d3537a3154ffb37db2ed620769522d1228da0c397f",
+      "source": "scripts\\enshrouded_house_render.py"
+    },
+    {
+      "path": "scripts/enshrouded_bundle.py",
+      "sha256": "ee6d601b625f9b536f25fa3a7bd74fbfa0786bd3e971020e7ca82bc3e725094a",
+      "source": "scripts\\enshrouded_bundle.py"
+    },
+    {
+      "path": "scripts/enshrouded_assist.py",
+      "sha256": "f1202e72b2a0efcbe9c32d0f2ac62d363b9a083f3c1dedd9c81990820c245cbb",
+      "source": "scripts\\enshrouded_assist.py"
+    },
+    {
+      "path": "scripts/enshrouded_view.py",
+      "sha256": "dcc4058885b974b2a3e6f9fa3367a1c66f8a73be27a9debd6994eaf8320b8f7e",
+      "source": "scripts\\enshrouded_view.py"
+    },
+    {
+      "path": "scripts/test_enshrouded_house.py",
+      "sha256": "8734ae5391206a8e6e038670e1dcef364d57406862cbf5f102cd0472ed5d3c69",
+      "source": "scripts\\test_enshrouded_house.py"
+    },
+    {
+      "path": "docs/enshrouded-houses/materials.json",
+      "sha256": "8e4e8af9d30d93ecd3a66c60cef388bed8b5330a2edf4d7f7f66882b4ea9a26b",
+      "source": "docs\\enshrouded-houses\\materials.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/prop-catalog.json",
+      "sha256": "24c04ec3ffec03cc35306a886a43e7963faf8936cd8e22f770306a32d2cdda8f",
+      "source": "docs\\enshrouded-houses\\prop-catalog.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/npc-stations.json",
+      "sha256": "5f83682b711080d6deb730895c5ec5abbe9553b4c774a987a434ed06682a7603",
+      "source": "docs\\enshrouded-houses\\npc-stations.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/lit-lamps.json",
+      "sha256": "6b89fdd916c5996a862716dae9a8031c2970d2a79532664a5959834bd07ce5c8",
+      "source": "docs\\enshrouded-houses\\lit-lamps.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/enshrouded-geometry-templates.json",
+      "sha256": "63bd68d6df9b8de599049f8c033940fb3b3e623650f023919e60b58af5e277f6",
+      "source": "docs\\enshrouded-houses\\enshrouded-geometry-templates.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/starter-cottage.json",
+      "sha256": "4e746c343d6305a60399987fbbe9c2827a03cb62dfae4ad08e49f58e9737c1ae",
+      "source": "docs\\enshrouded-houses\\starter-cottage.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/castle.json",
+      "sha256": "95a458eff1a1b7c348de7bb8b49617980057bdd195011b6001bc421b9f0d18c4",
+      "source": "docs\\enshrouded-houses\\castle.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/estate.json",
+      "sha256": "4fb21a5f0fb3043b5792498f7983e1030d0ed9bbaa80c0c930392f6e75eeb5be",
+      "source": "docs\\enshrouded-houses\\estate.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/workshop-fortress.json",
+      "sha256": "0585b5c8a854f5776671c588709b7929a6a10b055ef88b2c4acafa34aa20d0a8",
+      "source": "docs\\enshrouded-houses\\workshop-fortress.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/gen_castle.py",
+      "sha256": "bcca53e0dcbd34d6fd2f6550b48c9b11d4d9ed7452a3b43b55331d3e8b85094a",
+      "source": "docs\\enshrouded-houses\\gen_castle.py"
+    },
+    {
+      "path": "docs/enshrouded-houses/gen_estate.py",
+      "sha256": "a840cf11d46863d522a8a38f58efb2ab2e362021bd3e9143ac08550346d84f46",
+      "source": "docs\\enshrouded-houses\\gen_estate.py"
+    },
+    {
+      "path": "docs/enshrouded-houses/gen_workshop_fortress.py",
+      "sha256": "7db95fdeea046c6da243d8dbc687c90d6941fa74f80d1e6174e08d94a231b1ad",
+      "source": "docs\\enshrouded-houses\\gen_workshop_fortress.py"
+    },
+    {
+      "path": "docs/enshrouded-houses/viewer/template.html",
+      "sha256": "db845964e217a218f5f4d27a582d1c6f807b3d385f77b976bc05c8bb3605bbf7",
+      "source": "docs\\enshrouded-houses\\viewer\\template.html"
+    },
+    {
+      "path": "docs/enshrouded-houses/blueprints/FORMAT.md",
+      "sha256": "9525d17da7deb2926bc31f458405c3e88369b68c884db5476a9b44f4e7f40033",
+      "source": "docs\\enshrouded-houses\\blueprints\\FORMAT.md"
+    },
+    {
+      "path": "docs/enshrouded-house-design.md",
+      "sha256": "84e7c5940db7b33121de1560835556b8eab23f02a8829ff399e87e7ff8fbabf5",
+      "source": "docs\\enshrouded-house-design.md"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Ancient_Gray_Stone_CRAFTING_side_albedo.jpg",
+      "sha256": "9a6382a30c8a1aee2559b656e18616e6d617aeb678333e1df6b3bd787c99b1e9",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Ancient_Gray_Stone_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Ancient_Gray_Stone_CRAFTING_side_normal.jpg",
+      "sha256": "9176c1f85b0e3fbcc17293e39521702748f16071ff21185bda03147bcb26f3c0",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Ancient_Gray_Stone_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Ancient_Gray_Stone_CRAFTING_top_albedo.jpg",
+      "sha256": "f26ae4932c54295fc664d275736bf5c2b29792a8173b4317cf8ea562a68833b4",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Ancient_Gray_Stone_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Ancient_Gray_Stone_CRAFTING_top_normal.jpg",
+      "sha256": "33f6597049ac4e4694d15db387f5b102d9931b1e87e0d31b7e545c8419603f09",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Ancient_Gray_Stone_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Dark_Circles_Ancient_REWARD_side_albedo.jpg",
+      "sha256": "58b2723195c44a4625cee86ec93dcc59fbbdd9b892fa83cb2d40e2904a5d187b",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Dark_Circles_Ancient_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Dark_Circles_Ancient_REWARD_side_normal.jpg",
+      "sha256": "06520400ed729bc56bd3c674b372b11dc87cb4723b0ebd18abf5f3a965b44226",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Dark_Circles_Ancient_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Dark_Circles_Ancient_REWARD_top_albedo.jpg",
+      "sha256": "58b2723195c44a4625cee86ec93dcc59fbbdd9b892fa83cb2d40e2904a5d187b",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Dark_Circles_Ancient_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Dark_Circles_Ancient_REWARD_top_normal.jpg",
+      "sha256": "06520400ed729bc56bd3c674b372b11dc87cb4723b0ebd18abf5f3a965b44226",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Dark_Circles_Ancient_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Full_Gold_Ancient_REWARD_side_albedo.jpg",
+      "sha256": "e19c81f8100341d743fccbf4dcee68eecf3e1e59b95558649facd4ee99ebc6a5",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Full_Gold_Ancient_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Full_Gold_Ancient_REWARD_side_normal.jpg",
+      "sha256": "d8e92e70ffc5768665f90f664a077a7cf762c8eaa2b960ae440be4f31bad4bc1",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Full_Gold_Ancient_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Full_Gold_Ancient_REWARD_top_albedo.jpg",
+      "sha256": "2d40f71d7a0ff42bd9ddaca9ed0b69dc9726ac09dac22d45690bb2a579ca8db4",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Full_Gold_Ancient_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Full_Gold_Ancient_REWARD_top_normal.jpg",
+      "sha256": "d5027988ede9fcf7131cf228cf4bb63e693fa6ac35ed6f8fdf55257173ca891a",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Full_Gold_Ancient_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_albedo.jpg",
+      "sha256": "8fc3acfa8d85ab9dfb670e1f623a62d6dfe89586617ecbed4d83d70eab07ace5",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_normal.jpg",
+      "sha256": "b4735799fbc0893f4e32e42624b7a4018f09030654e79c309fd5f3f09c3e8d55",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_albedo.jpg",
+      "sha256": "7cf8b093c2356bcdcdccf832c9352defac47990972f532f0a406b6b707684c61",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_normal.jpg",
+      "sha256": "004e3581f616c13b711b8d7efc9403b8d06401f92efce720925ae8385c597ea1",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_YellowGlow_AncientEnergy_REWARD_side_albedo.jpg",
+      "sha256": "6eccaed7ba403a3c066ac5aadc3b5fbf70bb8fc7e9abc02a241a41d98f0f07a1",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_YellowGlow_AncientEnergy_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_YellowGlow_AncientEnergy_REWARD_side_normal.jpg",
+      "sha256": "dcf68185cd8a86ac14d007abbae8facb953486fc9e4bb5fc84afc07dbb465989",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_YellowGlow_AncientEnergy_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_YellowGlow_AncientEnergy_REWARD_top_albedo.jpg",
+      "sha256": "6eccaed7ba403a3c066ac5aadc3b5fbf70bb8fc7e9abc02a241a41d98f0f07a1",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_YellowGlow_AncientEnergy_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/_Block_T7_YellowGlow_AncientEnergy_REWARD_top_normal.jpg",
+      "sha256": "dcf68185cd8a86ac14d007abbae8facb953486fc9e4bb5fc84afc07dbb465989",
+      "source": "docs\\enshrouded-houses\\visual\\_Block_T7_YellowGlow_AncientEnergy_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/alchemy_station.glb",
+      "sha256": "48af6b71df8e094f1af162563541c4f97228886bd801a440d9089bcb6872b23d",
+      "source": "docs\\enshrouded-houses\\visual\\alchemy_station.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/ancients_banner_standing_01.glb",
+      "sha256": "c6d7ceec036d3cae0e95515c41bc1bbd7734e031343c1e52e0499d2aba6a5f36",
+      "source": "docs\\enshrouded-houses\\visual\\ancients_banner_standing_01.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/ancients_banner_standing_02.glb",
+      "sha256": "6edf04d1fd7fc43b43f94f891573b6a28528ba912b638ba5fae14bc7182be08d",
+      "source": "docs\\enshrouded-houses\\visual\\ancients_banner_standing_02.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/ancients_banner_wall_01.glb",
+      "sha256": "d896835d968cd8a9205391cdc80fd73490dac076114c25659ea70e94f85d49d4",
+      "source": "docs\\enshrouded-houses\\visual\\ancients_banner_wall_01.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/ancients_banner_wall_02.glb",
+      "sha256": "7f968434498565bf6d05ec10ce6ab96482a97cef14109347190688e5a4f19bfb",
+      "source": "docs\\enshrouded-houses\\visual\\ancients_banner_wall_02.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/bed_comfort2_t1.glb",
+      "sha256": "186ba9b5eeae88cc8c02e2c6fbb6b3d9a1420a5ff8099a1c3f5fe0cfe9725039",
+      "source": "docs\\enshrouded-houses\\visual\\bed_comfort2_t1.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/beehive.glb",
+      "sha256": "9fa8f5bf7f7eaec0bfe73cc646ed0264b94f577c6dc12ddd407b2853ec902f27",
+      "source": "docs\\enshrouded-houses\\visual\\beehive.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/bench.glb",
+      "sha256": "ec21640f65efea7e6cf0f6d430287e9b5534f0d6dd252a1d91c6c5476020fde0",
+      "source": "docs\\enshrouded-houses\\visual\\bench.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/bench_comfort2.glb",
+      "sha256": "27a9fa9385632338887cdc9d2d180f886c6e07488e736a5e54d68b7095ec9d0a",
+      "source": "docs\\enshrouded-houses\\visual\\bench_comfort2.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/blast_furnace.glb",
+      "sha256": "88fc5e44872f4a23ae147990458afddfd78ff7ce3064c91f1115ff99b9a7d2ed",
+      "source": "docs\\enshrouded-houses\\visual\\blast_furnace.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_PlantFibre_side_albedo.jpg",
+      "sha256": "6b8d2672adf2d07c3a46f985432f9e87ff543477eaa28b9ff3810e358c1d9ec9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_PlantFibre_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_PlantFibre_side_normal.jpg",
+      "sha256": "a2bdadf57c7e6ad4ee8e882daf6646a2177fd4719f5711b969b29f940308a58a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_PlantFibre_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_PlantFibre_top_albedo.jpg",
+      "sha256": "6b8d2672adf2d07c3a46f985432f9e87ff543477eaa28b9ff3810e358c1d9ec9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_PlantFibre_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_PlantFibre_top_normal.jpg",
+      "sha256": "a2bdadf57c7e6ad4ee8e882daf6646a2177fd4719f5711b969b29f940308a58a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_PlantFibre_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_StoneShingles_CRAFTING_side_albedo.jpg",
+      "sha256": "2e8327d8696304e938d2bad7cc2ae19e7728f5cbeca91a5abe99507b1525b8e9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_StoneShingles_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_StoneShingles_CRAFTING_side_normal.jpg",
+      "sha256": "a0018a4bcf341a31983b68fa2caf94f2ad46d4a6c0213e0d49112766d114304d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_StoneShingles_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_StoneShingles_CRAFTING_top_albedo.jpg",
+      "sha256": "83a62da781f71eb8cf6961c9ec3d0daf2552af9500e1a13be8df6e67b09fe3e9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_StoneShingles_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_StoneShingles_CRAFTING_top_normal.jpg",
+      "sha256": "413b0ea22e91e7d4aa5115aa8d99888917d420c19358380f18e56b23d021ace0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_StoneShingles_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_albedo.jpg",
+      "sha256": "656501a3c5c243d4a4ba3e2b7fee25186496b1e5e2bdf22f6ab3187559ca6059",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_normal.jpg",
+      "sha256": "5f427d973d5274e12eb18ee88b5d8776148b5c35e7963d88ec391e93a0161831",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_albedo.jpg",
+      "sha256": "fa55f687baba990c60871a090be89b77847c4e12e58e2834cfd1599b2c9eb4b6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_normal.jpg",
+      "sha256": "8717e514a8a158674b601e045f3b7d0e2f5c3968fa5892f85f9cef45103d37cb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_albedo.jpg",
+      "sha256": "b91c6115097f78dc6083e84779ffd8b6c5e7173e15422f770d1d621995127378",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_normal.jpg",
+      "sha256": "71262b8eef32d1d6839da39bbec250774c4686283c7809f250503d37b0c879e7",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_albedo.jpg",
+      "sha256": "bbef142712c744268c3663bd0abe384ac4c4cdfa2ea85125eec3879b83349906",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_normal.jpg",
+      "sha256": "69ad23d339d7d27dac72e5d684dcf858d5930643b2874bd8ff12df4ab9c30b0b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Straw_side_albedo.jpg",
+      "sha256": "30df8f8ce15f908440bc1be2fdf49a9ecde9194909066699e6e4a4c2cdb83e44",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Straw_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Straw_side_normal.jpg",
+      "sha256": "7ea1bb3a7c46dcf80345432ea7becc29c3bb95a773c23e7e276e68d5683f0ced",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Straw_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Straw_top_albedo.jpg",
+      "sha256": "30df8f8ce15f908440bc1be2fdf49a9ecde9194909066699e6e4a4c2cdb83e44",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Straw_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Straw_top_normal.jpg",
+      "sha256": "7ea1bb3a7c46dcf80345432ea7becc29c3bb95a773c23e7e276e68d5683f0ced",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Straw_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Tarred_Straw_side_albedo.jpg",
+      "sha256": "35c158f4ac738c64a54075b127c434181f873d41c2178deb5b1a49587a1c7e0c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Tarred_Straw_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Tarred_Straw_side_normal.jpg",
+      "sha256": "18c6603a1204b85d61c3fa51b609d9bd266271031e262389f186f13121686966",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Tarred_Straw_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Tarred_Straw_top_albedo.jpg",
+      "sha256": "cdc5b1ea6f0bc0b07a6511f507b6aa50e46c8ffef7d48760cb61a21d56733d0a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Tarred_Straw_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T3_Tarred_Straw_top_normal.jpg",
+      "sha256": "e1068afab14a837ee17b8187d6700b569f633e70b795064cf80130f0ea91ac89",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T3_Tarred_Straw_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T4_Desert_Shingles_01_Reward_side_albedo.jpg",
+      "sha256": "dbb4e160a02f88b8af666b5a2229bc6a9471c83d2382695a0b15be38692e139c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T4_Desert_Shingles_01_Reward_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T4_Desert_Shingles_01_Reward_side_normal.jpg",
+      "sha256": "a78c0dcc43e8abfb15a84aedbc366fa776bd3efa7db63204d2425514354f7e13",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T4_Desert_Shingles_01_Reward_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T4_Desert_Shingles_01_Reward_top_albedo.jpg",
+      "sha256": "dbb4e160a02f88b8af666b5a2229bc6a9471c83d2382695a0b15be38692e139c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T4_Desert_Shingles_01_Reward_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T4_Desert_Shingles_01_Reward_top_normal.jpg",
+      "sha256": "a78c0dcc43e8abfb15a84aedbc366fa776bd3efa7db63204d2425514354f7e13",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T4_Desert_Shingles_01_Reward_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Ornamented_side_albedo.jpg",
+      "sha256": "19bbca02c46f5c5450a82aff107e0af39f8d7cc3cd75df6b88231b6ec80eb77f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Ornamented_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Ornamented_side_normal.jpg",
+      "sha256": "675cf5b3765c9b986e68f694b93bdbb206151d6961f351bc0249258adfa10fd3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Ornamented_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Ornamented_top_albedo.jpg",
+      "sha256": "19bbca02c46f5c5450a82aff107e0af39f8d7cc3cd75df6b88231b6ec80eb77f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Ornamented_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Ornamented_top_normal.jpg",
+      "sha256": "675cf5b3765c9b986e68f694b93bdbb206151d6961f351bc0249258adfa10fd3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Ornamented_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Shingles_side_albedo.jpg",
+      "sha256": "3573959d75bf132be57a890db2c2e22794fff0410d20037397071c118314ca99",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Shingles_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Shingles_side_normal.jpg",
+      "sha256": "5943b088b66d50d86adcef354bc56f246864caf63fb989e4def69389abc8764d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Shingles_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Shingles_top_albedo.jpg",
+      "sha256": "3573959d75bf132be57a890db2c2e22794fff0410d20037397071c118314ca99",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Shingles_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T5_Granite_Shingles_top_normal.jpg",
+      "sha256": "5943b088b66d50d86adcef354bc56f246864caf63fb989e4def69389abc8764d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T5_Granite_Shingles_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Palmleaves_side_albedo.jpg",
+      "sha256": "46f58ce940f13aa0bd29e13c5831ec80154dadab114877eeddfc002d00b5442b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Palmleaves_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Palmleaves_side_normal.jpg",
+      "sha256": "2729c89f49aedc4c72f412177aeb3744dea863010ef539b4e51f939c4ba25a1e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Palmleaves_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Palmleaves_top_albedo.jpg",
+      "sha256": "46f58ce940f13aa0bd29e13c5831ec80154dadab114877eeddfc002d00b5442b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Palmleaves_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Palmleaves_top_normal.jpg",
+      "sha256": "2729c89f49aedc4c72f412177aeb3744dea863010ef539b4e51f939c4ba25a1e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Palmleaves_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_albedo.jpg",
+      "sha256": "f14aa6ec8583966df8ddec87be9aaf391e95b7d2f69760a6197e230081d35db4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_normal.jpg",
+      "sha256": "1175ad825d1ba9e070af524e345fea0be9e30e16bbab25f046aec7c6a3cc6a1d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_albedo.jpg",
+      "sha256": "acfa2d4dd72f15b4b485f1a43b828fab4e4b61868be1b77d494b35c6a2d5ead4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_normal.jpg",
+      "sha256": "e70495bbf612a5e8a06d65be6cecea410de6a3028a6db25a03a96a7745ba56b0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_albedo.jpg",
+      "sha256": "8abe756148fc4468e6ccd9d38c680bbdf2ba55b5716675e5673541504d0b5913",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_normal.jpg",
+      "sha256": "be6f8eca7ee79c14599768b38ef2019871d381f58f549bda283efab723561a6c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_albedo.jpg",
+      "sha256": "9c7c83f4a5c6b806bf12317451af71c04c9fc33a74be3e3171d844f9dfed3689",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_normal.jpg",
+      "sha256": "ea8e7791a9eb026fa08596c1fad91dd869fb075a5d71898872911a3914474fb8",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_albedo.jpg",
+      "sha256": "9881dd569f050d79cdf5f83899772e53d53f29a0edc1b8251fc640d96e2c1be5",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_normal.jpg",
+      "sha256": "49696ad6ae94371bf634348a34c83ae01309e98bca243f50ccb09b2ad03cfe55",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_albedo.jpg",
+      "sha256": "9881dd569f050d79cdf5f83899772e53d53f29a0edc1b8251fc640d96e2c1be5",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_normal.jpg",
+      "sha256": "49696ad6ae94371bf634348a34c83ae01309e98bca243f50ccb09b2ad03cfe55",
+      "source": "docs\\enshrouded-houses\\visual\\Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Bones_REWARD_side_albedo.jpg",
+      "sha256": "9982f20cf4f06f03565f1d74d2b22ba8bafa91034674ebe63189a8c62564b8d6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Bones_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Bones_REWARD_side_normal.jpg",
+      "sha256": "a467acaee4712db6c7c99d1afad92b264d06daadf8edc008c9dbad5487899f39",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Bones_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Bones_REWARD_top_albedo.jpg",
+      "sha256": "a00314d44ba53cac35655b860f44b66f8225ba30a9a469d6312e900e35a5c271",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Bones_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Bones_REWARD_top_normal.jpg",
+      "sha256": "4531845a0e84ff135e73fb9a7f897d0825a7550ae44a0fd6aeb4d4b05de0a2a1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Bones_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Flintstone_Rough_CRAFTING_side_albedo.jpg",
+      "sha256": "9dea0265143baaa2d6e2bb35b41eb1015146495a6932c9b0937fc45ef45862f8",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Flintstone_Rough_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Flintstone_Rough_CRAFTING_side_normal.jpg",
+      "sha256": "e853944ebc3a05274880702b0c8d2da1ae214f58000c5cc4a74279840294c54f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Flintstone_Rough_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Flintstone_Rough_CRAFTING_top_albedo.jpg",
+      "sha256": "27dea6823e8ea0b6dd1d7de8fd23b10b68343ffcf6c8f98a0cee9ae01f49e166",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Flintstone_Rough_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Flintstone_Rough_CRAFTING_top_normal.jpg",
+      "sha256": "e0f2446e34cb9132946c99bebba85693712cbe0760b7a87dd39d647cdc8d97b7",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Flintstone_Rough_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_Blue_CRAFTING_side_albedo.jpg",
+      "sha256": "689c579e45bd2f32b77dc7557a85ba326d96a9f7c4a329bb6b8631509d6e625a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_Blue_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_Blue_CRAFTING_side_normal.jpg",
+      "sha256": "802287cf101ac126857d7a9923166c69dd4a70f0de6e09addd50616d86090674",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_Blue_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_Blue_CRAFTING_top_albedo.jpg",
+      "sha256": "689c579e45bd2f32b77dc7557a85ba326d96a9f7c4a329bb6b8631509d6e625a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_Blue_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_Blue_CRAFTING_top_normal.jpg",
+      "sha256": "802287cf101ac126857d7a9923166c69dd4a70f0de6e09addd50616d86090674",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_Blue_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_WarmWhite_CRAFTING_side_albedo.jpg",
+      "sha256": "ed8bcb07ddf8f97630c8ab6e83a029cd4cfb84e2baa9576e41ad06ac534471bf",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_WarmWhite_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_WarmWhite_CRAFTING_side_normal.jpg",
+      "sha256": "35d2c6302aeb8d2c1b12ee9064871e94a65c971bd94ab5b9cac7a1a9409af81b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_WarmWhite_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_WarmWhite_CRAFTING_top_albedo.jpg",
+      "sha256": "ed8bcb07ddf8f97630c8ab6e83a029cd4cfb84e2baa9576e41ad06ac534471bf",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_WarmWhite_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_GlowDirt_WarmWhite_CRAFTING_top_normal.jpg",
+      "sha256": "35d2c6302aeb8d2c1b12ee9064871e94a65c971bd94ab5b9cac7a1a9409af81b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_GlowDirt_WarmWhite_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_albedo.jpg",
+      "sha256": "9b16bd613252cdb21f1f5170e226eca0485575c5d347e26e69224d0dc114f34b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_normal.jpg",
+      "sha256": "1c4a642732b0f02caca8eadb7d29d7d7847430b5be0c0ade361c9bc177c9566c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_albedo.jpg",
+      "sha256": "109a63ccf3c3e862d5c85e2150eb92cb1a0d4c46cab3362b697eeac2a66a7d31",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_normal.jpg",
+      "sha256": "ec576257259cf032f8e98301d3ed3b5920bef7a9f003b349fcf66e4ebc970565",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Metal_Sheets_CRAFTING_side_albedo.jpg",
+      "sha256": "aea0dbc682532ac251b1e09f679514bc1dcd2a2f7d33782b79bf2426c7642875",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Metal_Sheets_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Metal_Sheets_CRAFTING_side_normal.jpg",
+      "sha256": "d7ff8fe5e25391eab788fcc11b224f0871c88d83f089daebaa09295744f855f3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Metal_Sheets_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Metal_Sheets_CRAFTING_top_albedo.jpg",
+      "sha256": "aea0dbc682532ac251b1e09f679514bc1dcd2a2f7d33782b79bf2426c7642875",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Metal_Sheets_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Metal_Sheets_CRAFTING_top_normal.jpg",
+      "sha256": "d7ff8fe5e25391eab788fcc11b224f0871c88d83f089daebaa09295744f855f3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Metal_Sheets_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Mycelium_CRAFTING_side_albedo.jpg",
+      "sha256": "e51a52370f8c6fcb6a3edfec423f6c1943c20c4876f3d58cc6391e58117a1700",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Mycelium_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Mycelium_CRAFTING_side_normal.jpg",
+      "sha256": "397561e1bd3c8dedd0ac0528c5a84ec1b936f79ed74d6203404d238b32b676c6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Mycelium_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Mycelium_CRAFTING_top_albedo.jpg",
+      "sha256": "0170ebed6a0eb307c4698e7b7d1db866f4779a47d420bcb210b36c23ed65062f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Mycelium_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Mycelium_CRAFTING_top_normal.jpg",
+      "sha256": "8f28fba0ccbfaf7dc7fd06e98de67c89c4e61113efb6186b44f81baf96c31887",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Mycelium_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Nation01_Basement_REWARD_side_albedo.jpg",
+      "sha256": "8375aa099578a981de413afa56fe5481578506492c729dafe855b88c01564256",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Nation01_Basement_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Nation01_Basement_REWARD_side_normal.jpg",
+      "sha256": "5bf45dbc72ae7d08214a3dc36e2a5de109dd9f474d8737555c0911e6fdeca913",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Nation01_Basement_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Nation01_Basement_REWARD_top_albedo.jpg",
+      "sha256": "892596330f7dc4330b3910df67671e93c065fd4f3b4f0c6c0fa80038245ce16f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Nation01_Basement_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Nation01_Basement_REWARD_top_normal.jpg",
+      "sha256": "cc747dbb7797f46aecb354e3362b56aa26d8692b40f08cc6d47b2c298b462ca4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Nation01_Basement_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Rough_CRAFTING_side_albedo.jpg",
+      "sha256": "6009da38762cdc0e89da78af328907a0e9e7a80d791a79da5d613aa66980f7a0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Rough_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Rough_CRAFTING_side_normal.jpg",
+      "sha256": "7fdd1093aaf4140c02305dd04b2e3622edb99c759e7c083853ba4403f38c59d9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Rough_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Rough_CRAFTING_top_albedo.jpg",
+      "sha256": "bd1286d8e23c706c1b43a33827c1ce5d2d8445016a3131ae7ff7e2ca05986621",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Rough_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Stone_Rough_CRAFTING_top_normal.jpg",
+      "sha256": "c997c76cbe78c4669d9fcbe37351ad81a03dd297a79943edba317e87dec5c0c0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Stone_Rough_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Deadwood_CRAFTING_side_albedo.jpg",
+      "sha256": "b4e7ed41653e04f38e4bc193f1e7ff2d4d6bf8038ab5353d4ba7b4f2ce376517",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Deadwood_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Deadwood_CRAFTING_side_normal.jpg",
+      "sha256": "352c60e382d937d4fdf98aca12e678cd98dc4bd43ffb8a53b31d588c74c66a8e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Deadwood_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Deadwood_CRAFTING_top_albedo.jpg",
+      "sha256": "8cb8ea03405ff601cc775f592f7858ee63d51d6bd9eb7c5a9c5bce0ba40d2755",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Deadwood_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Deadwood_CRAFTING_top_normal.jpg",
+      "sha256": "11f609df93ab617520276be54c6bcd3dcf7098767bc03c3520bdce36deb3d798",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Deadwood_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Rough_CRAFTING_side_albedo.jpg",
+      "sha256": "fd26d98ff48db735009424419eddfe8577fcd12d30945b6af91ef128ab8fa0ec",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Rough_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Rough_CRAFTING_side_normal.jpg",
+      "sha256": "a150797208d378e6e0671ae62d0f198ee87dfe38942ad317a229adbf75f11346",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Rough_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Rough_CRAFTING_top_albedo.jpg",
+      "sha256": "48af673eccf004be6e5c6d9678aff9e3d45b980729f5e0fcc0686097d7c59d26",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Rough_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_Rough_CRAFTING_top_normal.jpg",
+      "sha256": "da5353a9f77078fa34551aaea14adbf395fc920e849d66d5b2c9534a856ba12b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_Rough_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_TarredWood_CRAFTING_side_albedo.jpg",
+      "sha256": "3dd14cdaf9ce4f62a1a883646430348ad7cf0e66417e5eb0436d18422e354ba9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_TarredWood_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_TarredWood_CRAFTING_side_normal.jpg",
+      "sha256": "29fca80868788b34c4569c51c8e2dd3e204af49d1c7ac7b2a98b50f6ba26fdc8",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_TarredWood_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_TarredWood_CRAFTING_top_albedo.jpg",
+      "sha256": "3dd14cdaf9ce4f62a1a883646430348ad7cf0e66417e5eb0436d18422e354ba9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_TarredWood_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T1_Wood_TarredWood_CRAFTING_top_normal.jpg",
+      "sha256": "29fca80868788b34c4569c51c8e2dd3e204af49d1c7ac7b2a98b50f6ba26fdc8",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T1_Wood_TarredWood_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_albedo.jpg",
+      "sha256": "344cbe79624409e68ac6af3f312a1004612ab52f395850da9ef0ba41c8f07d4b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_normal.jpg",
+      "sha256": "8d7574cb2c11578d604947d4a6fb92d5bbe22f6230695c83a0f41b0218aa6080",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_albedo.jpg",
+      "sha256": "dd1187e8beaa61461abc908690358c8288503c0b3cb7634347e86b318da68e05",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_normal.jpg",
+      "sha256": "d2a20482a481fcc43488fc153fbc8ff21225fbef44f6b095c7d4f33d94125982",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Stone_Catacombs_REWARD_side_albedo.jpg",
+      "sha256": "22daaced56eb2c57e390dd6f9f82b973c39cbefb8ae86cca55466de69665e46f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Stone_Catacombs_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Stone_Catacombs_REWARD_side_normal.jpg",
+      "sha256": "c7b8e6ba640e56a5db83e11a8320a1d172111b2b27dd7e174f58d15b2c71cb35",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Stone_Catacombs_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Stone_Catacombs_REWARD_top_albedo.jpg",
+      "sha256": "60f6b4aae86d77558e5a13c2bc071656695a0128585c399c3a6e51d68edf6e07",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Stone_Catacombs_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Dungeon_Stone_Catacombs_REWARD_top_normal.jpg",
+      "sha256": "41d99d1df03bd44aff34044bf8cbb1604eae64879f0640956d8feb4bb678c0eb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Dungeon_Stone_Catacombs_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_GlowDirt_Green_CRAFTING_side_albedo.jpg",
+      "sha256": "4038f0300c09dd80634f5a1bbf33231c702d8f207d923201609c6eac09b5c8e1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_GlowDirt_Green_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_GlowDirt_Green_CRAFTING_side_normal.jpg",
+      "sha256": "d0c57540c32e29175f016796bd3512cbbd68d89ca52c3f3927ada2a3b81ce372",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_GlowDirt_Green_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_GlowDirt_Green_CRAFTING_top_albedo.jpg",
+      "sha256": "4038f0300c09dd80634f5a1bbf33231c702d8f207d923201609c6eac09b5c8e1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_GlowDirt_Green_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_GlowDirt_Green_CRAFTING_top_normal.jpg",
+      "sha256": "d0c57540c32e29175f016796bd3512cbbd68d89ca52c3f3927ada2a3b81ce372",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_GlowDirt_Green_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Loam_FiredBricks_CRAFTING_side_albedo.jpg",
+      "sha256": "f62891d557956d7911aaf2f7103196419274697d4f64a86343a4f2918b2af90e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Loam_FiredBricks_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Loam_FiredBricks_CRAFTING_side_normal.jpg",
+      "sha256": "45663fe72d268694b34747236696f88c0a94fad8558e53291c83ea33b136bb55",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Loam_FiredBricks_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Loam_FiredBricks_CRAFTING_top_albedo.jpg",
+      "sha256": "0278612746ccd19e4422ce541fd62751fe6fc1ebee2045e49af27cdec5c2eb73",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Loam_FiredBricks_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Loam_FiredBricks_CRAFTING_top_normal.jpg",
+      "sha256": "6c20b705d1e61f7ac0a3ae0daabd00da84d7950bb24ec4c788c68e3292fad8fb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Loam_FiredBricks_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Metal_Copper_CRAFTING_side_albedo.jpg",
+      "sha256": "b78d81e2c3f2f2e76f714a6898c26dfbad81d3c1ced34957c3d7abefd8a59242",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Metal_Copper_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Metal_Copper_CRAFTING_side_normal.jpg",
+      "sha256": "e8db916c763584bf930fd58065f3e8ac475c63b8134344fcb74d4fed8f9401bb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Metal_Copper_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Metal_Copper_CRAFTING_top_albedo.jpg",
+      "sha256": "be03fc55dc5e676e6c3eec89ae09523a87549ef5497408bf565a083731a5c6b6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Metal_Copper_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Metal_Copper_CRAFTING_top_normal.jpg",
+      "sha256": "cd0a41ee1378171fc6d0e6707f5eafe67dfe8f276a34c187f3155dbff4bf7f74",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Metal_Copper_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Nation01_Citywall01_REWARD_side_albedo.jpg",
+      "sha256": "4651851c7a3e6e26b93cb69c4ab083370d18b03c68aebfa051e8d27c4f2a927b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Nation01_Citywall01_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Nation01_Citywall01_REWARD_side_normal.jpg",
+      "sha256": "a6a1608ccefa132cf2fd42cdf894c2e2e510021bc6eb6dd4d215e6dd618a90d2",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Nation01_Citywall01_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Nation01_Citywall01_REWARD_top_albedo.jpg",
+      "sha256": "6450c2d3d7d788714dd52da7def28d358f47de860d56ddb56c3f01c6639c66bc",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Nation01_Citywall01_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Nation01_Citywall01_REWARD_top_normal.jpg",
+      "sha256": "2568301e16931a7674cec3b4aef9d2b9f8d46e958d111660d08b83e1189cd7a0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Nation01_Citywall01_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_DungeonWall_REWARD_side_albedo.jpg",
+      "sha256": "8f108324f763b5ef2f967d80ffc0575c03526b31000062129d9b71de908ed1b1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_DungeonWall_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_DungeonWall_REWARD_side_normal.jpg",
+      "sha256": "d5a7e11a103bb1441feb16ab2897216aec4f7e50b4274f6dc94558a1bc883c1a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_DungeonWall_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_DungeonWall_REWARD_top_albedo.jpg",
+      "sha256": "765fc097d312aaea2ae7558cb81423bcf6b4e003a14992e39a11dcdd9add3dbc",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_DungeonWall_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_DungeonWall_REWARD_top_normal.jpg",
+      "sha256": "473595a11645ec90f056a58e13a54ad65eb43b5c4b866e5ee7f09c4c1f8b0629",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_DungeonWall_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_albedo.jpg",
+      "sha256": "8a3806a874ad4cab9585f0f2f89c028579792ab81549309267e7f906b250d2c1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_normal.jpg",
+      "sha256": "369f38729117114c6acd4907d3243cf1a459655794ae6d2a391d341778bbd685",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_albedo.jpg",
+      "sha256": "e38ec68d269c6cd3966a8194ff5d5c474027a3655d38c1e855b4167e448dcd57",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_normal.jpg",
+      "sha256": "f031b24454d0150734cb2b8b3690d08a5b869fcf554a95d6150d9ad6039fc39f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_albedo.jpg",
+      "sha256": "70a8c114de94d7381ce896e6684f886667401f37fff372d437bc51605a16be9b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_normal.jpg",
+      "sha256": "7a19fadf5d6d4f5618ea6591e8aded686479f665e85b5b8650974790513cb9c1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_albedo.jpg",
+      "sha256": "2e50e6218b89210c9f13828d3f573b68b2f161bcfb198c20f60e022b278a8767",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_normal.jpg",
+      "sha256": "02ad7df9a6f5ab7e63a4bd1d46ac50308d51d0edb825e5298798fde5cf0aba2a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Fancy_CRAFTING_side_albedo.jpg",
+      "sha256": "cd08d8fbb3b751a5a18fc0b4bf8c00f3d19ec4505e602a3557c9f44a28901394",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Fancy_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Fancy_CRAFTING_side_normal.jpg",
+      "sha256": "290a506b7a29ba4edf403e8dc3be5a85bb6c969a0317794f6ef284e5f29ed66b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Fancy_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Fancy_CRAFTING_top_albedo.jpg",
+      "sha256": "14b0644e01a05b5cc200d5f36242174c2cad974812b33ced51a52e4572a7db6a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Fancy_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Fancy_CRAFTING_top_normal.jpg",
+      "sha256": "939d77c83de8024f2d1c6842f0652d7d6d73b8ffb4a73fd7425deaf1b17006d1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Fancy_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Timberframe_REWARD_side_albedo.jpg",
+      "sha256": "5aa408bed52e9eea00eaf7d09f014691335b89bd00f19e3aa03366a0be27fcc2",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Timberframe_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Timberframe_REWARD_side_normal.jpg",
+      "sha256": "7baf60ad3948df4e779950b71881c605cba173639058a713d1694b03a5f856a7",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Timberframe_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Timberframe_REWARD_top_albedo.jpg",
+      "sha256": "389b2beaf05011be75b771b299b251b6d1db3bccd952aa16e78217ed9b22eb92",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Timberframe_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_Timberframe_REWARD_top_normal.jpg",
+      "sha256": "7be4b67b6f67ce0d680cc67bfd579480e047e332d6f604417d8eca5d07a7abd3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_Timberframe_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_TimberframeBrick_REWARD_side_albedo.jpg",
+      "sha256": "6b6d2e92b756d45ef809002abc9894226deea0e564fa92016a1ab106e97ee8a7",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_TimberframeBrick_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_TimberframeBrick_REWARD_side_normal.jpg",
+      "sha256": "7f0a277ba5cd3ed4de2aa524e49a8cc232958bd4f517d9188fef8eca1fab2764",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_TimberframeBrick_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_TimberframeBrick_REWARD_top_albedo.jpg",
+      "sha256": "65d145b17f2b6d82b56578c4186f2ea836533e5cba7c51d55c424e735fe9f281",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_TimberframeBrick_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T2_Wood_TimberframeBrick_REWARD_top_normal.jpg",
+      "sha256": "b10ccd45fb6bb68dac06467b0117690bc58082954a9556bfe949ba5283252541",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T2_Wood_TimberframeBrick_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Dungeon_Fancy_REWARD_side_albedo.jpg",
+      "sha256": "097d2313e1897631fc75ca4ecb73c3224acfb08eb0be8a6427722e0f3498bf84",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Dungeon_Fancy_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Dungeon_Fancy_REWARD_side_normal.jpg",
+      "sha256": "776e64e314ba42586ef9df6ba52a52bc1e7e924c585d10c34d7cd3b82bacf582",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Dungeon_Fancy_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Dungeon_Fancy_REWARD_top_albedo.jpg",
+      "sha256": "3ee36947dcf95b1219fc6f7f00f7e6e391295c9857b47ba57054f433fae45b17",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Dungeon_Fancy_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Dungeon_Fancy_REWARD_top_normal.jpg",
+      "sha256": "3d978018ea594e926a159a1bf6491413f12784414cb349ab539fa3b27e1a4ad1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Dungeon_Fancy_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_albedo.jpg",
+      "sha256": "03e9cbd8cd3c76a02393ae8729df325607771e0999fa07b08f96e6e60cf746fd",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_normal.jpg",
+      "sha256": "e99ad581deade1d64eaed3d3088bfbbcc0e153de0a7967a41494371a05f4abd3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_albedo.jpg",
+      "sha256": "03e9cbd8cd3c76a02393ae8729df325607771e0999fa07b08f96e6e60cf746fd",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_normal.jpg",
+      "sha256": "e99ad581deade1d64eaed3d3088bfbbcc0e153de0a7967a41494371a05f4abd3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Metal_Bronze_CRAFTING_side_albedo.jpg",
+      "sha256": "86d2bc35ee3f0dac3b77e85ffd44d121b2119c0e9a2dcdcda6a1bf22299af21d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Metal_Bronze_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Metal_Bronze_CRAFTING_side_normal.jpg",
+      "sha256": "4563012036386b0dc04be7edd7c43c3770dc703e1ac46c09ddda3c53d21baf12",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Metal_Bronze_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Metal_Bronze_CRAFTING_top_albedo.jpg",
+      "sha256": "6feca43496f033eea7b070bf69875aa8538a85226421cfcf2685f661e4114c58",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Metal_Bronze_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Metal_Bronze_CRAFTING_top_normal.jpg",
+      "sha256": "f3c2ed69d01e01177156479aa6b9553611d93d7c42714529b74777202b3273fa",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Metal_Bronze_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Brittle_MixedSizes_REWARD_side_albedo.jpg",
+      "sha256": "a31669a2c9a03f785ab41cf0605314686464575528892a8d361c5227d3443694",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Brittle_MixedSizes_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Brittle_MixedSizes_REWARD_side_normal.jpg",
+      "sha256": "39b2502612d5bec11497ef146cc4d99255a43188eac2d8cc168669f7c939f548",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Brittle_MixedSizes_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Brittle_MixedSizes_REWARD_top_albedo.jpg",
+      "sha256": "de5702ef3ca222dfd3f7211d24ed319683cfad63b29a95833db38a13897fc5c3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Brittle_MixedSizes_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Brittle_MixedSizes_REWARD_top_normal.jpg",
+      "sha256": "8f5edb01aa9263ae2d08bef36990c6ee6dac950c78ce7d687e469926455f1816",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Brittle_MixedSizes_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CastleWall_REWARD_side_albedo.jpg",
+      "sha256": "7eb40bc206f1a1254a303506254cada5f5ae78f1dd7a904b37d4e973432e6aaa",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CastleWall_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CastleWall_REWARD_side_normal.jpg",
+      "sha256": "88ce3b29a35966b82190ab261c088e0497bb6c5bb7f50f2c6b6bc94206933fc3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CastleWall_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CastleWall_REWARD_top_albedo.jpg",
+      "sha256": "402068ce14ee2471a77c8dd8027328fbaa3e8cc96b176c9f4c7d2edee1189cd8",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CastleWall_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CastleWall_REWARD_top_normal.jpg",
+      "sha256": "d6f482464fcf1747b87a12b5f6a7e34f745c72fef497b58834a7344c72e852f9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CastleWall_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CityWall_REWARD_side_albedo.jpg",
+      "sha256": "e2d9e0d574f1912b3481a06433b6ee5b9d1fb4e2c0e85b3c94d23a5a2604f60f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CityWall_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CityWall_REWARD_side_normal.jpg",
+      "sha256": "6dae264236733c3a30c03f96e6d828bc144f06699a0f3b5120f7e2c37d1820e9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CityWall_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CityWall_REWARD_top_albedo.jpg",
+      "sha256": "247494355c18d945380dc2c856c41525ef68ac80ccc3830a818c5c0f526ba41e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CityWall_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_CityWall_REWARD_top_normal.jpg",
+      "sha256": "a4cea55a956682358572b7888ed20ad991942dc8cfe660360a78b5e1127e15ee",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_CityWall_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Fancy_CRAFTING_side_albedo.jpg",
+      "sha256": "ec9f931483b1238373df2c2215192294e54bf8ac1074eaca0dcf54e68869dad4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Fancy_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Fancy_CRAFTING_side_normal.jpg",
+      "sha256": "eb2112ac19f4da9c847435dd112db86db91dba4fb1f9950a683a726733ede3f3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Fancy_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Fancy_CRAFTING_top_albedo.jpg",
+      "sha256": "62188f25cefcdd12dd2ad93c4d25e7897d649e3aee8f7cbd2642db1325b4987c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Fancy_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Fancy_CRAFTING_top_normal.jpg",
+      "sha256": "074b47b04eddedec6d97c10a2301aded21bf986880b96c66e1a7d810804677d1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Fancy_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_albedo.jpg",
+      "sha256": "ef3bff141aebc8f30f1b061a287e84f45d504374238424eeb65cc7b15c9a4281",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_normal.jpg",
+      "sha256": "344a1511703a1b0aa754e84752774e1e8ca2254740e4a0b096a1d542407da6b3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_albedo.jpg",
+      "sha256": "2c8052fa9d115c23cac52f019e522538ef216970d6ce64d444fb3bf572178b86",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_normal.jpg",
+      "sha256": "c422f10bb84aca220d90d9044915d853fe1fbe15779feec128544e1b8b90ab86",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Sandstone_Temple_REWARD_side_albedo.jpg",
+      "sha256": "8717598146cd01bbcdb45dbf0a83dfcc6b0694f3302af878c47c54fe33502fea",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Sandstone_Temple_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Sandstone_Temple_REWARD_side_normal.jpg",
+      "sha256": "a255fbd848141bf3dfab7cc256741270c2227c2fee4a0fe119e0febf9db2c814",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Sandstone_Temple_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Sandstone_Temple_REWARD_top_albedo.jpg",
+      "sha256": "0cf5e1e21decca64df4600bf364641b751f668532b5f685b63c2d58abe1c8118",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Sandstone_Temple_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Sandstone_Temple_REWARD_top_normal.jpg",
+      "sha256": "df809f9e430b06394d4a16586a8d84cf8e77248fdc54459e6448d5d5f8f1519b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Sandstone_Temple_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Stone_WellWall_REWARD_side_albedo.jpg",
+      "sha256": "0d180bbf006fe96ce019f756f53e86884f6dba69bb66d92547a770fd4cc0f697",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Stone_WellWall_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Stone_WellWall_REWARD_side_normal.jpg",
+      "sha256": "7e5e09874398a86bc3b6fe0ebb7aabfd74e2e39b698652e8019f034b9995950a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Stone_WellWall_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Stone_WellWall_REWARD_top_albedo.jpg",
+      "sha256": "3108fe066433acbcf011835f9a35f97f8ca98bbb2234287f132e56e52d225c96",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Stone_WellWall_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Dungeon_Stone_WellWall_REWARD_top_normal.jpg",
+      "sha256": "1dafb7bd715aae69c4f0474764d5432128640dc11ba779f549dd600ba93d9598",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Dungeon_Stone_WellWall_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Metal_Iron_CRAFTING_side_albedo.jpg",
+      "sha256": "ae6d6cbd51576ed9b0bc4db728e3b9285b767e7b0d24fae8b27f0c28fc7be8fc",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Metal_Iron_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Metal_Iron_CRAFTING_side_normal.jpg",
+      "sha256": "0e43e3fa66f84bfd93abb8674b411c2379d6a128405ccd7f8f6ee0fd32c3752b",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Metal_Iron_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Metal_Iron_CRAFTING_top_albedo.jpg",
+      "sha256": "a8502ff963977e9fe6d3d112b12ad3eb4269a195926dc2d696f5fe0cde55b22e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Metal_Iron_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Metal_Iron_CRAFTING_top_normal.jpg",
+      "sha256": "30d5c061c347d406344f1d019f8134437de90e3030679c2ac4f883fb11653b4d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Metal_Iron_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Polished_REWARD_side_albedo.jpg",
+      "sha256": "949d17a9255f20229a73cfe458616d658b3215fc2526e0fe4085ff355fe7618d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Polished_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Polished_REWARD_side_normal.jpg",
+      "sha256": "f7ad6922db21fdfd4c05c7198f882090bb070f9f49c6ee2954e2132388a7d28c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Polished_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Polished_REWARD_top_albedo.jpg",
+      "sha256": "5210fd18f8c1844366664f0b956265a603b05e9693266f8d0202a57d8c05b33e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Polished_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Polished_REWARD_top_normal.jpg",
+      "sha256": "ff3de1cb5d89b1a4c17324fbd770536dc48bfa76f9d8f9b0b464bb8589d446ab",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Polished_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Sandstone_Rough_CRAFTING_side_albedo.jpg",
+      "sha256": "afd8d06af981661d2ef714ac36d4f9d455929e5f2dad0b58f0aeaec99d5c7ba3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Sandstone_Rough_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Sandstone_Rough_CRAFTING_side_normal.jpg",
+      "sha256": "18b65b2cf5ce9012cfdaaa7ad79fe1334ea628b69c8db598a3c3ff9e94f7cc87",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Sandstone_Rough_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Sandstone_Rough_CRAFTING_top_albedo.jpg",
+      "sha256": "1a71acf821ab1dc4339f627f0feabb62bb0b61a90364b3ed25b0f09f799729b2",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Sandstone_Rough_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Sandstone_Rough_CRAFTING_top_normal.jpg",
+      "sha256": "fb471ed868fd932fcb5e47134f44f54a8910f65986a976dd7c9fd45d1dc237c2",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Sandstone_Rough_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_albedo.jpg",
+      "sha256": "7ed9421eda1ebb20dba6dbff446b80605219e0db2f343785a9be40f38448d2ea",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_normal.jpg",
+      "sha256": "e6a85d6329f12871f1e566688907c42174a585d16ee1c0c826074a4999d37a4a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_albedo.jpg",
+      "sha256": "3772e1dc90ff0d1389b7a897a9798e1c1493815a74a4857e80148acb30d4e021",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_normal.jpg",
+      "sha256": "9f55ef59d8688004e55ee4e1680dd551cd17074fa3c84d9242d34dc6faf652bc",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_albedo.jpg",
+      "sha256": "3e1080b3c3919fd96d30193ebfe2eacc8028952836dea21dd7136702e3b4e387",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_normal.jpg",
+      "sha256": "b46ed0ab40ebbfb6767c65d76c089b175a9c9b6826962e78b33e10ae2a468656",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_albedo.jpg",
+      "sha256": "e71997ade58857fe00607da90535a1261553e30221a7e39ac35a7d521c10e82f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_normal.jpg",
+      "sha256": "5cd909b21fb8cb73fcd92a893ec090c451dbe7029e8de44b26ce8945e350ba04",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Stone_HighlyPolished_REWARD_side_albedo.jpg",
+      "sha256": "73046357654c8c32ed02c6449e774ac570e29d471b0d8caf38a67b902378bb0c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Stone_HighlyPolished_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Stone_HighlyPolished_REWARD_side_normal.jpg",
+      "sha256": "708a420959602d25d2f126583fa2bbb353fafce3626fde62adbffc6d617414ba",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Stone_HighlyPolished_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Stone_HighlyPolished_REWARD_top_albedo.jpg",
+      "sha256": "f1105bd5980c7519739975f4591b6890b76934390b540e03f92192492025b4b4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Stone_HighlyPolished_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Stone_HighlyPolished_REWARD_top_normal.jpg",
+      "sha256": "baa01b1ef19a3d4849e82e816620c889417f77c9ab6e09c466624729dec01d9d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Stone_HighlyPolished_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Wood_Palmwood_CRAFTING_side_albedo.jpg",
+      "sha256": "ba4109dc30c42af392567580162638f8c4a00ed2d032d5a328e82a820e174fed",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Wood_Palmwood_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Wood_Palmwood_CRAFTING_side_normal.jpg",
+      "sha256": "9137ab5c75edccebd5fb6a7b78f994f04d9b954179e9b85bc663dc8878a02364",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Wood_Palmwood_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Wood_Palmwood_CRAFTING_top_albedo.jpg",
+      "sha256": "b9f63e8eab50694e4e5ee11db84fd55ed8bf54414ee689d60070779b51c151b4",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Wood_Palmwood_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_Wood_Palmwood_CRAFTING_top_normal.jpg",
+      "sha256": "421248678a28d17b5aa01ce9170bda95983e15dd2d51dffba5395fe9f3036528",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_Wood_Palmwood_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_YellowGlow_MemorialHall_CRAFTING_side_albedo.jpg",
+      "sha256": "036dd6a2e77c115fecc572429693c36f528cf1280c489f6173a92af3f46ea07e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_YellowGlow_MemorialHall_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_YellowGlow_MemorialHall_CRAFTING_side_normal.jpg",
+      "sha256": "7c77cfdf06a00395b9b74ffdae737c230bbe29cb376b3ae7c85e239e100945eb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_YellowGlow_MemorialHall_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_YellowGlow_MemorialHall_CRAFTING_top_albedo.jpg",
+      "sha256": "036dd6a2e77c115fecc572429693c36f528cf1280c489f6173a92af3f46ea07e",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_YellowGlow_MemorialHall_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T4_YellowGlow_MemorialHall_CRAFTING_top_normal.jpg",
+      "sha256": "7c77cfdf06a00395b9b74ffdae737c230bbe29cb376b3ae7c85e239e100945eb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T4_YellowGlow_MemorialHall_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_albedo.jpg",
+      "sha256": "99de136648d34685f14ac391636dc1963ce2282ae3742c1ff967a9dbde218b3d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_normal.jpg",
+      "sha256": "4c6e47af1bb60f7d8907bc1f03183b2adc40e244e2348a077f0939a9d4792667",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_albedo.jpg",
+      "sha256": "33affd37ea8898313070acb6554172e190837733972516f6f47a440a3de20a40",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_normal.jpg",
+      "sha256": "1a21feba7375bb8d33c7cf7d56a71921c2cb22ab86d2c39f91c251845c080d75",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_Polished_REWARD_side_albedo.jpg",
+      "sha256": "41ade538071ffb6e8179011b424f6c1a4f298131c3232a4c72eb4f7184245ce1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_Polished_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_Polished_REWARD_side_normal.jpg",
+      "sha256": "78c8054f66e81e90ec010b222b58536ff1d0328f1c4dfdec8bc393e6d7c76edb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_Polished_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_Polished_REWARD_top_albedo.jpg",
+      "sha256": "fa7d0f333f1659f63f8f8ae1a7c88bba5fb2e9ac0acdd43c019b4eb4bb4cb320",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_Polished_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_Polished_REWARD_top_normal.jpg",
+      "sha256": "b02404c05aa6aa34d104ca4517ac302bcb68c24366357d500da07ee22652e062",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_Polished_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_side_albedo.jpg",
+      "sha256": "195a92461e566cdb851303619b34fab1998834a297d986c28b23fe646b6e0012",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_side_normal.jpg",
+      "sha256": "4ac91e4272219edda00e292aa69e63818f4baf15b89729d7f9c88cbe654f3c5d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_top_albedo.jpg",
+      "sha256": "0ba9ee50ac63ca052606d07175bdd5dec51e9411092638551eb62ab751bbfbe5",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Granite_top_normal.jpg",
+      "sha256": "19568e6bfdc6dad7ccdc2623642ca4a460a757258ded3ddaa8807b8b493981bf",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Granite_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Obsidian_Polished_REWARD_side_albedo.jpg",
+      "sha256": "7a1b054344f42c0918f4c2998d48eaf8216ff0272013233c1e553c81d57d8db1",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Obsidian_Polished_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Obsidian_Polished_REWARD_side_normal.jpg",
+      "sha256": "fde0ac9728864dd2ad132d8b4fd9770a95d9c6649f49ba7b81a135b30a0f6ec2",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Obsidian_Polished_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Obsidian_Polished_REWARD_top_albedo.jpg",
+      "sha256": "5df981bbeab97311d6e6de0809779e7d3e719429e36a31c84167e25fe66f7caa",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Obsidian_Polished_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_Obsidian_Polished_REWARD_top_normal.jpg",
+      "sha256": "a9fde8151e125f6fa6b91185058ed8f2d057f335a18a26762b63ffbde0e9943c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_Obsidian_Polished_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_StarMaterial_REWARD_side_albedo.jpg",
+      "sha256": "33caa58ed8a58353ea5cdca81164298ce6f0a3064a9d1f7b5f1dc3d2ebfeb039",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_StarMaterial_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_StarMaterial_REWARD_side_normal.jpg",
+      "sha256": "05a7a3b6ea4ca543c5cbac90ea1e796a2c6c75d959f3f850d4984975118d98d0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_StarMaterial_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_StarMaterial_REWARD_top_albedo.jpg",
+      "sha256": "cca4b4ca8652ddde663c0076730c06c60ea00d04b103dc66ac20d8e995c9ba8d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_StarMaterial_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Stone_StarMaterial_REWARD_top_normal.jpg",
+      "sha256": "ee81dd6c48ec295f8cae66b22d647fd2bf63d9109af49099b3f0457de921536d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Stone_StarMaterial_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Wood_Pine_side_albedo.jpg",
+      "sha256": "e2ea9d2d9f65bf3b0ceff63eec127cc982accbdae35cabd552541a8ac117fa92",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Wood_Pine_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Wood_Pine_side_normal.jpg",
+      "sha256": "fae96f80c8624fdde805f4de5d660cb4f76439d27b1730152720f6834df4d931",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Wood_Pine_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Wood_Pine_top_albedo.jpg",
+      "sha256": "f79c34fda21140465a6b693fdfe491e486c79cc814b2522787eb28c56e1a9225",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Wood_Pine_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T5_Wood_Pine_top_normal.jpg",
+      "sha256": "aefbb6d8d8bad80b09e23c4253f1cd4d2fc96840c6b55e22cf3004e1f5f71167",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T5_Wood_Pine_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Fabric_CastleCarpet_REWARD_side_albedo.jpg",
+      "sha256": "0d950d8f4b57bc138486f784412eee7449fcf397a05be7111838be4fb08fcf71",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Fabric_CastleCarpet_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Fabric_CastleCarpet_REWARD_side_normal.jpg",
+      "sha256": "b5a74f01eff55b6ae6e6499e030ad28efe2a55add91f02cdf544845a53ec19d6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Fabric_CastleCarpet_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Fabric_CastleCarpet_REWARD_top_albedo.jpg",
+      "sha256": "0d950d8f4b57bc138486f784412eee7449fcf397a05be7111838be4fb08fcf71",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Fabric_CastleCarpet_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Fabric_CastleCarpet_REWARD_top_normal.jpg",
+      "sha256": "b5a74f01eff55b6ae6e6499e030ad28efe2a55add91f02cdf544845a53ec19d6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Fabric_CastleCarpet_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_albedo.jpg",
+      "sha256": "8abe756148fc4468e6ccd9d38c680bbdf2ba55b5716675e5673541504d0b5913",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_normal.jpg",
+      "sha256": "be6f8eca7ee79c14599768b38ef2019871d381f58f549bda283efab723561a6c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_albedo.jpg",
+      "sha256": "f5c923728cb83c7a1dc7a40b608b6541d2dbad10864a2ec053f11e3b2462f7a0",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_normal.jpg",
+      "sha256": "76b0239d57887b67505af66498a6db35774de076166e52fed9fbfcc84a3c40ca",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_albedo.jpg",
+      "sha256": "d312bf124fcd405c778703b4ee25dd9cbb38681076c8ac87c844405dd1337787",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_normal.jpg",
+      "sha256": "51f07c21f37374e217cd637b97d746ede4253a52175ab0a532066a91dc8df541",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_albedo.jpg",
+      "sha256": "4ceb6c7a6961281c88c7a9fca1ecbd6bbdd349cfd026c1c4d85483285acf4747",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_normal.jpg",
+      "sha256": "643ca4aa708c6f2af38f689b777b0336afdd26c7cddda3568530f99b13e867ea",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_albedo.jpg",
+      "sha256": "90762334d1b5231fa019722330ef70ad53a23c366b790847169f07e362e9c22c",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_normal.jpg",
+      "sha256": "a6d694f9dc77a8667c0d0f0c1f68003516d24c0dfbdabfa4dfd6c7e2aff4c364",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_albedo.jpg",
+      "sha256": "6535dab26ae991cade523250314744e526c92f6faf641956d7bc4efa47509443",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_normal.jpg",
+      "sha256": "dde459db15a40e5369d272b4d67707b5c94bf26cd2c4ce4336e04039f6d4632a",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Bamboo_side_albedo.jpg",
+      "sha256": "8b8b8894a389cc5e98404a803e2f1ebe5c51ea46a8385e01bccc3fb95315380d",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Bamboo_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Bamboo_side_normal.jpg",
+      "sha256": "db998c0eee29ffbcc2acdb1a32bf5d59b590302ee209e20945f9d46c654c5acb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Bamboo_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Bamboo_top_albedo.jpg",
+      "sha256": "aa66cd082a4f60dceb0de999908154942ece87ea893567df80d96aba8d0e2595",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Bamboo_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Bamboo_top_normal.jpg",
+      "sha256": "fe45eeec1615f6c253c766063bcd57c82f8ec43de49e5c969827dfd4a13c1915",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Bamboo_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_albedo.jpg",
+      "sha256": "9cba9ac4a14a189cc6a671a384e2c57ef7910bba237dbb956ebed1ad52a092a9",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_normal.jpg",
+      "sha256": "31cb9c128da3b9842bb2377efe3eac4c1f95afeadd0f936b58420aa4a5129c84",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_albedo.jpg",
+      "sha256": "55ebf01f2d3649acfd147577d3f0ffaeab477c71fb45ba2b14ea0ff775dfaccb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_normal.jpg",
+      "sha256": "3476ba50114d43f7e363f24b77a1f39be187c8c257c9abf070926e4c0e052377",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_albedo.jpg",
+      "sha256": "17f538c02d8d070cb30d272a2f44439e1e54c39ece79b709ad28dea337cd06eb",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_normal.jpg",
+      "sha256": "ec0bb405736b6fc5834142ba57205b6f8786c60c2056d583eccd0b05a3e7a1d3",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_albedo.jpg",
+      "sha256": "7a5d14ed1ac1abe011603aec15fa021b044a546dfb3779871471b1eaadae485f",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_normal.jpg",
+      "sha256": "60e9cfc741033922e9fc135f2c843074caa1fc4baeb4be2af3a1c2e027df3451",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_SunkenCity_REWARD_side_albedo.jpg",
+      "sha256": "e736d32f121975af1b5ec257a902f8c68818561f56fba2121234e2ee3e3b9f29",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_SunkenCity_REWARD_side_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_SunkenCity_REWARD_side_normal.jpg",
+      "sha256": "3f58c657212954f3840c4fda092756e736ddbdbe943ea85e23769346c2bd87d6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_SunkenCity_REWARD_side_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_SunkenCity_REWARD_top_albedo.jpg",
+      "sha256": "e736d32f121975af1b5ec257a902f8c68818561f56fba2121234e2ee3e3b9f29",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_SunkenCity_REWARD_top_albedo.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/Block_T7_Stone_Ancient_SunkenCity_REWARD_top_normal.jpg",
+      "sha256": "3f58c657212954f3840c4fda092756e736ddbdbe943ea85e23769346c2bd87d6",
+      "source": "docs\\enshrouded-houses\\visual\\Block_T7_Stone_Ancient_SunkenCity_REWARD_top_normal.jpg"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/book_pile_01_a.glb",
+      "sha256": "b7fb0ad22c02e7eebd56bc5161a8a20fa19f637ee1ec2e980b4a1cef6a28bdba",
+      "source": "docs\\enshrouded-houses\\visual\\book_pile_01_a.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/book_pile_03_c.glb",
+      "sha256": "d5809d653c51365e12075d9fe8e3f27b1eb509541108731cf7dee8381769a6b0",
+      "source": "docs\\enshrouded-houses\\visual\\book_pile_03_c.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/book_pile_05_e.glb",
+      "sha256": "51eae58457687a7885688f04cce02251fdec8b98ef101be4cd757594aed92074",
+      "source": "docs\\enshrouded-houses\\visual\\book_pile_05_e.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/butter_churn.glb",
+      "sha256": "1e1f23724d1dde144e1f8b53fe8529cc794e7024c4b9c53d5ced3852782eb2c4",
+      "source": "docs\\enshrouded-houses\\visual\\butter_churn.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/carding_machine.glb",
+      "sha256": "10e79099c04b2217ea75cde66e17485fa425d6280a5da604adf5c7cbdbbad4d6",
+      "source": "docs\\enshrouded-houses\\visual\\carding_machine.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/carpenter_workbench.glb",
+      "sha256": "d3f4c309d317f0c1a979e7122907b3944234190b171a146bcecc810883bcd223",
+      "source": "docs\\enshrouded-houses\\visual\\carpenter_workbench.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chair.glb",
+      "sha256": "fd3c0da2c6e6cfdcf87366c735fe0f17e284a404c1012486a969c58177d8609f",
+      "source": "docs\\enshrouded-houses\\visual\\chair.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/charcoal_kiln.glb",
+      "sha256": "54b3980ccc9839990d19dd58883f85c85c5cdcb6f645e443fc09ba5f7ad911c6",
+      "source": "docs\\enshrouded-houses\\visual\\charcoal_kiln.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chest_magic_large.glb",
+      "sha256": "842e668d6394b27b298329cb67c09f5e93b949c6bf3bb218ff927463524b85d4",
+      "source": "docs\\enshrouded-houses\\visual\\chest_magic_large.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chest_magic_medium.glb",
+      "sha256": "f1a6a09f146c40e7490dc107c578d51e0b92fee3484765c7b9dcfa87ffdfec33",
+      "source": "docs\\enshrouded-houses\\visual\\chest_magic_medium.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chest_magic_small.glb",
+      "sha256": "1311ef4b92257b1dd52e75b412456d6eaa00368f50dddbd6a69d84150f5149f2",
+      "source": "docs\\enshrouded-houses\\visual\\chest_magic_small.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chest_medium.glb",
+      "sha256": "77f46bad9d6a335736990ab3221f20f149d82a3b169a12c5c284351dd6179f5c",
+      "source": "docs\\enshrouded-houses\\visual\\chest_medium.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/chest_wooden.glb",
+      "sha256": "94fafb8f42a9c33b3ec7b326372e4e2d0ed322be05c25346a0dfa8f0c46d5a2c",
+      "source": "docs\\enshrouded-houses\\visual\\chest_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort2_t1_bathroomsink.glb",
+      "sha256": "25fe0d8b95b990f304a1db1fa127822d0b410accff2110d44ef5b5739e4b0a17",
+      "source": "docs\\enshrouded-houses\\visual\\comfort2_t1_bathroomsink.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort2_t1_bathroomtoilet.glb",
+      "sha256": "2d372f2f27666378f3f4935a359687bd677db1b8af78f922124f62614c913122",
+      "source": "docs\\enshrouded-houses\\visual\\comfort2_t1_bathroomtoilet.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort2_t1_bathroomtub.glb",
+      "sha256": "4c3821a543a188593ab4c75e2dc766766fbee120dcadd28f1a5a3f29adf5d492",
+      "source": "docs\\enshrouded-houses\\visual\\comfort2_t1_bathroomtub.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort3_t2_hearth_fireplace.glb",
+      "sha256": "cea06697c3c394ebe1d03db127cf64f299a70d0327509cdc786f3122f21a191b",
+      "source": "docs\\enshrouded-houses\\visual\\comfort3_t2_hearth_fireplace.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort3_t2_table_night.glb",
+      "sha256": "bbfe0c4f0342bf3d97432566393252ec078fcebee223eaf641f7da9d45bbae22",
+      "source": "docs\\enshrouded-houses\\visual\\comfort3_t2_table_night.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort4_t3_bathroomsink.glb",
+      "sha256": "1fa73dd1d59a2ee539f456bea9daa41db5f9edd3f1d43565ca74620fbcd1c984",
+      "source": "docs\\enshrouded-houses\\visual\\comfort4_t3_bathroomsink.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort4_t3_hearth_fireplace.glb",
+      "sha256": "c756bad8f986ccd886ba940bcda567d6e9a01e37bd4f52e8a05d7c835cada570",
+      "source": "docs\\enshrouded-houses\\visual\\comfort4_t3_hearth_fireplace.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort5_t4_chair.glb",
+      "sha256": "07e75c68cbc64a1ef49972104d16544da00453088431b61e76787b32217a1901",
+      "source": "docs\\enshrouded-houses\\visual\\comfort5_t4_chair.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort5_t4_table_large.glb",
+      "sha256": "010aef6ab606584fad4e8046fd968265ea3e529e9e0bf32edfb925c58212bef9",
+      "source": "docs\\enshrouded-houses\\visual\\comfort5_t4_table_large.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort6_t4_bed.glb",
+      "sha256": "31d49a075ea330fb9cbb19182c07e0130b98484fd98da9b399d703060065686c",
+      "source": "docs\\enshrouded-houses\\visual\\comfort6_t4_bed.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort7_t4_throne.glb",
+      "sha256": "c0854abb8e16eec093036b82c0dc8cd6b9ddec7e9e903ec38dab94815b6d84a2",
+      "source": "docs\\enshrouded-houses\\visual\\comfort7_t4_throne.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t0_illuminationfloor.glb",
+      "sha256": "8a81664b0373b8c112d4009b9431855825d655a424772742d745271d76e5bb41",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t0_illuminationfloor.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t0_illuminationfloor_firefly.glb",
+      "sha256": "4856ce6bf5d2c83625e6b651d25d17bed95938b63ba8ba47a00504508b97d60e",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t0_illuminationfloor_firefly.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t0_illuminationsmall_firefly.glb",
+      "sha256": "54824649097d557289cfee59e3c94365ddf6f74de63c4d3d92122352c0e7e19c",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t0_illuminationsmall_firefly.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t0_illuminationwall_torch.glb",
+      "sha256": "27c03cdab897cfeeab3c7c8450bd2b6dde7ff63321c1396800b26cb7d15b79d0",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t0_illuminationwall_torch.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_floor_plantfibre_big.glb",
+      "sha256": "f53eff3fefda8f9d03374dbcc88644593e9f85b8440ffb707607e48aaef82284",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_floor_plantfibre_big.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illumination_skull_candle_01_a_on.glb",
+      "sha256": "70734a3e89b533bc632192b6d3ae23a62f2783941abfba1a33dfa89a83fcb4b1",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illumination_skull_candle_01_a_on.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illuminationceiling_chandelier.glb",
+      "sha256": "28e394d024524c7249c875c7c4f9cbefeaabde6792a11e55b94c525a052fb941",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illuminationceiling_chandelier.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illuminationfloor_brazier.glb",
+      "sha256": "d0111eced740026620d5c62f77f60cde2e5d4d1fbe2e284037923d4f04c66cb0",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illuminationfloor_brazier.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illuminationfloor_standingtorch.glb",
+      "sha256": "b741497785e9f7b77308135654c645696c74b4ade3e199f468df2f0622f26fa3",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illuminationfloor_standingtorch.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illuminationsmall_candle.glb",
+      "sha256": "5291a1c976d1d7e5bdd453f7ea7412e275df418beef55467edb4eabdfed9c0bf",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illuminationsmall_candle.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t1_illuminationwall_candle.glb",
+      "sha256": "b4f173bebea4acd0dd84218bc37a21436f39dc82e5c6b639e5c660ee23019d16",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t1_illuminationwall_candle.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t4_floor_carpet01.glb",
+      "sha256": "c88edb681aa74b34ce2fb543dd5feccb0f8926dbe0afed2b4fe8159f977b1a39",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t4_floor_carpet01.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t4_illuminationwall.glb",
+      "sha256": "9740dc85ce6e49b74c7d74872f1edc066520bc2bcd5cb92a93f859be0586c92c",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t4_illuminationwall.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t4_wall_painting_3.glb",
+      "sha256": "3f70524e4707b94c4d717b801c59d5804d6494a7d46561e96a6170589d2aaaa0",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t4_wall_painting_3.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/comfort_t4_wall_painting_8.glb",
+      "sha256": "5ce50664d8c88c41b88c83181f4d5cf4b84f7347025a676b5278b8e234129a25",
+      "source": "docs\\enshrouded-houses\\visual\\comfort_t4_wall_painting_8.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/component_athanor.glb",
+      "sha256": "570f4ee18e50195c62ac3bb84cbbc0d7c6ed28e0c583f8b68254e2e0f3ec622f",
+      "source": "docs\\enshrouded-houses\\visual\\component_athanor.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/component_kettle.glb",
+      "sha256": "4512acef1eb1e6295ace528557d900475d36f5d205e17eee2e7a920d36138a08",
+      "source": "docs\\enshrouded-houses\\visual\\component_kettle.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/component_scientific_instruments.glb",
+      "sha256": "e4beecad34a2a934246a8d0e8c1b920d7b2aa675a786dd6be660814d81733e61",
+      "source": "docs\\enshrouded-houses\\visual\\component_scientific_instruments.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/door_wooden.glb",
+      "sha256": "11b97f8579d433a27c5b3bb15d95c09941a27a8a29c0b90fd8153c12c6fe3dce",
+      "source": "docs\\enshrouded-houses\\visual\\door_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/drying_rack.glb",
+      "sha256": "cd7e26c6c52dabfc2000600eadac4b4eb5e07edf4778d12e68444f6f5e082f04",
+      "source": "docs\\enshrouded-houses\\visual\\drying_rack.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/farmbed_empty.glb",
+      "sha256": "2529de3e5ccbc496961e66e85237fc1858284f44431292ab5f77e8b074c92d84",
+      "source": "docs\\enshrouded-houses\\visual\\farmbed_empty.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/farmer_kitchen.glb",
+      "sha256": "ba5553aa10e0af32e237440e4448160c75972b19596cce9db571bcb826c2c123",
+      "source": "docs\\enshrouded-houses\\visual\\farmer_kitchen.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/fireplace_comfort1_t0.glb",
+      "sha256": "4cf41c9c61ff9b7255abb24f89ba53e6a47c815069ab7daa90d3b42cbdfdff62",
+      "source": "docs\\enshrouded-houses\\visual\\fireplace_comfort1_t0.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/fireplace_comfort2_t1.glb",
+      "sha256": "3ff4bedc67ded68418ef80f0ecaeeb616d37a4a607efa5c72b7801573fb9f3ff",
+      "source": "docs\\enshrouded-houses\\visual\\fireplace_comfort2_t1.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flame_altar_t0.glb",
+      "sha256": "c7de6e59b90f57433418ec77d8fdcc22fef1bbb831711ba0e511be0d526e25a9",
+      "source": "docs\\enshrouded-houses\\visual\\flame_altar_t0.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flame_altar_t2.glb",
+      "sha256": "6d6a303c3cc2cef85d22cecd2f791302d89c4f2d71a898a8568d1c99091d5def",
+      "source": "docs\\enshrouded-houses\\visual\\flame_altar_t2.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flame_altar_t3.glb",
+      "sha256": "8d03aad8528e4454fe2903e12e6cd83be1e6f52781747144a61a8f0ecf45ce0e",
+      "source": "docs\\enshrouded-houses\\visual\\flame_altar_t3.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flame_altar_t4.glb",
+      "sha256": "446e17bef08cf2f34dc59fe11bf0454bfddad52f520d146c1e18b8c5e9e919bc",
+      "source": "docs\\enshrouded-houses\\visual\\flame_altar_t4.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flame_altar_t5.glb",
+      "sha256": "d9cacc316777217c1e2d94c019f65cf77db8f5f9f1249477246bfb371e91dbc9",
+      "source": "docs\\enshrouded-houses\\visual\\flame_altar_t5.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_long_ground_pink.glb",
+      "sha256": "fc96ad385f2d499fb1d241016f50173d82253cddee3c4352fc6cc025905d1c10",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_long_ground_pink.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_long_ground_red.glb",
+      "sha256": "fc96ad385f2d499fb1d241016f50173d82253cddee3c4352fc6cc025905d1c10",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_long_ground_red.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_long_ground_white.glb",
+      "sha256": "fc96ad385f2d499fb1d241016f50173d82253cddee3c4352fc6cc025905d1c10",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_long_ground_white.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_long_ground_yellow.glb",
+      "sha256": "fc96ad385f2d499fb1d241016f50173d82253cddee3c4352fc6cc025905d1c10",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_long_ground_yellow.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_small_ground_pink.glb",
+      "sha256": "8ec8b7f892b9821526b72004e417c92f3dd4d2a9c5bad379fb214b1e07bef3f1",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_small_ground_pink.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/flower_pot_small_ground_red.glb",
+      "sha256": "8ec8b7f892b9821526b72004e417c92f3dd4d2a9c5bad379fb214b1e07bef3f1",
+      "source": "docs\\enshrouded-houses\\visual\\flower_pot_small_ground_red.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/forge.glb",
+      "sha256": "804450329fb1fe89c34f70f4a55142df1c52a4c20d037ce0aaf5e9322c0a8cf0",
+      "source": "docs\\enshrouded-houses\\visual\\forge.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/grapplehook_anchor_pullup.glb",
+      "sha256": "e85cedf75160690f7324b831b25930a79b8f55ac209038bd5a620910298fa58c",
+      "source": "docs\\enshrouded-houses\\visual\\grapplehook_anchor_pullup.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/hand_grinder.glb",
+      "sha256": "a19de531f2682ae3941602a7da634c4a0adeb8f77c8f5f52b1e34a393424fd84",
+      "source": "docs\\enshrouded-houses\\visual\\hand_grinder.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/hand_spindle.glb",
+      "sha256": "f2dd100c5c296dc1ac5fadbc3c2e1e49a97453bfc868fceff20692e12c0c46e3",
+      "source": "docs\\enshrouded-houses\\visual\\hand_spindle.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/improved_grinder.glb",
+      "sha256": "ad45cdaac77a7b12cff39567fcffae8792f468cb34b409309cedeef134c62349",
+      "source": "docs\\enshrouded-houses\\visual\\improved_grinder.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/kiln.glb",
+      "sha256": "9b8743bda971b03c2ecfc9c52f00ffd47c073281679b984e012c821a7b46e71a",
+      "source": "docs\\enshrouded-houses\\visual\\kiln.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/laboratory.glb",
+      "sha256": "3746d6d1909f37099cb9c81efb4265ae21da4e5aeba34818697a789c7971079c",
+      "source": "docs\\enshrouded-houses\\visual\\laboratory.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/logic_workbench.glb",
+      "sha256": "f3b7511e63387631ec54602c71f85e95f8b96e316e54d6a6eac43fd21776ebd9",
+      "source": "docs\\enshrouded-houses\\visual\\logic_workbench.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/medieval_grill.glb",
+      "sha256": "718b6cfec825690c40ce36a7c48569f9f7795fa67de4f6e22eef815638079ec6",
+      "source": "docs\\enshrouded-houses\\visual\\medieval_grill.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/oven.glb",
+      "sha256": "a16d2d7b8821b2b1806becd6d47154423d3450c3b3b33411327a67d017b46913",
+      "source": "docs\\enshrouded-houses\\visual\\oven.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/README.json",
+      "sha256": "29a268c6d809d624c702e49b6db5e3b214db3ae81ab52fb7c709fa75574c7d8f",
+      "source": "docs\\enshrouded-houses\\visual\\README.json"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/seedbed.glb",
+      "sha256": "2ba51c6f09d4d36904279898b85221fcbd98efd7367886ac670c4368a79b7aeb",
+      "source": "docs\\enshrouded-houses\\visual\\seedbed.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/smelter.glb",
+      "sha256": "7a414f0319e615496831fd265186fc1827af746a83082774d0d680c3c4bc74d0",
+      "source": "docs\\enshrouded-houses\\visual\\smelter.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/spinning_wheel.glb",
+      "sha256": "a89304a7f4f4e0650c7b90cc95a88674a40aff8984fb28213ac9207c9eb85995",
+      "source": "docs\\enshrouded-houses\\visual\\spinning_wheel.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/stairs_secret.glb",
+      "sha256": "4b374f1290311e860734b903dbf758d0bb7173983f30ee4f391bf52c619b3ed5",
+      "source": "docs\\enshrouded-houses\\visual\\stairs_secret.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/storage_56_t4_box.glb",
+      "sha256": "33ecd558628bfa974d181aa170f0bb20895c4760a66a99f503958b1a3c5d4180",
+      "source": "docs\\enshrouded-houses\\visual\\storage_56_t4_box.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_fence_crude_wooden_01.glb",
+      "sha256": "25d7ffc69f0831400898d5ff025f7ba8142cd3eaf25447b48bc3e895ca07fc92",
+      "source": "docs\\enshrouded-houses\\visual\\t0_fence_crude_wooden_01.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_fence_crude_wooden_02.glb",
+      "sha256": "53b94308784a4dbc23ba506c51e523ca2b35b6a1f2e05c69f3d515dbc693e16d",
+      "source": "docs\\enshrouded-houses\\visual\\t0_fence_crude_wooden_02.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_fencegate_crude_wooden.glb",
+      "sha256": "95bb9ae6e59ae07970a757b6953cc15757f5642a31ae61893b069146d4743c9c",
+      "source": "docs\\enshrouded-houses\\visual\\t0_fencegate_crude_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_fencegate_crude_wooden1.glb",
+      "sha256": "d5b95400a09f8a0cd9251823301a34cc386fac29233ea314e41e0b0cc0dcae4b",
+      "source": "docs\\enshrouded-houses\\visual\\t0_fencegate_crude_wooden1.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_shelf_roughwood.glb",
+      "sha256": "258010fafbafdfca1c3170864447c63066811622a66a5c78e6b7556cb07e9d08",
+      "source": "docs\\enshrouded-houses\\visual\\t0_shelf_roughwood.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t0_shelf_small_roughwood.glb",
+      "sha256": "3fbce3854feaf9a2148d00098c81e0371ccfe051a0ec2196ce863e8f4546d4cc",
+      "source": "docs\\enshrouded-houses\\visual\\t0_shelf_small_roughwood.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t1_cabinet_carved_wooden_large.glb",
+      "sha256": "d1d58a217518bfcc9f2f25c8a57ad4d822033f48e50c6bf7d508eb7cbf26fcb6",
+      "source": "docs\\enshrouded-houses\\visual\\t1_cabinet_carved_wooden_large.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t1_door_carved_wooden.glb",
+      "sha256": "2db193c7ee33a791f4b765e1bd8ebf41ba1de1e12f998c3831643ffcb7281c86",
+      "source": "docs\\enshrouded-houses\\visual\\t1_door_carved_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t1_shelf_carved_wooden.glb",
+      "sha256": "e7d8309c28d34235d7425fb6d4dc58a186c6350be680969f2e784522f3ff46ce",
+      "source": "docs\\enshrouded-houses\\visual\\t1_shelf_carved_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_barrel_wooden01.glb",
+      "sha256": "d3f34433b08f64bbc1550af9504bdc32fa60b125ed8c6bc21cb60eb338d43897",
+      "source": "docs\\enshrouded-houses\\visual\\t2_barrel_wooden01.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_bucket_wood.glb",
+      "sha256": "9fa3a88cd6b9dd40855a6cad4a1469b4321b8267d6380ffa976bbe7574015142",
+      "source": "docs\\enshrouded-houses\\visual\\t2_bucket_wood.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_cabinet_large_ornamented_wooden.glb",
+      "sha256": "7aafcbd32989357f588c3d2d7da9ad9c71bbf5d0d636f0de8873087cfa48b456",
+      "source": "docs\\enshrouded-houses\\visual\\t2_cabinet_large_ornamented_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_cabinet_small_ornamented_wooden.glb",
+      "sha256": "c338df5385d75aec62d0a7316cd7aff1450571d6a17f2522dabb0450a09bfcbc",
+      "source": "docs\\enshrouded-houses\\visual\\t2_cabinet_small_ornamented_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_crate_wooden.glb",
+      "sha256": "f1153bf16ffedddee3c525b5b4aef178e0dfd8e53113d4a086c6b2a85d546908",
+      "source": "docs\\enshrouded-houses\\visual\\t2_crate_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_door_ornamented_wooden.glb",
+      "sha256": "6b8538a9549df427d606b6f7bceeb09dc9aa6a5de2108b51fc0a9af8600f4a2e",
+      "source": "docs\\enshrouded-houses\\visual\\t2_door_ornamented_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_door_ornamented_wooden_double.glb",
+      "sha256": "5c8e48107988a8324719dd4fe699e2db4ce6cf1c97fb8b901149048bb85cfc4b",
+      "source": "docs\\enshrouded-houses\\visual\\t2_door_ornamented_wooden_double.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_shelf_ornamented_wooden.glb",
+      "sha256": "b82f1bfa70e4e6dac5ad37daf256dae592afbc924286665d1cfbeac3d2a90ba3",
+      "source": "docs\\enshrouded-houses\\visual\\t2_shelf_ornamented_wooden.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_statue_pikemeadstatue.glb",
+      "sha256": "0b35f7c12574d022a621e58603820f3e9124eb710006d3648d4ff6999e999c68",
+      "source": "docs\\enshrouded-houses\\visual\\t2_statue_pikemeadstatue.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t2_window_ornamented_wooden_frame.glb",
+      "sha256": "685d91ff6710f8a1cb616eb2b14c7dd15d5a287beb275834123f421c1c4ca0bf",
+      "source": "docs\\enshrouded-houses\\visual\\t2_window_ornamented_wooden_frame.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t3_fence_stone_limestone.glb",
+      "sha256": "16b55d65c725de2637c4565c4fb2aebad4c52e9f5541ef56dc85059f19da3ff6",
+      "source": "docs\\enshrouded-houses\\visual\\t3_fence_stone_limestone.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t3_statue_underworld.glb",
+      "sha256": "5fb28eb039aaa792610c2345a0eb1c9bf2a4e999fe1d2ab0bda2dcab195902b6",
+      "source": "docs\\enshrouded-houses\\visual\\t3_statue_underworld.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_bowl_crystal.glb",
+      "sha256": "a874b7e8c14d0600878b7b04cfbdd61f12f381707231019d9c61d6d4b327250e",
+      "source": "docs\\enshrouded-houses\\visual\\t4_bowl_crystal.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_clutter_globe.glb",
+      "sha256": "c1ca2eccb433f035825dd5855b6090123b2b50bd9452183f363790425a04ce96",
+      "source": "docs\\enshrouded-houses\\visual\\t4_clutter_globe.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_cup_crystal.glb",
+      "sha256": "0f124aa21dd0e57923ced3ffe52e2285ab0844151de036581f54a6eb6d295399",
+      "source": "docs\\enshrouded-houses\\visual\\t4_cup_crystal.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_jug_crystal.glb",
+      "sha256": "1292bd842f4c3cdbc3eb0a287e61df0046216d6d85af82ac1706296b5828c129",
+      "source": "docs\\enshrouded-houses\\visual\\t4_jug_crystal.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_platter_crystal.glb",
+      "sha256": "d285118b2e5e1d11f9115390b4f1f62caf4dbf0bd64038085170d14fa48bc28f",
+      "source": "docs\\enshrouded-houses\\visual\\t4_platter_crystal.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_shelf_palmwood.glb",
+      "sha256": "9ab1e0bc4d82bbb021d27ba36b70c8fe1aca7d16fd04602c4f7f56e44527dd92",
+      "source": "docs\\enshrouded-houses\\visual\\t4_shelf_palmwood.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t4_statue_snake.glb",
+      "sha256": "585de70edd6530cf78be134e4820bdc0840affb2d366e6bdc4273a07d87a06db",
+      "source": "docs\\enshrouded-houses\\visual\\t4_statue_snake.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/t6_wetland_king_statue.glb",
+      "sha256": "bc562314bcfa4d386aba00fb0b9b39e6711d41381f7ee97f3f0cf9b2c6dc2500",
+      "source": "docs\\enshrouded-houses\\visual\\t6_wetland_king_statue.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/table_large_comfort2.glb",
+      "sha256": "fadaf5008fba9dfc6e8f8483197bcd21ba0cfa59ea14b365baddbb000ab49b64",
+      "source": "docs\\enshrouded-houses\\visual\\table_large_comfort2.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/table_medium.glb",
+      "sha256": "f31f41335c59cf6f28bc3bbbb078a8cd53cb3370c356425b5334beae049f57ab",
+      "source": "docs\\enshrouded-houses\\visual\\table_medium.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/table_night_comfort2.glb",
+      "sha256": "f3be7da29b1d3ebc261f7fb96ddb528b09e11f846724213c9468a250c45c1f42",
+      "source": "docs\\enshrouded-houses\\visual\\table_night_comfort2.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/table_saw.glb",
+      "sha256": "9b85a5e8c82c2c40572b431c06717a1ffff589ac3ebfa90ce9f20227bd2c3e6a",
+      "source": "docs\\enshrouded-houses\\visual\\table_saw.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/tanning_station.glb",
+      "sha256": "4e0c23b8ea539b86915f3e594fe644bfd134a50143bd60d6655b55ec987d0141",
+      "source": "docs\\enshrouded-houses\\visual\\tanning_station.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/window_wooden_frame.glb",
+      "sha256": "97a225a3117e9d14ee63f6d3655a9fdc9f827f63d41b71af96a4da65d29fecbe",
+      "source": "docs\\enshrouded-houses\\visual\\window_wooden_frame.glb"
+    },
+    {
+      "path": "docs/enshrouded-houses/visual/workbench.glb",
+      "sha256": "654f5a1f8784750081ce2b2640f637311d1f014a5be4c30c2a0825bdba735843",
+      "source": "docs\\enshrouded-houses\\visual\\workbench.glb"
+    },
+    {
+      "path": "skills/enshrouded-building/references/aesthetics.md",
+      "sha256": "5e32c407c22dd537ac8572944383693e4fec45c3cc3970debe7ac1426b773dac",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/aesthetics.md"
+    },
+    {
+      "path": "skills/enshrouded-building/references/checklist.md",
+      "sha256": "2361b956aba82030eeb4affac02fd2857ac4af6a9e9ab8d1923339d4bf80bc6c",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/checklist.md"
+    },
+    {
+      "path": "skills/enshrouded-building/references/format.md",
+      "sha256": "ff9b4bc2f8341a50956c60be90090dae4265b7cc4d6ca47d3b7a5e3a16700109",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/format.md"
+    },
+    {
+      "path": "skills/enshrouded-building/references/rules.md",
+      "sha256": "0491f98711e3dbfe913aa5e21164b5a7f5b344c8c1f108cba04134c2a679a81a",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/rules.md"
+    },
+    {
+      "path": "skills/enshrouded-building/references/sizes.md",
+      "sha256": "c549761219dd743f5431c29efad99f726ed9173c9b2423c553ce18902dc6caf6",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/sizes.md"
+    },
+    {
+      "path": "skills/enshrouded-building/references/tools.md",
+      "sha256": "d78afc0e9931854b9ccafc7d7dad70918deae35831219e8f0c530dd9bac5e0cf",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/references/tools.md"
+    },
+    {
+      "path": "skills/enshrouded-building/SKILL.md",
+      "sha256": "fd8373b21a9fbfc4a9ff8b49134692b79303d58840240bf104a837edb5c1b132",
+      "source": "Custodian_GM/.agents/skills/enshrouded-building/SKILL.md"
+    }
+  ]
+}

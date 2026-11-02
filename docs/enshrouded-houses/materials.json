@@ -1,0 +1,3457 @@
+{
+"schema": "enshrouded-materials/1",
+"cell_encoding": "building voxel cell value = material_id (high byte 0). Terrain cell = material_id in low byte, density in high byte.",
+"note": "Terrain materials have no blending-layer textures here.",
+"materials": [
+{
+"debug_name": "Block_Roof_T1_PlantFibre",
+"name_en": "Plant Fiber Roof Block",
+"name_ru": "Кровельный блок из растительных волокон",
+"material_id": 130,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Plant_Fibre",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 2,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T1_PlantFibre_side_albedo.jpg",
+"Block_Roof_T1_PlantFibre_side_normal.jpg",
+"Block_Roof_T1_PlantFibre_top_albedo.jpg",
+"Block_Roof_T1_PlantFibre_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T1_StoneShingles_CRAFTING",
+"name_en": "Stone Shingle Roof Block",
+"name_ru": "Каменный кровельный блок",
+"material_id": 173,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Material_T1_Stone_Flint",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 45,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T1_StoneShingles_CRAFTING_side_albedo.jpg",
+"Block_Roof_T1_StoneShingles_CRAFTING_side_normal.jpg",
+"Block_Roof_T1_StoneShingles_CRAFTING_top_albedo.jpg",
+"Block_Roof_T1_StoneShingles_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T1_Wood_TaredShingles_CRAFTING",
+"name_en": "Tarred Shingle Roof Block",
+"name_ru": "Просмоленный кровельный блок",
+"material_id": 133,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Wood_Logs",
+"count": 5
+},
+{
+"item": "Material_T1_Tar",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 5,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_albedo.jpg",
+"Block_Roof_T1_Wood_TaredShingles_CRAFTING_side_normal.jpg",
+"Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_albedo.jpg",
+"Block_Roof_T1_Wood_TaredShingles_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T2_Loam_FiredShingle_CRAFTING",
+"name_en": "Roof Tiles Block",
+"name_ru": "Кровельный блок",
+"material_id": 159,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Fired_Brick",
+"count": 4
+},
+{
+"item": "Material_T2_Clay",
+"count": 1
+},
+{
+"item": "Material_T1_Plant_Fibre",
+"count": 1
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 31,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_albedo.jpg",
+"Block_Roof_T2_Loam_FiredShingle_CRAFTING_side_normal.jpg",
+"Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_albedo.jpg",
+"Block_Roof_T2_Loam_FiredShingle_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T3_Straw",
+"name_en": "Straw Roof Block",
+"name_ru": "Соломенный кровельный блок",
+"material_id": 169,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T3_Straw",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 41,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T3_Straw_side_albedo.jpg",
+"Block_Roof_T3_Straw_side_normal.jpg",
+"Block_Roof_T3_Straw_top_albedo.jpg",
+"Block_Roof_T3_Straw_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T3_Tarred_Straw",
+"name_en": "Tarred Straw Block",
+"name_ru": "Блок из просмоленной соломы",
+"material_id": 168,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T3_Straw",
+"count": 4
+},
+{
+"item": "Material_T1_Tar",
+"count": 1
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 40,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T3_Tarred_Straw_side_albedo.jpg",
+"Block_Roof_T3_Tarred_Straw_side_normal.jpg",
+"Block_Roof_T3_Tarred_Straw_top_albedo.jpg",
+"Block_Roof_T3_Tarred_Straw_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T4_Desert_Shingles_01_Reward",
+"name_en": "Desert Shingle Roof Block",
+"name_ru": "Пустынный кровельный блок",
+"material_id": 200,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Clay",
+"count": 10
+},
+{
+"item": "Material_T3_Bronze_Bar",
+"count": 1
+},
+{
+"item": "Material_T4_Lapislazuli",
+"count": 1
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 72,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T4_Desert_Shingles_01_Reward_side_albedo.jpg",
+"Block_Roof_T4_Desert_Shingles_01_Reward_side_normal.jpg",
+"Block_Roof_T4_Desert_Shingles_01_Reward_top_albedo.jpg",
+"Block_Roof_T4_Desert_Shingles_01_Reward_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T5_Granite_Ornamented",
+"name_en": "Granite Ornamented Roof Block",
+"name_ru": "Украшенный гранитный кровельный блок",
+"material_id": 194,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 10
+},
+{
+"item": "Material_T5_Silver_Bar",
+"count": 1
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 66,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T5_Granite_Ornamented_side_albedo.jpg",
+"Block_Roof_T5_Granite_Ornamented_side_normal.jpg",
+"Block_Roof_T5_Granite_Ornamented_top_albedo.jpg",
+"Block_Roof_T5_Granite_Ornamented_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T5_Granite_Shingles",
+"name_en": "Granite Shingle Roof Block",
+"name_ru": "Гранитный кровельный блок",
+"material_id": 195,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 10
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 67,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T5_Granite_Shingles_side_albedo.jpg",
+"Block_Roof_T5_Granite_Shingles_side_normal.jpg",
+"Block_Roof_T5_Granite_Shingles_top_albedo.jpg",
+"Block_Roof_T5_Granite_Shingles_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T6_Palmleaves",
+"name_en": "Palm Leaf Roof Block",
+"name_ru": "Кровельный блок из пальмовых листьев",
+"material_id": 205,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T6_PalmLeaves",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 77,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T6_Palmleaves_side_albedo.jpg",
+"Block_Roof_T6_Palmleaves_side_normal.jpg",
+"Block_Roof_T6_Palmleaves_top_albedo.jpg",
+"Block_Roof_T6_Palmleaves_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T6_ShellLime_Castle_WallAndRoof",
+"name_en": "Castle Roof Block",
+"name_ru": "Кровельный блок замка",
+"material_id": 208,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 10
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 80,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_albedo.jpg",
+"Block_Roof_T6_ShellLime_Castle_WallAndRoof_side_normal.jpg",
+"Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_albedo.jpg",
+"Block_Roof_T6_ShellLime_Castle_WallAndRoof_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD",
+"name_en": "Drak Temple Roof Block",
+"name_ru": "Кровельный храмовый блок дракков",
+"material_id": 204,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 10
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 76,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_albedo.jpg",
+"Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_side_normal.jpg",
+"Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_albedo.jpg",
+"Block_Roof_T6_ShellLime_LizardTemple_Shingles_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD",
+"name_en": "Shell Limestone Shingles",
+"name_ru": "Кровельный блок из ракушечника",
+"material_id": 207,
+"is_building_voxel": true,
+"category": "roof",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Clay",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 5
+}
+],
+"output_count": 50
+}
+],
+"blending_layer": 79,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_albedo.jpg",
+"Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_side_normal.jpg",
+"Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_albedo.jpg",
+"Block_Roof_T6_Shellime_PirateBay_Shingles_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Bones_REWARD",
+"name_en": "Bone Block",
+"name_ru": "Костный блок",
+"material_id": 174,
+"is_building_voxel": true,
+"category": "decorative",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Bones",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 46,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Bones_REWARD_side_albedo.jpg",
+"Block_T1_Bones_REWARD_side_normal.jpg",
+"Block_T1_Bones_REWARD_top_albedo.jpg",
+"Block_T1_Bones_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Flintstone_Rough_CRAFTING",
+"name_en": "Rough Flintstone Block",
+"name_ru": "Грубый кремниевый блок",
+"material_id": 166,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Stone_Flint",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 38,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Flintstone_Rough_CRAFTING_side_albedo.jpg",
+"Block_T1_Flintstone_Rough_CRAFTING_side_normal.jpg",
+"Block_T1_Flintstone_Rough_CRAFTING_top_albedo.jpg",
+"Block_T1_Flintstone_Rough_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_GlowDirt_Blue_CRAFTING",
+"name_en": "Blue Luminescent Block",
+"name_ru": "Синий светящийся блок",
+"material_id": 167,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T1_GlowDirt_Blue_ActiveMycelium",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 39,
+"emits_light": true,
+"emissive_intensity": 3.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_GlowDirt_Blue_CRAFTING_side_albedo.jpg",
+"Block_T1_GlowDirt_Blue_CRAFTING_side_normal.jpg",
+"Block_T1_GlowDirt_Blue_CRAFTING_top_albedo.jpg",
+"Block_T1_GlowDirt_Blue_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_GlowDirt_WarmWhite_CRAFTING",
+"name_en": "White Luminescent Block",
+"name_ru": "Белый светящийся блок",
+"material_id": 182,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Material_T1_GlowDirt_WarmWhite",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 54,
+"emits_light": true,
+"emissive_intensity": 3.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_GlowDirt_WarmWhite_CRAFTING_side_albedo.jpg",
+"Block_T1_GlowDirt_WarmWhite_CRAFTING_side_normal.jpg",
+"Block_T1_GlowDirt_WarmWhite_CRAFTING_top_albedo.jpg",
+"Block_T1_GlowDirt_WarmWhite_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_HollowHalls_Stone_HallowHalls_REWARD",
+"name_en": "Hollow Halls Block",
+"name_ru": "Блок из Залов умертвий",
+"material_id": 177,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Material_T1_Tar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 49,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.0625,
+"textures": [
+"Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_albedo.jpg",
+"Block_T1_HollowHalls_Stone_HallowHalls_REWARD_side_normal.jpg",
+"Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_albedo.jpg",
+"Block_T1_HollowHalls_Stone_HallowHalls_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Metal_Sheets_CRAFTING",
+"name_en": "Metal Block",
+"name_ru": "Металлический блок",
+"material_id": 172,
+"is_building_voxel": true,
+"category": "metal",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Metal_Sheets",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 44,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Metal_Sheets_CRAFTING_side_albedo.jpg",
+"Block_T1_Metal_Sheets_CRAFTING_side_normal.jpg",
+"Block_T1_Metal_Sheets_CRAFTING_top_albedo.jpg",
+"Block_T1_Metal_Sheets_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Stone_Mycelium_CRAFTING",
+"name_en": "Mycelium Overgrown Block",
+"name_ru": "Мицелиевый блок",
+"material_id": 149,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 2
+},
+{
+"item": "Material_T1_FogTerrain_Mycelium",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 21,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Stone_Mycelium_CRAFTING_side_albedo.jpg",
+"Block_T1_Stone_Mycelium_CRAFTING_side_normal.jpg",
+"Block_T1_Stone_Mycelium_CRAFTING_top_albedo.jpg",
+"Block_T1_Stone_Mycelium_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Stone_Nation01_Basement_REWARD",
+"name_en": "Roughly Cut Stone Block",
+"name_ru": "Блок из камня грубого сечения",
+"material_id": 138,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 8
+},
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 10,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Stone_Nation01_Basement_REWARD_side_albedo.jpg",
+"Block_T1_Stone_Nation01_Basement_REWARD_side_normal.jpg",
+"Block_T1_Stone_Nation01_Basement_REWARD_top_albedo.jpg",
+"Block_T1_Stone_Nation01_Basement_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Stone_Rough_CRAFTING",
+"name_en": "Rough Stone Block",
+"name_ru": "Грубый каменный блок",
+"material_id": 155,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 27,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Stone_Rough_CRAFTING_side_albedo.jpg",
+"Block_T1_Stone_Rough_CRAFTING_side_normal.jpg",
+"Block_T1_Stone_Rough_CRAFTING_top_albedo.jpg",
+"Block_T1_Stone_Rough_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Wood_Deadwood_CRAFTING",
+"name_en": "Shroud Wood Block",
+"name_ru": "Блок мертвого дерева",
+"material_id": 147,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Wood_Logs_Dead",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 19,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Wood_Deadwood_CRAFTING_side_albedo.jpg",
+"Block_T1_Wood_Deadwood_CRAFTING_side_normal.jpg",
+"Block_T1_Wood_Deadwood_CRAFTING_top_albedo.jpg",
+"Block_T1_Wood_Deadwood_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Wood_Rough_CRAFTING",
+"name_en": "Rough Wood Block",
+"name_ru": "Грубый деревянный блок",
+"material_id": 143,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Wood_Logs",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 15,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Wood_Rough_CRAFTING_side_albedo.jpg",
+"Block_T1_Wood_Rough_CRAFTING_side_normal.jpg",
+"Block_T1_Wood_Rough_CRAFTING_top_albedo.jpg",
+"Block_T1_Wood_Rough_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T1_Wood_TarredWood_CRAFTING",
+"name_en": "Tarred Wood Block",
+"name_ru": "Блок из просмоленной древесины",
+"material_id": 163,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Wood_Logs",
+"count": 2
+},
+{
+"item": "Material_T1_Tar",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 35,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T1_Wood_TarredWood_CRAFTING_side_albedo.jpg",
+"Block_T1_Wood_TarredWood_CRAFTING_side_normal.jpg",
+"Block_T1_Wood_TarredWood_CRAFTING_top_albedo.jpg",
+"Block_T1_Wood_TarredWood_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Dungeon_Marble_HallowHalls_REWARD",
+"name_en": "Red Marble Block",
+"name_ru": "Красный мраморный блок",
+"material_id": 179,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Red_Marble_Fragment",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 51,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_albedo.jpg",
+"Block_T2_Dungeon_Marble_HallowHalls_REWARD_side_normal.jpg",
+"Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_albedo.jpg",
+"Block_T2_Dungeon_Marble_HallowHalls_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Dungeon_Stone_Catacombs_REWARD",
+"name_en": "Weathered Stone Block",
+"name_ru": "Блок из старого камня",
+"material_id": 142,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T2_Stone_DeepForest",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 14,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Dungeon_Stone_Catacombs_REWARD_side_albedo.jpg",
+"Block_T2_Dungeon_Stone_Catacombs_REWARD_side_normal.jpg",
+"Block_T2_Dungeon_Stone_Catacombs_REWARD_top_albedo.jpg",
+"Block_T2_Dungeon_Stone_Catacombs_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_GlowDirt_Green_CRAFTING",
+"name_en": "Green Luminescent Block",
+"name_ru": "Зеленый светящийся блок",
+"material_id": 181,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Material_T2_GlowDirt_Green",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 53,
+"emits_light": true,
+"emissive_intensity": 4.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_GlowDirt_Green_CRAFTING_side_albedo.jpg",
+"Block_T2_GlowDirt_Green_CRAFTING_side_normal.jpg",
+"Block_T2_GlowDirt_Green_CRAFTING_top_albedo.jpg",
+"Block_T2_GlowDirt_Green_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Loam_FiredBricks_CRAFTING",
+"name_en": "Fired Bricks Block",
+"name_ru": "Блок из обожженных кирпичей",
+"material_id": 153,
+"is_building_voxel": true,
+"category": "brick",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Fired_Brick",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 25,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Loam_FiredBricks_CRAFTING_side_albedo.jpg",
+"Block_T2_Loam_FiredBricks_CRAFTING_side_normal.jpg",
+"Block_T2_Loam_FiredBricks_CRAFTING_top_albedo.jpg",
+"Block_T2_Loam_FiredBricks_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Metal_Copper_CRAFTING",
+"name_en": "Copper Block",
+"name_ru": "Медный блок",
+"material_id": 171,
+"is_building_voxel": true,
+"category": "metal",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Copper_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 43,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Metal_Copper_CRAFTING_side_albedo.jpg",
+"Block_T2_Metal_Copper_CRAFTING_side_normal.jpg",
+"Block_T2_Metal_Copper_CRAFTING_top_albedo.jpg",
+"Block_T2_Metal_Copper_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Stone_Nation01_Citywall01_REWARD",
+"name_en": "Citywall Block",
+"name_ru": "Блок городской стены",
+"material_id": 148,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T2_Stone_DeepForest",
+"count": 8
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_DeepForest",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 20,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Stone_Nation01_Citywall01_REWARD_side_albedo.jpg",
+"Block_T2_Stone_Nation01_Citywall01_REWARD_side_normal.jpg",
+"Block_T2_Stone_Nation01_Citywall01_REWARD_top_albedo.jpg",
+"Block_T2_Stone_Nation01_Citywall01_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Stone_Vukah_DungeonWall_REWARD",
+"name_en": "Temple Stones",
+"name_ru": "Храмовые камни",
+"material_id": 183,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T2_Stone_Talltree",
+"count": 8
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_Talltrees",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 55,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Stone_Vukah_DungeonWall_REWARD_side_albedo.jpg",
+"Block_T2_Stone_Vukah_DungeonWall_REWARD_side_normal.jpg",
+"Block_T2_Stone_Vukah_DungeonWall_REWARD_top_albedo.jpg",
+"Block_T2_Stone_Vukah_DungeonWall_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Stone_Vukah_PlaitedWalll_REWARD",
+"name_en": "Plaited Block",
+"name_ru": "Плетеный блок",
+"material_id": 185,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Twigs",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 57,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_albedo.jpg",
+"Block_T2_Stone_Vukah_PlaitedWalll_REWARD_side_normal.jpg",
+"Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_albedo.jpg",
+"Block_T2_Stone_Vukah_PlaitedWalll_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Wood_Deepforest_WoodPlanks_REWARD",
+"name_en": "Ornate Wood Block",
+"name_ru": "Резной деревянный блок",
+"material_id": 176,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Wood_Planks",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 48,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_albedo.jpg",
+"Block_T2_Wood_Deepforest_WoodPlanks_REWARD_side_normal.jpg",
+"Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_albedo.jpg",
+"Block_T2_Wood_Deepforest_WoodPlanks_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Wood_Fancy_CRAFTING",
+"name_en": "Refined Wood Block",
+"name_ru": "Блок обработанной древесины",
+"material_id": 144,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Wood_Planks",
+"count": 8
+},
+{
+"item": "Material_T1_Wood_Logs",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 16,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Wood_Fancy_CRAFTING_side_albedo.jpg",
+"Block_T2_Wood_Fancy_CRAFTING_side_normal.jpg",
+"Block_T2_Wood_Fancy_CRAFTING_top_albedo.jpg",
+"Block_T2_Wood_Fancy_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Wood_TimberframeBrick_REWARD",
+"name_en": "Brick-Timbered Block",
+"name_ru": "Блок бревенчатого кирпича",
+"material_id": 180,
+"is_building_voxel": true,
+"category": "brick",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Block_T2_Loam_FiredBricks_CRAFTING",
+"count": 1
+},
+{
+"item": "Material_T1_Wood_Logs",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 52,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T2_Wood_TimberframeBrick_REWARD_side_albedo.jpg",
+"Block_T2_Wood_TimberframeBrick_REWARD_side_normal.jpg",
+"Block_T2_Wood_TimberframeBrick_REWARD_top_albedo.jpg",
+"Block_T2_Wood_TimberframeBrick_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T2_Wood_Timberframe_REWARD",
+"name_en": "Half-Timbered Block",
+"name_ru": "Фахверковый блок",
+"material_id": 140,
+"is_building_voxel": true,
+"category": "timber_frame",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T2_Clay",
+"count": 5
+},
+{
+"item": "Material_T1_Wood_Logs",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 12,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T2_Wood_Timberframe_REWARD_side_albedo.jpg",
+"Block_T2_Wood_Timberframe_REWARD_side_normal.jpg",
+"Block_T2_Wood_Timberframe_REWARD_top_albedo.jpg",
+"Block_T2_Wood_Timberframe_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Dungeon_Fancy_REWARD",
+"name_en": "Fancy Stone Block",
+"name_ru": "Изящный каменный блок",
+"material_id": 145,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 7
+},
+{
+"item": "Material_T2_Wood_Planks",
+"count": 3
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 17,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_Dungeon_Fancy_REWARD_side_albedo.jpg",
+"Block_T3_Dungeon_Fancy_REWARD_side_normal.jpg",
+"Block_T3_Dungeon_Fancy_REWARD_top_albedo.jpg",
+"Block_T3_Dungeon_Fancy_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_GreenGlow_HallowHalls_Cairn_REWARD",
+"name_en": "Ectoplasm Block",
+"name_ru": "Блок из эктоплазмы",
+"material_id": 178,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Stone_Flint",
+"count": 5
+},
+{
+"item": "Material_T3_Green_Essence",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 50,
+"emits_light": true,
+"emissive_intensity": 3.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_albedo.jpg",
+"Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_side_normal.jpg",
+"Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_albedo.jpg",
+"Block_T3_GreenGlow_HallowHalls_Cairn_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Metal_Bronze_CRAFTING",
+"name_en": "Bronze Block",
+"name_ru": "Бронзовый блок",
+"material_id": 170,
+"is_building_voxel": true,
+"category": "metal",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T3_Bronze_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 42,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_Metal_Bronze_CRAFTING_side_albedo.jpg",
+"Block_T3_Metal_Bronze_CRAFTING_side_normal.jpg",
+"Block_T3_Metal_Bronze_CRAFTING_top_albedo.jpg",
+"Block_T3_Metal_Bronze_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Stone_Brittle_MixedSizes_REWARD",
+"name_en": "Regular Stone Block",
+"name_ru": "Обычный каменный блок",
+"material_id": 151,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 23,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_Stone_Brittle_MixedSizes_REWARD_side_albedo.jpg",
+"Block_T3_Stone_Brittle_MixedSizes_REWARD_side_normal.jpg",
+"Block_T3_Stone_Brittle_MixedSizes_REWARD_top_albedo.jpg",
+"Block_T3_Stone_Brittle_MixedSizes_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Stone_CastleWall_REWARD",
+"name_en": "Castle Wall Stone Block",
+"name_ru": "Каменный блок стены замка",
+"material_id": 165,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T3_Dirt_Steppes",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 37,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T3_Stone_CastleWall_REWARD_side_albedo.jpg",
+"Block_T3_Stone_CastleWall_REWARD_side_normal.jpg",
+"Block_T3_Stone_CastleWall_REWARD_top_albedo.jpg",
+"Block_T3_Stone_CastleWall_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Stone_CityWall_REWARD",
+"name_en": "Mixed Sandstone Block",
+"name_ru": "Блок из смешанного песчаника",
+"material_id": 186,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 58,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_Stone_CityWall_REWARD_side_albedo.jpg",
+"Block_T3_Stone_CityWall_REWARD_side_normal.jpg",
+"Block_T3_Stone_CityWall_REWARD_top_albedo.jpg",
+"Block_T3_Stone_CityWall_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Stone_Fancy_CRAFTING",
+"name_en": "Refined Stone Block",
+"name_ru": "Блок обработанного камня",
+"material_id": 128,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 5
+},
+{
+"item": "Material_T1_Stone_Flint",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 0,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T3_Stone_Fancy_CRAFTING_side_albedo.jpg",
+"Block_T3_Stone_Fancy_CRAFTING_side_normal.jpg",
+"Block_T3_Stone_Fancy_CRAFTING_top_albedo.jpg",
+"Block_T3_Stone_Fancy_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T3_Stone_Nation01_Shed_Basement_REWARD",
+"name_en": "Limestone Block",
+"name_ru": "Блок из известняка",
+"material_id": 162,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 6
+},
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 4
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 34,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_albedo.jpg",
+"Block_T3_Stone_Nation01_Shed_Basement_REWARD_side_normal.jpg",
+"Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_albedo.jpg",
+"Block_T3_Stone_Nation01_Shed_Basement_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Dungeon_Sandstone_Temple_REWARD",
+"name_en": "Desert Temple Block",
+"name_ru": "Пустынный храмовый блок",
+"material_id": 161,
+"is_building_voxel": true,
+"category": "sandstone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 8
+},
+{
+"item": "Material_T2_Indigo_Plant",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 33,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_Dungeon_Sandstone_Temple_REWARD_side_albedo.jpg",
+"Block_T4_Dungeon_Sandstone_Temple_REWARD_side_normal.jpg",
+"Block_T4_Dungeon_Sandstone_Temple_REWARD_top_albedo.jpg",
+"Block_T4_Dungeon_Sandstone_Temple_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Dungeon_Stone_WellWall_REWARD",
+"name_en": "Well Block",
+"name_ru": "Колодезный блок",
+"material_id": 146,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 8
+},
+{
+"item": "Material_T1_MushroomDrop_ShroudLiquid",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 18,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T4_Dungeon_Stone_WellWall_REWARD_side_albedo.jpg",
+"Block_T4_Dungeon_Stone_WellWall_REWARD_side_normal.jpg",
+"Block_T4_Dungeon_Stone_WellWall_REWARD_top_albedo.jpg",
+"Block_T4_Dungeon_Stone_WellWall_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Metal_Iron_CRAFTING",
+"name_en": "Iron Block",
+"name_ru": "Железный блок",
+"material_id": 135,
+"is_building_voxel": true,
+"category": "metal",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T4_Iron_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 7,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_Metal_Iron_CRAFTING_side_albedo.jpg",
+"Block_T4_Metal_Iron_CRAFTING_side_normal.jpg",
+"Block_T4_Metal_Iron_CRAFTING_top_albedo.jpg",
+"Block_T4_Metal_Iron_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_SandStone_Polished_REWARD",
+"name_en": "Desert City Wall",
+"name_ru": "Стена пустынного города",
+"material_id": 164,
+"is_building_voxel": true,
+"category": "sandstone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 15
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 36,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_SandStone_Polished_REWARD_side_albedo.jpg",
+"Block_T4_SandStone_Polished_REWARD_side_normal.jpg",
+"Block_T4_SandStone_Polished_REWARD_top_albedo.jpg",
+"Block_T4_SandStone_Polished_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_SandStone_SandstonePlastered_01_CRAFTING",
+"name_en": "Regular Sandstone Block",
+"name_ru": "Обычный песчаниковый блок",
+"material_id": 150,
+"is_building_voxel": true,
+"category": "sandstone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 8
+},
+{
+"item": "Material_T2_Clay",
+"count": 2
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 22,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_albedo.jpg",
+"Block_T4_SandStone_SandstonePlastered_01_CRAFTING_side_normal.jpg",
+"Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_albedo.jpg",
+"Block_T4_SandStone_SandstonePlastered_01_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_SandStone_Sandstone_Fancy_CRAFTING",
+"name_en": "Refined Sandstone Block",
+"name_ru": "Блок из обработанного песчаника",
+"material_id": 158,
+"is_building_voxel": true,
+"category": "sandstone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T4_Dirt_Desert_sand",
+"count": 2
+},
+{
+"item": "Material_T2_Clay",
+"count": 2
+},
+{
+"item": "Material_T2_Indigo_Plant",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 30,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_albedo.jpg",
+"Block_T4_SandStone_Sandstone_Fancy_CRAFTING_side_normal.jpg",
+"Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_albedo.jpg",
+"Block_T4_SandStone_Sandstone_Fancy_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Sandstone_Rough_CRAFTING",
+"name_en": "Rough Sandstone Block",
+"name_ru": "Грубый блок песчаника",
+"material_id": 136,
+"is_building_voxel": true,
+"category": "sandstone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 8,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_Sandstone_Rough_CRAFTING_side_albedo.jpg",
+"Block_T4_Sandstone_Rough_CRAFTING_side_normal.jpg",
+"Block_T4_Sandstone_Rough_CRAFTING_top_albedo.jpg",
+"Block_T4_Sandstone_Rough_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Stone_HighlyPolished_REWARD",
+"name_en": "Highly Polished Stone Block",
+"name_ru": "Блок из отшлифованного камня",
+"material_id": 132,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 15
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 4,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_Stone_HighlyPolished_REWARD_side_albedo.jpg",
+"Block_T4_Stone_HighlyPolished_REWARD_side_normal.jpg",
+"Block_T4_Stone_HighlyPolished_REWARD_top_albedo.jpg",
+"Block_T4_Stone_HighlyPolished_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_Wood_Palmwood_CRAFTING",
+"name_en": "Palm Wood Block",
+"name_ru": "Блок из пальмового дерева",
+"material_id": 152,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T4_Wood_Logs_Palm",
+"count": 7
+},
+{
+"item": "Material_T1_Wood_Logs",
+"count": 3
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 24,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_Wood_Palmwood_CRAFTING_side_albedo.jpg",
+"Block_T4_Wood_Palmwood_CRAFTING_side_normal.jpg",
+"Block_T4_Wood_Palmwood_CRAFTING_top_albedo.jpg",
+"Block_T4_Wood_Palmwood_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T4_YellowGlow_MemorialHall_CRAFTING",
+"name_en": "Yellow Luminescent Block",
+"name_ru": "Желтый светящийся блок",
+"material_id": 197,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T4_Glass",
+"count": 3
+},
+{
+"item": "Material_T4_Saffron",
+"count": 3
+},
+{
+"item": "Material_T1_Stone_Flint",
+"count": 4
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 69,
+"emits_light": true,
+"emissive_intensity": 4.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T4_YellowGlow_MemorialHall_CRAFTING_side_albedo.jpg",
+"Block_T4_YellowGlow_MemorialHall_CRAFTING_side_normal.jpg",
+"Block_T4_YellowGlow_MemorialHall_CRAFTING_top_albedo.jpg",
+"Block_T4_YellowGlow_MemorialHall_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Dungeon_HollowHalls_Decoration_REWARD",
+"name_en": "Midnight Tomb Block",
+"name_ru": "Блок «Полуночная гробница»",
+"material_id": 198,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T1_Red_Marble_Fragment",
+"count": 9
+},
+{
+"item": "Material_T3_Bronze_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 70,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_albedo.jpg",
+"Block_T5_Dungeon_HollowHalls_Decoration_REWARD_side_normal.jpg",
+"Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_albedo.jpg",
+"Block_T5_Dungeon_HollowHalls_Decoration_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Stone_Granite",
+"name_en": "Granite Block",
+"name_ru": "Гранитный блок",
+"material_id": 192,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 64,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T5_Stone_Granite_side_albedo.jpg",
+"Block_T5_Stone_Granite_side_normal.jpg",
+"Block_T5_Stone_Granite_top_albedo.jpg",
+"Block_T5_Stone_Granite_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Stone_Granite_Polished_REWARD",
+"name_en": "Polished Granite Block",
+"name_ru": "Шлифованный гранитный блок",
+"material_id": 193,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 15
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 65,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T5_Stone_Granite_Polished_REWARD_side_albedo.jpg",
+"Block_T5_Stone_Granite_Polished_REWARD_side_normal.jpg",
+"Block_T5_Stone_Granite_Polished_REWARD_top_albedo.jpg",
+"Block_T5_Stone_Granite_Polished_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Stone_Obsidian_Polished_REWARD",
+"name_en": "Obsidian Block",
+"name_ru": "Обсидиановый блок",
+"material_id": 196,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T5_Obsidian",
+"count": 9
+},
+{
+"item": "Material_T5_Silver_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 68,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T5_Stone_Obsidian_Polished_REWARD_side_albedo.jpg",
+"Block_T5_Stone_Obsidian_Polished_REWARD_side_normal.jpg",
+"Block_T5_Stone_Obsidian_Polished_REWARD_top_albedo.jpg",
+"Block_T5_Stone_Obsidian_Polished_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Stone_StarMaterial_REWARD",
+"name_en": "Starlight Block",
+"name_ru": "Звездный блок",
+"material_id": 199,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 8
+},
+{
+"item": "Material_T3_Bronze_Bar",
+"count": 1
+},
+{
+"item": "Material_T4_Lapislazuli",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 71,
+"emits_light": true,
+"emissive_intensity": 1.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T5_Stone_StarMaterial_REWARD_side_albedo.jpg",
+"Block_T5_Stone_StarMaterial_REWARD_side_normal.jpg",
+"Block_T5_Stone_StarMaterial_REWARD_top_albedo.jpg",
+"Block_T5_Stone_StarMaterial_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T5_Wood_Pine",
+"name_en": "Conifer Wood Block",
+"name_ru": "Блок из хвойного дерева",
+"material_id": 191,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T5_Wood_Logs_Pine",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 63,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T5_Wood_Pine_side_albedo.jpg",
+"Block_T5_Wood_Pine_side_normal.jpg",
+"Block_T5_Wood_Pine_top_albedo.jpg",
+"Block_T5_Wood_Pine_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Fabric_CastleCarpet_REWARD",
+"name_en": "Red Carpet Block",
+"name_ru": "Блок красного ковра",
+"material_id": 210,
+"is_building_voxel": true,
+"category": "fabric",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T4_Fabric_Red",
+"count": 4
+},
+{
+"item": "Material_T6_PaperReed",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 82,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Fabric_CastleCarpet_REWARD_side_albedo.jpg",
+"Block_T6_Fabric_CastleCarpet_REWARD_side_normal.jpg",
+"Block_T6_Fabric_CastleCarpet_REWARD_top_albedo.jpg",
+"Block_T6_Fabric_CastleCarpet_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Stone_Shelllime_Castle_wall_Foundation",
+"name_en": "Castle Block",
+"name_ru": "Замковый блок",
+"material_id": 202,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 74,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_albedo.jpg",
+"Block_T6_Stone_Shelllime_Castle_wall_Foundation_side_normal.jpg",
+"Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_albedo.jpg",
+"Block_T6_Stone_Shelllime_Castle_wall_Foundation_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Stone_Shelllime_LizardTemple_REWARD",
+"name_en": "Drak Temple Block",
+"name_ru": "Храмовый блок дракков",
+"material_id": 201,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 9
+},
+{
+"item": "Material_T6_Gold_Bar",
+"count": 1
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 73,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_albedo.jpg",
+"Block_T6_Stone_Shelllime_LizardTemple_REWARD_side_normal.jpg",
+"Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_albedo.jpg",
+"Block_T6_Stone_Shelllime_LizardTemple_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Stone_Shelllime_PirateBay_wall_REWARD",
+"name_en": "Shell Limestone Block",
+"name_ru": "Блок из ракушечника",
+"material_id": 209,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 81,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_albedo.jpg",
+"Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_side_normal.jpg",
+"Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_albedo.jpg",
+"Block_T6_Stone_Shelllime_PirateBay_wall_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Wood_Bamboo",
+"name_en": "Bamboo Wood Block",
+"name_ru": "Бамбуковый блок",
+"material_id": 203,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T6_Wood_Logs_Bamboo",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 75,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Wood_Bamboo_side_albedo.jpg",
+"Block_T6_Wood_Bamboo_side_normal.jpg",
+"Block_T6_Wood_Bamboo_top_albedo.jpg",
+"Block_T6_Wood_Bamboo_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD",
+"name_en": "Half-timbered Shell Limestone Block",
+"name_ru": "Фахверковый блок из ракушечника",
+"material_id": 206,
+"is_building_voxel": true,
+"category": "wood",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T6_Wood_Logs_Tropical",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 78,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_albedo.jpg",
+"Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_side_normal.jpg",
+"Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_albedo.jpg",
+"Block_T6_Wood_Palmwood_Shelllime_PirateBay_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING",
+"name_en": "Ancient Dungeon Block",
+"name_ru": "Блок подземелья Древних",
+"material_id": 154,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 26,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.25,
+"textures": [
+"Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_albedo.jpg",
+"Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_side_normal.jpg",
+"Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_albedo.jpg",
+"Block_T7_Stone_Ancient_Dungeon_Basalt_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "Block_T7_Stone_Ancient_SunkenCity_REWARD",
+"name_en": "Weathered Ancient Stone Block",
+"name_ru": "Старый блок из камня Древних",
+"material_id": 184,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "_Block_T7_Ancient_Gray_Stone_CRAFTING",
+"count": 100
+},
+{
+"item": "Build_TerrainMaterial_T2_Stone_Talltree",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 56,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"Block_T7_Stone_Ancient_SunkenCity_REWARD_side_albedo.jpg",
+"Block_T7_Stone_Ancient_SunkenCity_REWARD_side_normal.jpg",
+"Block_T7_Stone_Ancient_SunkenCity_REWARD_top_albedo.jpg",
+"Block_T7_Stone_Ancient_SunkenCity_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"name_en": "Springlands Dirt",
+"name_ru": "Земля из Земель источников",
+"material_id": 1,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Dirt_Underwater_mud",
+"name_en": "Underwater Mud",
+"name_ru": "Подводная грязь",
+"material_id": 91,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Farmsoil",
+"name_en": "Farm Soil",
+"name_ru": "Плодородная почва",
+"material_id": 39,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 7
+},
+{
+"item": "Material_T1_Bonemeal",
+"count": 3
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Farmsoil_Flowerbed",
+"name_en": "Flower Soil",
+"name_ru": "Цветочная почва",
+"material_id": 45,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 10
+},
+{
+"item": "Food_T1_raw_sweets_Honey",
+"count": 1
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_FieldStoneWall",
+"name_en": "Field Stones",
+"name_ru": "Полевые камни",
+"material_id": 67,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 6
+},
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 4
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_GlowDirt_Blue_ActiveMycelium",
+"name_en": "Luminous Growth",
+"name_ru": "Светящийся нарост",
+"material_id": 32,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Grassland_Rubble",
+"name_en": "Springlands Rubble",
+"name_ru": "Щебень из Земель источников",
+"material_id": 66,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 4
+},
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Grassland_fertile_Highgrass",
+"name_en": "Fertile Springlands Dirt",
+"name_ru": "Плодородная земля из Земель источников",
+"material_id": 79,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 9
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Road_Dirt_1",
+"name_en": "Dirt Road Block",
+"name_ru": "Грязный дорожный блок",
+"material_id": 20,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Road_Stone_1",
+"name_en": "Smooth Stone Road Block",
+"name_ru": "Дорожный блок из гладкого камня",
+"material_id": 21,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T1_Dirt_Grassland",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Road_Stone_2",
+"name_en": "Rocky Stone Road Block",
+"name_ru": "Дорожный блок \"Скалистый камень",
+"material_id": 22,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Stone",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Rubble",
+"name_en": "Rubble",
+"name_ru": "Щебень",
+"material_id": 8,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T1_Stone",
+"name_en": "Stone",
+"name_ru": "Камень",
+"material_id": 2,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Deepforest_Rubble",
+"name_en": "Revelwood Rubble",
+"name_ru": "Щебень из Разгульного леса",
+"material_id": 81,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_DeepForest",
+"count": 4
+},
+{
+"item": "Build_TerrainMaterial_T2_Stone_DeepForest",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Deepforest_fertile_Highgrass",
+"name_en": "Fertile Revelwood Dirt",
+"name_ru": "Плодородная земля из Разгульного леса",
+"material_id": 80,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_DeepForest",
+"count": 9
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Dirt_DeepForest",
+"name_en": "Revelwood Dirt",
+"name_ru": "Земля из Разгульного леса",
+"material_id": 12,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Dirt_Talltrees",
+"name_en": "Blackmire Dirt",
+"name_ru": "Почва из Черной трясины",
+"material_id": 104,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Stone_DeepForest",
+"name_en": "Revelwood Stone",
+"name_ru": "Камень из Разгульного леса",
+"material_id": 40,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Stone_Talltree",
+"name_en": "Blackmire Stone",
+"name_ru": "Камень из Черной трясины",
+"material_id": 106,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_Bark",
+"name_en": "Blackmire Bark",
+"name_ru": "Кора из Черной трясины",
+"material_id": 47,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_BoxTree",
+"name_en": "Foliage",
+"name_ru": "Листва",
+"material_id": 52,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_GiantMushroom",
+"name_en": "Mushroom Flesh",
+"name_ru": "Грибная мякоть",
+"material_id": 54,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_Inner",
+"name_en": "Blackmire Heartwood",
+"name_ru": "Древесная сердцевина из Черной трясины",
+"material_id": 53,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_Rubble",
+"name_en": "Blackmire Rubble",
+"name_ru": "Щебень из Черной трясины",
+"material_id": 107,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_Talltrees",
+"count": 4
+},
+{
+"item": "Build_TerrainMaterial_T2_Stone_Talltree",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_TallTree_TreeHouseHull",
+"name_en": "Vukah Nesting Material",
+"name_ru": "Подстилочный материал вука",
+"material_id": 55,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T2_Talltree_fertile_Highgrass",
+"name_en": "Fertile Blackmire Dirt",
+"name_ru": "Плодородная почва из Черной трясины",
+"material_id": 105,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T2_Dirt_Talltrees",
+"count": 9
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T3_Dirt_Steppes",
+"name_en": "Nomad Highlands Dirt",
+"name_ru": "Земля с Нагорий кочевников",
+"material_id": 11,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T3_Road_Stone_3",
+"name_en": "Limestone Road Block",
+"name_ru": "Дорожный блок из известняка",
+"material_id": 78,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T3_Steppes_Rubble",
+"name_en": "Nomad Highlands Rubble",
+"name_ru": "Щебень с Нагорий кочевников",
+"material_id": 69,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T3_Dirt_Steppes",
+"count": 4
+},
+{
+"item": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T3_Steppes_fertile_Highgrass",
+"name_en": "Fertile Nomad Highlands Dirt",
+"name_ru": "Плодородная земля с Нагорий кочевников",
+"material_id": 70,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T3_Dirt_Steppes",
+"count": 9
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T3_Stone_Steppes_Limestone",
+"name_en": "Limestone",
+"name_ru": "Известняк",
+"material_id": 42,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Desert_Rubble",
+"name_en": "Kindlewastes Rubble",
+"name_ru": "Щебень из Хворостовых пустошей",
+"material_id": 74,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T4_Sandstone",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Desert_fertile_Highgrass",
+"name_en": "Fertile Kindlewastes Sand",
+"name_ru": "Плодородный песок из Хворостовых пустошей",
+"material_id": 75,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Farmsoil_Improved",
+"count": 1
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Dirt_Desert_fine_sand",
+"name_en": "Fine Sand",
+"name_ru": "Мелкий песок",
+"material_id": 46,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Dirt_Desert_sand",
+"name_en": "Sand",
+"name_ru": "Песок",
+"material_id": 9,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Farmsoil_Improved",
+"name_en": "Fertilised Farm Soil",
+"name_ru": "Удобренная почва",
+"material_id": 41,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T3_Fossilized_Bone_Dust",
+"count": 2
+},
+{
+"item": "Material_T4_Nitrate",
+"count": 3
+},
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T4_Sandstone",
+"name_en": "Sandstone",
+"name_ru": "Песчаник",
+"material_id": 28,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Dirt_ColdHeights",
+"name_en": "Albaneve Summits Dirt",
+"name_ru": "Земля с Альбаневских вершин",
+"material_id": 58,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Farmsoil_ShroudInfused",
+"name_en": "Shroud Infused Farm Soil",
+"name_ru": "Тронутая Пеленой плодородная почва",
+"material_id": 77,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T5_ChitinPowder",
+"count": 5
+},
+{
+"item": "Material_T4_FogTerrain_ShroudSand",
+"count": 10
+},
+{
+"item": "Build_TerrainMaterial_T1_Farmsoil",
+"count": 5
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Granite",
+"name_en": "Granite",
+"name_ru": "Гранит",
+"material_id": 13,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Ice",
+"name_en": "Ice",
+"name_ru": "Лед",
+"material_id": 57,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Moss",
+"name_en": "Moss",
+"name_ru": "Мох",
+"material_id": 59,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Road_Granite_Rubble",
+"name_en": "Granite Rubble Road Block",
+"name_ru": "Дорожный блок из гранитного щебня",
+"material_id": 64,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T5_Granite",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T5_Snow",
+"name_en": "Snow",
+"name_ru": "Снег",
+"material_id": 56,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Dirt_Wetlands",
+"name_en": "Veilwater Basin Dirt",
+"name_ru": "Земля из Бухты дымчатых вод",
+"material_id": 10,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Dirt_Wetlands_Sand",
+"name_en": "Veilwater Basin Sand",
+"name_ru": "Песок из Бухты дымчатых вод",
+"material_id": 95,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_GlowDirt_Green_Underwater",
+"name_en": "Underwater Luminous Growth",
+"name_ru": "Подводный светящийся нарост",
+"material_id": 93,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Road_Stone_4",
+"name_en": "Shell Limestone Road Block",
+"name_ru": "Дорожный блок из ракушечника",
+"material_id": 99,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 7
+},
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Rubble",
+"count": 3
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Wetlands_Gold_Coins",
+"name_en": "Gold Coins",
+"name_ru": "Золотые монеты",
+"material_id": 90,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Wetlands_Rubble",
+"name_en": "Veilwater Basin Rubble",
+"name_ru": "Щебень из Бухты дымчатых вод",
+"material_id": 87,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T6_Dirt_Wetlands",
+"count": 1
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"name_en": "Shell Limestone",
+"name_ru": "Ракушечник",
+"material_id": 86,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T6_Wetlands_fertile_Highgrass",
+"name_en": "Fertile Veilwater Basin Dirt",
+"name_ru": "Плодородная земля из Бухты дымчатых вод",
+"material_id": 88,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T6_Wetlands_Stone_Limestone_Shells",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T6_Dirt_Wetlands_Sand",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T6_Dirt_Wetlands",
+"count": 8
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_AncientLand_Rubble",
+"name_en": "Cinder's Cradle Rubble",
+"name_ru": "Щебень из Колыбели Пламени",
+"material_id": 102,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T1_Rubble",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"count": 5
+},
+{
+"item": "Build_TerrainMaterial_T7_Dirt_AncientLand",
+"count": 1
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"name_en": "Cinder Rock",
+"name_ru": "Окаменелый пепел",
+"material_id": 100,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"name_en": "Basalt",
+"name_ru": "Базальт",
+"material_id": 109,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_AncientLand_fertile_Ancientgrass",
+"name_en": "Fertile Altered Dirt",
+"name_ru": "Измененная почва",
+"material_id": 110,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T7_Dirt_AncientLand",
+"count": 8
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_AncientLand_fertile_Highgrass",
+"name_en": "Fertile Cinder's Cradle Dirt",
+"name_ru": "Плодородная земля из Колыбели Пламени",
+"material_id": 103,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 1
+},
+{
+"item": "Build_TerrainMaterial_T7_Dirt_AncientLand",
+"count": 8
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_Dirt_AncientLand",
+"name_en": "Cinder's Cradle Dirt",
+"name_ru": "Земля из Колыбели Пламени",
+"material_id": 101,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_Dirt_AncientLand_Sand",
+"name_en": "Cinder's Cradle Sand",
+"name_ru": "Песок из Колыбели Пламени",
+"material_id": 108,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "reward_or_found",
+"recipes": []
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_Farmsoil_Basalt",
+"name_en": "Basalt Farm Soil",
+"name_ru": "Базальтовая почва",
+"material_id": 111,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T4_Farmsoil_Improved",
+"count": 5
+},
+{
+"item": "Material_T7_Basalt_Dust",
+"count": 10
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "Build_TerrainMaterial_T7_Road_Stone_5",
+"name_en": "Ancient Road Block",
+"name_ru": "Дорожный блок Древних",
+"material_id": 112,
+"is_building_voxel": false,
+"category": "terrain",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"count": 7
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Rubble",
+"count": 3
+}
+],
+"output_count": 10
+}
+]
+},
+{
+"debug_name": "_Block_T7_Ancient_Gray_Stone_CRAFTING",
+"name_en": "Ancient Stone Block",
+"name_ru": "Каменный блок Древних",
+"material_id": 157,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T7_Moonstone",
+"count": 10
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 29,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"_Block_T7_Ancient_Gray_Stone_CRAFTING_side_albedo.jpg",
+"_Block_T7_Ancient_Gray_Stone_CRAFTING_side_normal.jpg",
+"_Block_T7_Ancient_Gray_Stone_CRAFTING_top_albedo.jpg",
+"_Block_T7_Ancient_Gray_Stone_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "_Block_T7_Dark_Circles_Ancient_REWARD",
+"name_en": "Ancient Circles Block",
+"name_ru": "Блок с круглыми узорами Древних",
+"material_id": 141,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 10
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 13,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"_Block_T7_Dark_Circles_Ancient_REWARD_side_albedo.jpg",
+"_Block_T7_Dark_Circles_Ancient_REWARD_side_normal.jpg",
+"_Block_T7_Dark_Circles_Ancient_REWARD_top_albedo.jpg",
+"_Block_T7_Dark_Circles_Ancient_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "_Block_T7_Full_Gold_Ancient_REWARD",
+"name_en": "Ancient Gold Block",
+"name_ru": "Золотой блок Древних",
+"material_id": 160,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T6_Gold_Bar",
+"count": 5
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 32,
+"emits_light": false,
+"emissive_intensity": 0.0,
+"tiling_factor": 0.125,
+"textures": [
+"_Block_T7_Full_Gold_Ancient_REWARD_side_albedo.jpg",
+"_Block_T7_Full_Gold_Ancient_REWARD_side_normal.jpg",
+"_Block_T7_Full_Gold_Ancient_REWARD_top_albedo.jpg",
+"_Block_T7_Full_Gold_Ancient_REWARD_top_normal.jpg"
+]
+},
+{
+"debug_name": "_Block_T7_Stone_Ancient_Moonstone_CRAFTING",
+"name_en": "Moonstone Block",
+"name_ru": "Блок из лунного камня",
+"material_id": 212,
+"is_building_voxel": true,
+"category": "stone",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T7_Moonstone",
+"count": 10
+},
+{
+"item": "Material_T7_Sparkling_Dust",
+"count": 4
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone_Basalt",
+"count": 3
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 84,
+"emits_light": true,
+"emissive_intensity": 1.0,
+"tiling_factor": 0.125,
+"textures": [
+"_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_albedo.jpg",
+"_Block_T7_Stone_Ancient_Moonstone_CRAFTING_side_normal.jpg",
+"_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_albedo.jpg",
+"_Block_T7_Stone_Ancient_Moonstone_CRAFTING_top_normal.jpg"
+]
+},
+{
+"debug_name": "_Block_T7_YellowGlow_AncientEnergy_REWARD",
+"name_en": "Ancient Beacon Block",
+"name_ru": "Блок маяков Древних",
+"material_id": 211,
+"is_building_voxel": true,
+"category": "glow",
+"obtained": "craftable",
+"recipes": [
+{
+"inputs": [
+{
+"item": "Material_T7_Celesthium_Ore",
+"count": 3
+},
+{
+"item": "Material_T7_LavaPlant_Magma_Gel",
+"count": 3
+},
+{
+"item": "Build_TerrainMaterial_T7_AncientLand_Stone",
+"count": 4
+}
+],
+"output_count": 100
+}
+],
+"blending_layer": 83,
+"emits_light": true,
+"emissive_intensity": 1.0,
+"tiling_factor": 0.125,
+"textures": [
+"_Block_T7_YellowGlow_AncientEnergy_REWARD_side_albedo.jpg",
+"_Block_T7_YellowGlow_AncientEnergy_REWARD_side_normal.jpg",
+"_Block_T7_YellowGlow_AncientEnergy_REWARD_top_albedo.jpg",
+"_Block_T7_YellowGlow_AncientEnergy_REWARD_top_normal.jpg"
+]
+}
+]
+}

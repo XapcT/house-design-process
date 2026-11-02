@@ -1,13 +1,19 @@
 # House Design App
 
-This app follows only the design session explicitly opened by `begin_house_design_session` in the same chat. The begin tool returns a session ID and opens this MCP App. The app binds to that ID from the tool result or initialization context. Reopen a specific session with `open_house_design_app(session_id=...)`; opening without an ID shows an empty state. The app never chooses a global latest session or a saved design as a substitute.
+This portable package includes the original house builder, renderer, bundle/export helpers, assistant, game-asset viewer, catalogs and viewer assets in the parent checkout. The MCP app and browser WebUI import those local `scripts/` and `docs/enshrouded-houses/` paths; neither needs the original development checkout.
 
-The model is assembled in memory through `update_house_design`, using either a full typed specification or appended parts with an expected revision. `set_house_design_phase` reports real work before the first model snapshot. `finish_house_design_session` records the terminal state. Each update stores an immutable, revision-addressed snapshot. The app bootstraps the original `castle-viewer/src/scripts/enshrouded_view.py` viewer once, then sends revision-guarded JSON updates into its live scene. The document, renderer, camera, and OrbitControls stay alive while the viewer replaces the design-owned scene root. `spec.presentation.stage` accepts `sketch`, `form`, or `materials`; omitted legacy metadata means `materials`. These stages change rendering of actual authored voxel data and do not advance automatically. Original OrbitControls handle mouse orbit, zoom, and pan; compact accessible buttons provide orbit, zoom, and reset controls.
+## Native app
 
-Session data is stored by the local `design_session.py` module in task-owned app storage. These tools do not launch a model, write a project design file, or interact with the game, server, or saves. The existing saved-project status and geometry-preview tools remain separate from the authoring session.
+Run `server.py` over MCP stdio to use the chat app. Authoring remains available through the typed `begin_house_design_session`, `update_house_design`, `set_house_design_phase` and `finish_house_design_session` tools. Updates use the existing SQLite session store at `work/house-app-integration/design-sessions/` and immutable snapshots/events. The app opens the original bundled 3D viewer, keeps its document, renderer, scene, camera and controls alive, and sends the exact ordered revision to it. Browser access is read-only; authoring stays on native MCP.
 
-## Tests
+## Browser WebUI
+
+Run `python tools/house-design-app/server.py --serve` from the checkout to host on loopback (default `127.0.0.1:8765`). The browser page wraps the same `index.html` app in an iframe and speaks its JSON-RPC UI bridge. Choose a session from the selector; without an explicit selection it stays empty and never binds to a global latest session. The selector lists durable sessions from the same SQLite database as MCP. Browser RPC only allows status, ordered updates, exact viewer bootstrap and explicit session reopen. POST requests require same-origin `Origin`; the host rejects non-loopback hosts and does not expose arbitrary file paths.
+
+## Checks
 
 ```powershell
 python -m unittest discover -s tools/house-design-app -p "test_*.py" -v
 ```
+
+The tests cover native stdio and session behavior as well as the browser bridge, shared SQLite state, viewer bootstrap, read-only allowlist, loopback origin and route isolation.

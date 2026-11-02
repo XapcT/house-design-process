@@ -1,0 +1,47 @@
+{
+ "note": "Lit-lamp templates seen in the mayor manor bundle: the same item placed with these template UUIDs spawns switched on (FORMAT.md, Prop row).",
+ "props": {
+  "Prop_Decoration_Comfort_T1_IlluminationWall_Candle": {
+   "item_id": 4089251356,
+   "template_uuid": [
+    "45cb8c8ebf46d5b3",
+    "857a38cf714e9ba8"
+   ]
+  },
+  "Prop_Decoration_Comfort_T1_IlluminationCeiling_Chandelier": {
+   "item_id": 1464322006,
+   "template_uuid": [
+    "4b88f4b944ea3afe",
+    "ccfa875fd57777af"
+   ]
+  },
+  "Prop_Decoration_Comfort_T4_IlluminationWall": {
+   "item_id": 2560383707,
+   "template_uuid": [
+    "4f217843aab0af31",
+    "d47b88e0848998b5"
+   ]
+  },
+  "Prop_Decoration_Comfort_T0_IlluminationWall_Torch": {
+   "item_id": 1727027190,
+   "template_uuid": [
+    "4ccc530e1972e42e",
+    "01a1669eb0e3db8f"
+   ]
+  },
+  "Prop_Decoration_Comfort_T1_IlluminationSmall_Candle": {
+   "item_id": 2939168228,
+   "template_uuid": [
+    "4f8d14990445be72",
+    "4065c605d83e90ad"
+   ]
+  },
+  "Prop_Decoration_Comfort_T0_IlluminationSmall_Firefly": {
+   "item_id": 834043165,
+   "template_uuid": [
+    "4799528d4f02140b",
+    "e3de755836942bb4"
+   ]
+  }
+ }
+}

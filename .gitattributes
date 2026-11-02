@@ -1,1 +1,7 @@
 * text=auto eol=lf
+# Preserve copied upstream files byte for byte for provenance verification.
+/scripts/enshrouded_*.py -text
+/scripts/test_enshrouded_house.py -text
+/skills/enshrouded-building/** -text
+/docs/enshrouded-house-design.md -text
+/docs/enshrouded-houses/** -text
