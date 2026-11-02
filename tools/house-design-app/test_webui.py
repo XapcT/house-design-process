@@ -1,5 +1,7 @@
 import asyncio
 import json
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -15,6 +17,24 @@ from design_session import begin_design, list_sessions, update_design
 
 
 class BrowserHostTests(unittest.TestCase):
+    @unittest.skipUnless(shutil.which("node"), "Node.js is needed to execute the browser host script")
+    def test_host_javascript_executes_initialize_and_read_tool_calls(self):
+        session_id = str(uuid.uuid4())
+        harness = r'''const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const html=fs.readFileSync(0,'utf8'),js=html.match(/<script>([\s\S]*?)<\/script>/)[1];
+const id=process.argv[1],origin='http://127.0.0.1:8765',location={origin,href:origin+'/?session_id='+id};location.search=new URL(location.href).search;
+const replies=[],requests=[];let listener;const frame={contentWindow:{postMessage:(m,o)=>{assert.equal(o,origin);replies.push(m)}}};let frameSrc='/ui';Object.defineProperty(frame,'src',{get(){return new URL(frameSrc,origin).href},set(v){frameSrc=v}});
+const select={options:[{value:''}],value:'',append(o){this.options.push(o)},addEventListener(){}};
+const document={querySelector(s){return s==='#sessions'?select:frame},createElement(){return {}}};
+const fetch=async(path,opts)=>{if(path==='/api/sessions')return{ok:true,json:async()=>({sessions:[{session_id:id,title:'Selected',state:'designing'}]})};const req=JSON.parse(opts.body);requests.push(req);if(req.params.name==='open_house_design_app')return{json:async()=>({result:{_meta:{houseDesign:{session_id:id,bind_mode:'resume_latest',cursor_sequence:2}}}})};if(req.params.name==='get_house_design_status')return{json:async()=>({result:{content:[{type:'text',text:JSON.stringify({session:{session_id:id,sequence:2}})}]}})};throw Error('Unexpected HTTP tool '+req.params.name)};
+const window={addEventListener:(n,fn)=>{if(n==='message')listener=fn}};
+vm.runInNewContext(js,{window,document,location,URL,URLSearchParams,fetch,setInterval:()=>0,history:{replaceState(){}},console});
+(async()=>{await new Promise(r=>setImmediate(r));assert.equal(select.value,id);await listener({source:frame.contentWindow,origin,data:{jsonrpc:'2.0',id:1,method:'ui/initialize',params:{}}});assert.equal(replies.at(-1).result.hostContext.toolResult._meta.houseDesign.session_id,id);await listener({source:frame.contentWindow,origin,data:{jsonrpc:'2.0',id:2,method:'tools/call',params:{name:'get_house_design_status',arguments:{session_id:id}}}});assert.equal(replies.at(-1).result.content[0].type,'text');assert.equal(JSON.parse(replies.at(-1).result.content[0].text).session.session_id,id);assert.equal(requests.length,2);process.stdout.write('browser host JS handshake and read tool PASS')})().catch(e=>{console.error(e);process.exitCode=1});'''
+        result = subprocess.run(["node", "-e", harness, session_id], input=webui.HOST_HTML,
+                                text=True, capture_output=True, timeout=8, check=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("handshake and read tool PASS", result.stdout)
+
     def test_browser_host_reads_shared_sessions_and_rejects_authoring(self):
         async def exercise():
             with tempfile.TemporaryDirectory() as temp:

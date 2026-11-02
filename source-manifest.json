@@ -460,6 +460,6 @@
   "tools/house-design-app/server.py": "e2578f906e22392f806a5c9831b72ec7551aa968c4c796e451acdae844812cf0",
   "tools/house-design-app/test_app.py": "5a17e36d4046e7435eec5c45b18cd6d7a4dcb02e822ef44f89287b69abf7d121",
   "tools/house-design-app/test_design_session.py": "1141bb38fe6f6e95c6382411685d9753f333662ad815ea450f3d29c577597882",
-  "tools/house-design-app/test_webui.py": "0ecbe82fab3ddc71d535816ca0faadf5e532d6a4b790c9b3d538ce3f584c0e25",
-  "tools/house-design-app/webui.py": "7b544ac3b3ea3288ba4e15d7bfd15089bac7c99e7a67542d5b046ef9601e21e4"
+  "tools/house-design-app/test_webui.py": "8ce966641b52c85492f39bbeeb64c4f770fe994b42c6e4fecd84b6789d306d56",
+  "tools/house-design-app/webui.py": "ef50ec75f8a0277af1375d4d7d48417c1859d575dc92a6b5f351afff0e9e78b5"
 }
