@@ -1,0 +1,4 @@
+interface:
+  display_name: "House Design"
+  short_description: "Живой процесс проектирования и 3D-модель в чате"
+  default_prompt: "Используй $house-design: показывай создание и изменения моего дома в интерактивном окне прямо в этом чате."

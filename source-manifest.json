@@ -1,0 +1,15 @@
+{
+  ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
+  ".gitignore": "d320e169e9bddcf726ad4f2aec268f28e8b43d9a209995ff9924cf6c83ffcadf",
+  "README.md": "abab4401bf15d3a22f5201851e2fee31f1a4ed85f49b104dedf441f5fe67db5e",
+  "docs/integration.md": "20209f93e423743c5b3176ee6fa2898373c962810ab960d5eb3454fe669dca08",
+  "requirements.txt": "25592d5dec965bdd4e6e2c0d4108b30fc98a576a68353c714f50e60f34731240",
+  "skills/house-design/SKILL.md": "b9e5eda71ddef2b9587523e801dce2e04ed2acb6b82f97fc4f118afd0a4efb42",
+  "skills/house-design/agents/openai.yaml": "871f30b45a4aabb0fcc9bce339bc7a5c9dbb691b66f446b09da17d400da1d54b",
+  "tools/house-design-app/README.md": "9ab97af26a620025bff6316cf37537d07e4c055466603e0b1921006bbcf3869e",
+  "tools/house-design-app/design_session.py": "816b2183df4c7fa9c9953d82fff8936d5253026a63f99f7c9dea7cc6d212b508",
+  "tools/house-design-app/index.html": "5f4f3221745abdb9ca2d924a307160911c5638a3345dcc4a27de952816949395",
+  "tools/house-design-app/server.py": "7432986387bbde131b1dd2c56180305c52af7c2025950efdb127464b6d495c4e",
+  "tools/house-design-app/test_app.py": "5a17e36d4046e7435eec5c45b18cd6d7a4dcb02e822ef44f89287b69abf7d121",
+  "tools/house-design-app/test_design_session.py": "8a38a989f255e921dfce24d774eb831b9181dd54426a4f3f50b70dfcc3efcc88"
+}
